@@ -1,1 +1,0 @@
-网上很多本地remix的教程无法使用，因为官方迁移了remix github库，需使用 https://github.com/ethereum/remix-project 才可正常使用。
