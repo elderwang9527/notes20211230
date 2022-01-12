@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>First DApp Demo</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>First DApp Demo</h1>
+      <h2 id="info"></h2>
+      <label>姓名：</label>
+      <input id="name" type="text" />
+      <label>年龄：</label>
+      <input id="age" type="text" />
+      <button id="button">更新</button>
+    </div>
+
+    <script>
+      console.log("web3:" + web3);
+
+      if (typeof web3 !== "undefined") {
+        web3 = new Web3(web3.currentProvider);
+      } else {
+        // set the provider you want from Web3.providers
+        web3 = new Web3(
+          new Web3.providers.HttpProvider("http://localhost:8545")
+        );
+      }
+
+      var infoContract = web3.eth.contract([
+        {
+          constant: true,
+          inputs: [],
+          name: "getInfo",
+          outputs: [
+            {
+              name: "",
+              type: "string",
+            },
+            {
+              name: "",
+              type: "uint256",
+            },
+          ],
+          payable: false,
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          constant: false,
+          inputs: [
+            {
+              name: "_name",
+              type: "string",
+            },
+            {
+              name: "_age",
+              type: "uint256",
+            },
+          ],
+          name: "setInfo",
+          outputs: [],
+          payable: false,
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ]);
+
+      var info = infoContract.at("0xBEb9344a46c4A31a550A745BFB2135308f6E00fF");
+
+      info.getInfo(function (error, result) {
+        if (!error) {
+          $("#info").html(result[0] + " (" + result[1] + " years old)");
+        } 
+      });
+
+      $("#button").click(function () {
+        var name = $("#name").val();
+        var age = $("#age").val();
+        info.setInfo(name,age,function(error,result){
+          if (!error) {
+            console.log("set ok")
+          }
+        })
+      });
+    </script>
+  </body>
+</html>
