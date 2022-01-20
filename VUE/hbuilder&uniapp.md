@@ -1,0 +1,7 @@
+uniapp 默认无法鼠标点选并复制文字，在 app.vue 中的 style 中输入
+
+page {
+-webkit-user-select: text;
+}
+
+即可点选并复制文字。
