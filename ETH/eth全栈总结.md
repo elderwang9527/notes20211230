@@ -1,3 +1,6 @@
+https://learnblockchain.cn/article/2383  
+https://dev.to/dabit3/the-complete-guide-to-full-stack-ethereum-development-3j13
+
 full-stack-ethereum
 
 安装各种依赖  
