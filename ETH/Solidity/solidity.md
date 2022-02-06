@@ -10,4 +10,5 @@ solidity vscode 格式化，需要添加这段到 settings.json。
 
 ```
 
-sol 文件里出现 import 报错，将 solidity 插件降到 0.0135。直接降可能失败，下载单独的文件，再将其拖入 vscode 的插件栏来安装。
+sol 文件里出现 import 报错，将 solidity 插件降到 0.0135。直接降可能失败，下载单独的文件，再将其拖入 vscode 的插件栏来安装。还需禁止 vscode 自动安装插件   
+![](./img/2022-02-04-17-23-24.png)

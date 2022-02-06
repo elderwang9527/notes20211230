@@ -16,3 +16,9 @@ netsh winhttp reset proxy
 netsh winhttp show proxy
 
 ![](./img/2022-01-15-16-31-19.png)
+
+powershell 似乎无法不换系统语言的情况下英文显示，只能转到 cmd，  
+让 cmd 纯英文显示  
+chcp 437  
+恢复为中文显示  
+chcp 936
