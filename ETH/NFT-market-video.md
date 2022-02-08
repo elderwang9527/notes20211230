@@ -24,7 +24,7 @@ NFT 继承自 ERC721URIStorage 而 ERC721URIStorage 又继承自 ERC721
 
 ![](./img/2022-02-07-10-37-00.png)
 using A for B，可用于在合约的上下文中，将库函数（来自库 A）附加到任何类型（B）  
-这里的 address 是 market 的。
+这里的 address 是 market contract 的。用来让 market contract 和 nft contract 交互
 
 ![](./img/2022-02-07-10-43-44.png)  
 给这个 token 或 marketplace 许可去 transact 这 token between users 和 other contracts。
@@ -44,19 +44,19 @@ solidity 没有动态数组，所以需要知道数组长度，所以需要 item
 ![](./img/2022-02-07-11-03-27.png)  
 尽管这里是 ether，但如果部署到 matic 网则是 matic。
 
-![](./img/2022-02-07-11-18-39.png)      
-一个marketitem被创建的时候产生的event，提供给客户端     
+![](./img/2022-02-07-11-18-39.png)  
+一个 marketitem 被创建的时候产生的 event，提供给客户端
 
 ![](./img/2022-02-07-11-38-51.png)
 createMarketItem
 
-![](./img/2022-02-07-11-42-24.png)      
-createMarketSale        
+![](./img/2022-02-07-11-42-24.png)  
+createMarketSale
 
 ![](./img/2022-02-07-11-44-25.png)
-fetchMarketItems        
+fetchMarketItems
 
 ![](./img/2022-02-07-11-45-27.png)
-fetchMyNFTs     
+fetchMyNFTs
 
 sample-test
