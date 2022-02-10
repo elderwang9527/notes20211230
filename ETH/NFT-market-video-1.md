@@ -75,10 +75,26 @@ createmarketsell,
 ### 接下来的 functions 就是想要不同的 views，即不同的 collection selection sets。如创造的，已售的，未售的等。
 
 ![](./img/2022-02-08-20-23-36.png)
-fetchmarketitems        
-itemcount，已创建总数       
+fetchmarketitems  
+itemcount，已创建总数
 
-we want to keep up with the local value for incrementing a number essentially,          
-because we are going looping over an array and we want to keep up with a number within that loop/array.         
-so in our case we are going be basically looping over the number of items created. and we want to increment that number if we basically have an empty address. that basically means if the item has an empty address that means it has not yet been sold.       
+we want to keep up with the local value for incrementing a number essentially,  
+because we are going looping over an array and we want to keep up with a number within that loop/array.  
+so in our case we are going be basically looping over the number of items created. and we want to increment that number if we basically have an empty address. that basically means if the item has an empty address that means it has not yet been sold.  
 and we want to populate an array with that unsold item. and then we want to return that item. coz again, we only want to return from the function, the number of unsold item. 所以创建空数组 item。（大意是循环找到未出售的 item 并将它加入数组）
+
+![](./img/2022-02-09-09-16-49.png)
+返回用户拥有的 nft。  
+并没有一个 function 能返回我拥有了多少个 nft。只能返回总创建数，不能返回单个用户的创建数。所以就需要循环所有 item。
+
+![](./img/2022-02-09-09-29-17.png)
+返回用户自己创建的 nft。类似上一个 function。
+
+![](./img/2022-02-09-09-46-45.png)      
+写 test。  
+1，目的是模拟部署两个合约，创建一个新的 nft，把新 nft 拿去卖，然后从别人手中买一个 nft。  
+2，获得 market 合约的引用。（NFTMarket 为合约文件名，git clone 文件名为 Market.sol，但视频文件名为 NFTMarket.sol）  
+3，等待合约部署完，然后获得合约地址的引用，因为部署 NFT 合约需要这个地址。  
+4，部署 nft 合约。      
+
+
