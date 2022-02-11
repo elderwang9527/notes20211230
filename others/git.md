@@ -33,3 +33,8 @@ git add git commit 和正常提交一样
 git push origin new-branch 提交到 github。
 git checkout main 返回 main 分支
 git branch -d new-branch 删除 new-branch 分支 (未 merge 的分支 -d 需写为-D)
+
+###
+
+想回到某次提交 git reset --hard \*\*\*  
+但再提交到 github 需要增加 -f 参数，且 github 上会丢失掉该次提交以后的提交。

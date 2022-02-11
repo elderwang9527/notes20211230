@@ -123,9 +123,39 @@ npm run dev
 2，创建此组件的 default export。  
 3，使用 usestate 创建一些 local state，file url 是允许用户上传的 ipfs 文件，forminput 组件允许用户 create nft，之前那个允许用户上传文件，这个允许用户上传 price，name，description。  
 4，create a ref to the router,use useRouter() hook.  
-5, 准备创建三个 function，第一个用于创造和上传 file url，因为现在是 null。 （usestate（null）），并且需要个form input。所以创造onchange function，然后attach它到input。
+5, 准备创建三个 function，第一个用于创造和上传 file url，因为现在是 null。 （usestate（null）），并且需要个 form input。所以创造 onchange function，然后 attach 它到 input。
 
-![](./img/2022-02-09-17-33-20.png)      
-1，也可以做个callback。加入{progress*}参数（没懂）      
-2，当上传结束后，我们获得变量added，使用它可以获得文件所在位置的url。       
-3，call setfileurl，这样当create nft时就知道nft保存在哪个位置了
+![](./img/2022-02-09-17-33-20.png)  
+1，也可以做个 callback。加入{progress\*}参数（没懂）  
+2，当上传结束后，我们获得变量 added，使用它可以获得文件所在位置的 url。  
+3，call setfileurl，这样当 create nft 时就知道 nft 保存在哪个位置了
+
+![](./img/2022-02-10-09-08-50.png)
+create items for users to list items for sale,分为两个 function。第一个让用户创造 item 并保存至 ipfs，coz not only we have the url ref locally but we want upload a json representation including the name, description, image. 第二个用于 listing items for sell。这里是第一个 function。
+1，从 forminput 中获得值。destructure 解构 获得名称，描述，价格。  
+2，剩下的跟之前的代码类似。
+
+![](./img/2022-02-10-09-13-29.png)  
+![](./img/2022-02-10-10-01-16.png)
+createsale 较简单。
+
+![](./img/2022-02-10-10-09-27.png)      
+返回 ui，创建新 nft 的对话框。
+
+![](./img/2022-02-10-10-11-26.png)      
+上传文件，上传文件的预览，上传文件的button。此处button onclick名称应改为createitem。
+
+
+### 之后是创建my-assets页面和creator-dashboard页面。跟之前的类似，省略掉。      
+
+![](./img/2022-02-10-10-26-46.png)      
+polygon测试网，mumbai。     
+
+![](./img/2022-02-10-10-28-56.png)      
+部署时指定mumbai        
+
+![](./img/2022-02-10-10-29-35.png)      
+polygon matic 测试网 水龙头 faucet      
+
+![](./img/2022-02-10-10-33-19.png)      
+![](./img/2022-02-10-10-33-55.png)      

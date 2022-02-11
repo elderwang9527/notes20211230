@@ -90,11 +90,9 @@ and we want to populate an array with that unsold item. and then we want to retu
 ![](./img/2022-02-09-09-29-17.png)
 返回用户自己创建的 nft。类似上一个 function。
 
-![](./img/2022-02-09-09-46-45.png)      
+![](./img/2022-02-09-09-46-45.png)  
 写 test。  
 1，目的是模拟部署两个合约，创建一个新的 nft，把新 nft 拿去卖，然后从别人手中买一个 nft。  
 2，获得 market 合约的引用。（NFTMarket 为合约文件名，git clone 文件名为 Market.sol，但视频文件名为 NFTMarket.sol）  
 3，等待合约部署完，然后获得合约地址的引用，因为部署 NFT 合约需要这个地址。  
-4，部署 nft 合约。      
-
-
+4，部署 nft 合约。
