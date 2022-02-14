@@ -70,7 +70,7 @@ web3modal 用于连接 eth 钱包。
 ![](./img/2022-02-09-15-01-52.png)  
 ![](./img/2022-02-09-15-14-39.png)
 1, loadNFTs, call contract and fetch nfts. 当 app loads 或 componet loads 时调用  
-2，因为 app loads 或 componet loads 时调用，所以使用之前提到的 useeffect 方法。  
+2，因为 app loads 或 componet loads 时调用，所以使用之前提到的 useeffect 方法。 (意思可能是因为 app loads 时，nfts 是空数组，就触发方法调用)    
 3，需要 ethers providers，因为是只读操作，不需要知道用户信息，所以使用一个很 generic 的 provider。JsonRpcProvider。  
 4，configure the contract，passing in adress, abi, provider.  
 5, also marketcontract. coz we are going to fetch the market items, then need to map over the market items. and want to get the token uri by interacting with a token contract. so we need both contracts.  
@@ -139,23 +139,22 @@ create items for users to list items for sale,分为两个 function。第一个�
 ![](./img/2022-02-10-10-01-16.png)
 createsale 较简单。
 
-![](./img/2022-02-10-10-09-27.png)      
+![](./img/2022-02-10-10-09-27.png)  
 返回 ui，创建新 nft 的对话框。
 
-![](./img/2022-02-10-10-11-26.png)      
-上传文件，上传文件的预览，上传文件的button。此处button onclick名称应改为createitem。
+![](./img/2022-02-10-10-11-26.png)  
+上传文件，上传文件的预览，上传文件的 button。此处 button onclick 名称应改为 createitem。
 
+### 之后是创建 my-assets 页面和 creator-dashboard 页面。跟之前的类似，省略掉。
 
-### 之后是创建my-assets页面和creator-dashboard页面。跟之前的类似，省略掉。      
+![](./img/2022-02-10-10-26-46.png)  
+polygon 测试网，mumbai。
 
-![](./img/2022-02-10-10-26-46.png)      
-polygon测试网，mumbai。     
+![](./img/2022-02-10-10-28-56.png)  
+部署时指定 mumbai
 
-![](./img/2022-02-10-10-28-56.png)      
-部署时指定mumbai        
+![](./img/2022-02-10-10-29-35.png)  
+polygon matic 测试网 水龙头 faucet
 
-![](./img/2022-02-10-10-29-35.png)      
-polygon matic 测试网 水龙头 faucet      
-
-![](./img/2022-02-10-10-33-19.png)      
-![](./img/2022-02-10-10-33-55.png)      
+![](./img/2022-02-10-10-33-19.png)  
+![](./img/2022-02-10-10-33-55.png)
