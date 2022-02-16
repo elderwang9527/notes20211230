@@ -51,7 +51,10 @@ instead 只是返回被渲染的 component，我们把它放进 div 里。这样
 ![](./img/2022-02-09-11-11-33.png)  
 usestate,useeffect 是 hooks，usestate 允许 keep up with local state。useeffect 允许 invoke a function 当 component loads 时  
 axios 是个 data fetching 库。  
-web3modal 用于连接 eth 钱包。
+web3modal 用于连接 eth 钱包。  
+(useEffect 钩子函数,第一个参数传函数,第二个可选参数是个数组类型  
+不传(没写或者只写空数组)，则监控全局 useState 值，任何一个 useState 值发生变化则执行该函数  
+传了，则监控该数组中的 useState 值，数组中的值发现变化则执行第一个参数的函数)
 
 ![](./img/2022-02-09-11-25-30.png)
 当部署合约时需要有个 ref to market address，和 nft address。
@@ -70,7 +73,7 @@ web3modal 用于连接 eth 钱包。
 ![](./img/2022-02-09-15-01-52.png)  
 ![](./img/2022-02-09-15-14-39.png)
 1, loadNFTs, call contract and fetch nfts. 当 app loads 或 componet loads 时调用  
-2，因为 app loads 或 componet loads 时调用，所以使用之前提到的 useeffect 方法。 (意思可能是因为 app loads 时，nfts 是空数组，就触发方法调用)    
+2，因为 app loads 或 componet loads 时调用，所以使用之前提到的 useeffect 方法。 (意思可能是因为 app loads 时，nfts 是空数组，就触发方法调用)  
 3，需要 ethers providers，因为是只读操作，不需要知道用户信息，所以使用一个很 generic 的 provider。JsonRpcProvider。  
 4，configure the contract，passing in adress, abi, provider.  
 5, also marketcontract. coz we are going to fetch the market items, then need to map over the market items. and want to get the token uri by interacting with a token contract. so we need both contracts.  
@@ -145,7 +148,8 @@ createsale 较简单。
 ![](./img/2022-02-10-10-11-26.png)  
 上传文件，上传文件的预览，上传文件的 button。此处 button onclick 名称应改为 createitem。
 
-### 之后是创建 my-assets 页面和 creator-dashboard 页面。跟之前的类似，省略掉。
+~~### 之后是创建 my-assets 页面和 creator-dashboard 页面。跟之前的类似，省略掉。~~
+my-assets 类似 index.js。只是需要加 signer 和使用 fetchMyNFTs 方法。
 
 ![](./img/2022-02-10-10-26-46.png)  
 polygon 测试网，mumbai。

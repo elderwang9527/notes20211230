@@ -38,3 +38,9 @@ git branch -d new-branch 删除 new-branch 分支 (未 merge 的分支 -d 需写
 
 想回到某次提交 git reset --hard \*\*\*  
 但再提交到 github 需要增加 -f 参数，且 github 上会丢失掉该次提交以后的提交。
+
+### 删掉增加但还未提交的文件和修改，即还原得跟上次提交一模一样。
+
+git checkout head . 修改被还原      
+git clean -nfd 查看即将被删除的文件     
+git clean -fd 增加的文件被删除      

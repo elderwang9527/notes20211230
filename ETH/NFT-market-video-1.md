@@ -9,14 +9,14 @@ matic doc
 
 ![](./img/2022-02-07-09-58-54.png)  
 ![](./img/2022-02-15-10-32-19.png)  
-注意写法，${}，不想暴露 id 可以单独开个不上传的文件     
-在JS中想要使用${}获取变量要在反引号中使用
+注意写法，不想暴露 id 可以单独开个不上传的文件  
+在 JS 中想要使用${}获取变量要在反引号中使用
 
 ![](./img/2022-02-07-10-00-32.png)  
 安全引入 private key 的方法。
 
 ![](./img/2022-02-07-10-06-36.png)  
-额外的 function， set token uri 去 set like it sounds the token uri。
+增加额外的 function，名字叫 set token uri 去 set like it sounds the token uri。
 
 ![](./img/2022-02-07-10-09-21.png)  
 用来增加数字
