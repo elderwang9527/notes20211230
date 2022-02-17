@@ -73,7 +73,7 @@ web3modal 用于连接 eth 钱包。
 ![](./img/2022-02-09-15-01-52.png)  
 ![](./img/2022-02-09-15-14-39.png)
 1, loadNFTs, call contract and fetch nfts. 当 app loads 或 componet loads 时调用  
-2，因为 app loads 或 componet loads 时调用，所以使用之前提到的 useeffect 方法。 (意思可能是因为 app loads 时，nfts 是空数组，就触发方法调用)  
+2，因为 app loads 或 componet loads 时调用，所以使用之前提到的 useeffect 方法。~~(意思可能是因为 app loads 时，nfts 是空数组，就触发方法调用)~~  useeffect用两个参数，第一个是触发时使用的函数，第二个是数组，填写具体usestate名，如果为空数组或不写则代表所有usestate状态发生更改时都触发函数。            
 3，需要 ethers providers，因为是只读操作，不需要知道用户信息，所以使用一个很 generic 的 provider。JsonRpcProvider。  
 4，configure the contract，passing in adress, abi, provider.  
 5, also marketcontract. coz we are going to fetch the market items, then need to map over the market items. and want to get the token uri by interacting with a token contract. so we need both contracts.  
