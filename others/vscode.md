@@ -16,3 +16,11 @@ git config --global core.autocrlf false
 避免 json 注释报错
 
 sol 文件里出现 import 报错，将 solidity 插件降到 0.0135。直接降可能失败，下载单独的文件，再将其拖入 vscode 的插件栏来安装。
+
+VSCode 关闭右侧预览功能 缩略图  
+关闭方法：点击文件-首选项-设置,搜索"editor.minimap.enabled",默认值为打钩,我们只需要把钩去掉即可；
+
+### vscode 快捷键设置
+
+切换侧边栏，默认为 ctrl b，换为 ctrl b 加 ctrl b  
+切换活动栏，默认未设置，换位 ctrl b 加 ctrl v
