@@ -14,7 +14,8 @@ npx hardhat test 进行测试。看到了很多奇怪的数据，接下来进行
 
 ![](./img/2022-02-09-10-33-10.png)
 重写，让结果更可读  
-map 它们，并让它们 update（实时更新？），想要 asynchronously 异步的，所以 promise.all，这样可以做异步的 mapping。
+map 它们，并让它们 update（实时更新？），想要 asynchronously 异步的，所以 promise.all，这样可以做异步的 mapping。  
+add，map 方法接收一个数组，并依次用数组里的值作为参数调用函数，并用最终的返回值组成新数组。
 
 ![](./img/2022-02-09-10-40-13.png)  
 重写后的输出结果
@@ -73,7 +74,7 @@ web3modal 用于连接 eth 钱包。
 ![](./img/2022-02-09-15-01-52.png)  
 ![](./img/2022-02-09-15-14-39.png)
 1, loadNFTs, call contract and fetch nfts. 当 app loads 或 componet loads 时调用  
-2，因为 app loads 或 componet loads 时调用，所以使用之前提到的 useeffect 方法。~~(意思可能是因为 app loads 时，nfts 是空数组，就触发方法调用)~~  useeffect用两个参数，第一个是触发时使用的函数，第二个是数组，填写具体usestate名，如果为空数组或不写则代表所有usestate状态发生更改时都触发函数。            
+2，因为 app loads 或 componet loads 时调用，所以使用之前提到的 useeffect 方法。~~(意思可能是因为 app loads 时，nfts 是空数组，就触发方法调用)~~ useeffect 用两个参数，第一个是触发时使用的函数，第二个是数组，填写具体 usestate 名，如果为空数组或不写则代表所有 usestate 状态发生更改时都触发函数。  
 3，需要 ethers providers，因为是只读操作，不需要知道用户信息，所以使用一个很 generic 的 provider。JsonRpcProvider。  
 4，configure the contract，passing in adress, abi, provider.  
 5, also marketcontract. coz we are going to fetch the market items, then need to map over the market items. and want to get the token uri by interacting with a token contract. so we need both contracts.  
