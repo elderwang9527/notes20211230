@@ -17,6 +17,9 @@ npx hardhat test 进行测试。看到了很多奇怪的数据，接下来进行
 map 它们，并让它们 update（实时更新？），想要 asynchronously 异步的，所以 promise.all，这样可以做异步的 mapping。  
 add，map 方法接收一个数组，并依次用数组里的值作为参数调用函数，并用最终的返回值组成新数组。
 
+![](./img/2022-02-19-10-20-50.png)  
+add, tokenuri 方法，在 erc721 和 erc721storageuri 里都有，实际使用时，先调用如图 erc721storageuri 里的，然后因为返回 super.\*，则再将值交给 erc721storageuri 所继承的 erc721 合约，从而再调用 erc721 里的 tokenuri 方法
+
 ![](./img/2022-02-09-10-40-13.png)  
 重写后的输出结果
 
