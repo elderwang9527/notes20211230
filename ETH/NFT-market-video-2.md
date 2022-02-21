@@ -123,7 +123,7 @@ npm run dev
 ![](./img/2022-02-09-16-48-55.png)
 创建新建 nft 的页面，create-item.js  
 1，引入依赖，其中 ipfs\* 允许通过 ipfs 来上传和下载文件。userouter 允许路由到不同的路由，也可以允许你知道 route uri 的值  
-2，创建名为 client 的变量，inferior url，set and pins items to ipfs。
+2，创建名为 client 的变量，infura url，set and pins items to ipfs。
 
 ![](./img/2022-02-09-17-32-16.png)
 1，引入两个合约的 json。  
