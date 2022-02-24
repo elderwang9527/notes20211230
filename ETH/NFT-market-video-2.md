@@ -86,7 +86,7 @@ web3modal 用于连接 eth 钱包。
 8,获得 token uri，并从中获得 token 的 metadata。当使用 ipfs 时，会上传一个 json 包含很多信息，如 token name，description，image 或 video（事实上是引用而不是真实的文件）。  
 9，创造一个叫 price 的值（要 format 它），它是被 set 在 item property 里。所以这里设置个 item object。  
 10，除了 price，还需要其它很多值，这样就可以很好的代表一个 nft 了。  
-11，setNFTs。
+11，setNFTs。[add,注意此时该function内部console.log(nfts)仍为空值，需要在此function外部才生效。当 setNfts 赋值之后，会在后继的重新渲染中打印出最新的值。]
 
 ![](./img/2022-02-09-15-17-45.png)  
 当 loaded 后，但还没有 nft，就要显示 no items。
