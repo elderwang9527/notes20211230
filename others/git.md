@@ -41,6 +41,13 @@ git branch -d new-branch 删除 new-branch 分支 (未 merge 的分支 -d 需写
 
 ### 删掉增加但还未提交的文件和修改，即还原得跟上次提交一模一样。
 
-git checkout head . 修改被还原      
-git clean -nfd 查看即将被删除的文件     
-git clean -fd 增加的文件被删除      
+git checkout head . 修改被还原  
+git clean -nfd 查看即将被删除的文件  
+git clean -fd 增加的文件被删除
+
+### 为一台电脑配置多个 GitHub 账号
+
+https://zhuanlan.zhihu.com/p/423007454      
+注意可能会以为此教程有笔误，但其实就是要那样写，没有笔误
+
+![](./img/2022-02-27-02-42-54.png)
