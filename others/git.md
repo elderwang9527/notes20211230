@@ -47,7 +47,12 @@ git clean -fd 增加的文件被删除
 
 ### 为一台电脑配置多个 GitHub 账号
 
-https://zhuanlan.zhihu.com/p/423007454      
-注意可能会以为此教程有笔误，但其实就是要那样写，没有笔误
+![](./img/2022-02-27-14-10-26.png)
 
-![](./img/2022-02-27-02-42-54.png)
+https://www.cnblogs.com/xjnotxj/p/5845574.html
+
+ssh-agent -s 可能遇到报错，输入 Set-Service -Name ssh-agent -StartupType automatic （https://www.jianshu.com/p/7bf7047af0f1）
+
+添加私钥 ssh-add ~/.ssh/id_rsa_one 时可能需要改为./id_rsa_one。
+
+config 文件仍使用~/.ssh/id_rsa_one 方式，且注意修改掉多余的空格
