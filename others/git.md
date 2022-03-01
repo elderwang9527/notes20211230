@@ -56,3 +56,7 @@ ssh-agent -s 可能遇到报错，输入 Set-Service -Name ssh-agent -StartupTyp
 添加私钥 ssh-add ~/.ssh/id_rsa_one 时可能需要改为./id_rsa_one。
 
 config 文件仍使用~/.ssh/id_rsa_one 方式，且注意修改掉多余的空格
+
+![](./img/2022-02-28-10-28-53.png)  
+注意使用第二个库 git clone 时：git clone git@two.github.com:two 的用户名/learngit.git （截图中 “two 的用户名”前多了个空格）。  
+git clone 下来后设置 git config user.name "two_name" ; git config user.email "two_email"
