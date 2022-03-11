@@ -45,3 +45,46 @@ contract Market {
     }
 }
 ```
+
+### set 和 get，结构体与映射。struct mapping。与上一个不同是 struct 里有 mapping，需要注意这时 set 就要换种方法
+
+```
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.8.0 <0.9.0;
+
+contract Market {
+    struct City {
+        uint256 cityID;
+        string cityName;
+        mapping(string => uint256) cityGoods;
+    }
+
+    mapping(uint256 => City) public citys;
+
+    function setCity(
+        uint256 _cityID,
+        string memory _cityName,
+        string memory _goodsName,
+        uint256 _goodsPrice
+    ) public {
+        City storage city = citys[_cityID];
+        city.cityID = _cityID;
+        city.cityName = _cityName;
+        city.cityGoods[_goodsName] = _goodsPrice;
+    }
+
+    function getCity(uint256 _cityID, string memory _goodsName)
+        public
+        view
+        returns (
+            string memory cityNamee,
+            uint256 cityIDD,
+            uint256 pricee
+        )
+    {
+        City storage city = citys[_cityID];
+        return (city.cityName, city.cityID, city.cityGoods[_goodsName]);
+    }
+}
+
+```
