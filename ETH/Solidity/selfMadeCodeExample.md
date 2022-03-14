@@ -88,3 +88,44 @@ contract Market {
 }
 
 ```
+
+### struct 里有子 mapping，子 mapping 里有孙 struct，具体怎么赋值。重点最后五行
+
+```
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.8.0 <0.9.0;
+
+contract Market {
+    struct City {
+        uint256 cityID;
+        string cityName;
+        mapping(uint256 => SingleGoods) goods;
+    }
+    mapping(uint256 => City) citys;
+
+    struct SingleGoods {
+        string name;
+        uint256 price;
+        uint256 qua;
+    }
+
+    function init(
+        uint256 _cityID,
+        string memory _cityName,
+        uint256 _goodsID,
+        string memory _goodsName,
+        uint256 _goodsPrice,
+        uint256 _goodsQua
+    ) public {
+        City storage city1 = citys[_cityID];
+        city1.cityID = _cityID;
+        city1.cityName = _cityName;
+        SingleGoods storage singleGoods1 = city1.goods[_goodsID];
+        singleGoods1.name = _goodsName;
+        singleGoods1.price = _goodsPrice;
+        singleGoods1.qua = _goodsQua;
+        city1.goods[_goodsID] = singleGoods1;
+    }
+}
+
+```
