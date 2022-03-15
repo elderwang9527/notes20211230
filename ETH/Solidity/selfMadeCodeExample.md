@@ -91,6 +91,8 @@ contract Market {
 
 ### struct 里有子 mapping，子 mapping 里有孙 struct，具体怎么赋值。重点最后五行
 
+reviewed 2022/03/15
+
 ```
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.8.0 <0.9.0;
