@@ -131,3 +131,109 @@ contract Market {
 }
 
 ```
+
+### 返回结构数组，内存数组不能 push 的解决方法
+
+```
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.8.0 <0.9.0;
+
+contract Market {
+    struct City {
+        uint256 cityID;
+        string cityName;
+        mapping(uint256 => SingleGoods) goods;
+    }
+
+    mapping(uint256 => City) citys;
+
+    // 表示某city的某goodsid是否存在。第一个uint是cityid，第二个是goodsid
+    mapping(uint256 => mapping(uint256 => bool)) public goodsWhetherInserted;
+
+    // 将某city的所有goodsid保存到一个数组中
+    mapping(uint256 => uint256[]) public ids;
+
+    struct SingleGoods {
+        string name;
+        uint256 price;
+        uint256 quantity;
+    }
+
+    function createCity(uint256 _cityID, string memory _cityName) public {
+        City storage city = citys[_cityID];
+        city.cityID = _cityID;
+        city.cityName = _cityName;
+    }
+
+    function addGoodsToCity(
+        uint256 _cityID,
+        uint256 _goodsID,
+        string memory _goodsName,
+        uint256 _goodsPrice,
+        uint256 _goodsQuantity
+    ) public {
+        City storage city = citys[_cityID];
+        SingleGoods storage singleGoods = city.goods[_goodsID];
+        singleGoods.name = _goodsName;
+        singleGoods.price = _goodsPrice;
+        singleGoods.quantity = _goodsQuantity;
+        goodsWhetherInserted[_cityID][_goodsID] = true;
+        ids[_cityID].push(_goodsID);
+    }
+
+    function getCityName(uint256 _cityID)
+        public
+        view
+        returns (uint256 cityID, string memory cityName)
+    {
+        City storage city = citys[_cityID];
+        return (city.cityID, city.cityName);
+    }
+
+    function getCityGoods(uint256 _cityID)
+        public
+        view
+        returns (SingleGoods[] memory)
+    {
+        SingleGoods[] memory allGoods;
+        SingleGoods memory singleGoods;
+        for (uint256 index = 0; index < ids[_cityID].length; index++) {
+            // 以下为错误写法：内存数组不能push
+            // singleGoods.name = citys[_cityID].goods[ids[_cityID][index]].name;
+            // singleGoods.price = citys[_cityID].goods[ids[_cityID][index]].price;
+            // singleGoods.quantity = citys[_cityID]
+            //     .goods[ids[_cityID][index]]
+            //     .quantity;
+            // allGoods.push(singleGoods);
+
+            // 以下为正确写法之一：直接定义，设置元素
+            allGoods[index] = SingleGoods(
+                citys[_cityID].goods[ids[_cityID][index]].name,
+                citys[_cityID].goods[ids[_cityID][index]].price,
+                citys[_cityID].goods[ids[_cityID][index]].quantity
+            );
+        }
+        return allGoods;
+    }
+
+    //   以下为正确写法之二，先定义一个对应长度的数组，然后设置
+    //     function getCityGoods(uint256 _cityID)
+    //     public
+    //     view
+    //     returns (SingleGoods[] memory)
+    // {
+    //     SingleGoods[] memory allGoods = new SingleGoods[](ids[_cityID].length);
+    //     SingleGoods memory singleGoods;
+    //     for (uint256 index = 0; index < ids[_cityID].length; index++) {
+    //         singleGoods.name = citys[_cityID].goods[ids[_cityID][index]].name;
+    //         singleGoods.price = citys[_cityID].goods[ids[_cityID][index]].price;
+    //         singleGoods.quantity = citys[_cityID]
+    //             .goods[ids[_cityID][index]]
+    //             .quantity;
+    //         allGoods[index] = singleGoods;
+    //     }
+    //     return allGoods;
+    // }
+}
+
+```
