@@ -132,7 +132,7 @@ contract Market {
 
 ```
 
-### 返回结构数组，内存数组不能 push 的解决方法
+### 一个可以创造 city，并为每个 city 增加 goods，并可以返回 city 和 goods 信息的合约。重点是最后的 getCityGoods 方法：返回结构数组，内存数组不能 push 的解决方法 (add,2022/03/16: 代码有错误，方法一有报错，方法二也有错误，需要进行修改，结果为下一段代码。)
 
 ```
 // SPDX-License-Identifier: GPL-3.0
@@ -216,7 +216,7 @@ contract Market {
         return allGoods;
     }
 
-    //   以下为正确写法之二，先定义一个对应长度的数组，然后设置
+    //   以下为正确写法之二，先定义一个对应长度的数组，然后设置。比第一个方案复杂，暂未学习
     //     function getCityGoods(uint256 _cityID)
     //     public
     //     view
@@ -234,6 +234,87 @@ contract Market {
     //     }
     //     return allGoods;
     // }
+}
+
+```
+
+### 对上一段代码的修改，采用方法二，但 SingleGoods memory singleGoods 写入循环内。
+
+```
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.8.0 <0.9.0;
+
+contract Market {
+    struct City {
+        uint256 cityID;
+        string cityName;
+        mapping(uint256 => SingleGoods) goods;
+    }
+
+    mapping(uint256 => City) citys;
+
+    // 表示某city的某goodsid是否存在。第一个uint是cityid，第二个是goodsid
+    mapping(uint256 => mapping(uint256 => bool)) public goodsWhetherInserted;
+
+    // 将某city的所有goodsid保存到一个数组中
+    mapping(uint256 => uint256[]) public ids;
+
+    struct SingleGoods {
+        string name;
+        uint256 price;
+        uint256 quantity;
+    }
+
+    function createCity(uint256 _cityID, string memory _cityName) public {
+        City storage city = citys[_cityID];
+        city.cityID = _cityID;
+        city.cityName = _cityName;
+    }
+
+    function addGoodsToCity(
+        uint256 _cityID,
+        uint256 _goodsID,
+        string memory _goodsName,
+        uint256 _goodsPrice,
+        uint256 _goodsQuantity
+    ) public {
+        City storage city = citys[_cityID];
+        SingleGoods storage singleGoods = city.goods[_goodsID];
+        singleGoods.name = _goodsName;
+        singleGoods.price = _goodsPrice;
+        singleGoods.quantity = _goodsQuantity;
+        city.goods[_goodsID] = singleGoods;
+        goodsWhetherInserted[_cityID][_goodsID] = true;
+        ids[_cityID].push(_goodsID);
+    }
+
+    function getCityName(uint256 _cityID)
+        public
+        view
+        returns (uint256 cityID, string memory cityName)
+    {
+        City storage city = citys[_cityID];
+        return (city.cityID, city.cityName);
+    }
+
+    function getCityGoods(uint256 _cityID)
+        public
+        view
+        returns (SingleGoods[] memory)
+    {
+        SingleGoods[] memory allGoods = new SingleGoods[](ids[_cityID].length);
+        for (uint256 index = 0; index < ids[_cityID].length; index++) {
+            SingleGoods memory singleGoods;
+            singleGoods.name = citys[_cityID].goods[ids[_cityID][index]].name;
+            singleGoods.price = citys[_cityID].goods[ids[_cityID][index]].price;
+            singleGoods.quantity = citys[_cityID]
+                .goods[ids[_cityID][index]]
+                .quantity;
+            allGoods[index] = singleGoods;
+        }
+        return allGoods;
+    }
+
 }
 
 ```
