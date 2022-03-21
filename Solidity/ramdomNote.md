@@ -8,3 +8,13 @@ internal 和 private 类似，不过， 如果某个合约继承自其父合约�
 external 与 public 类似，只不过这些函数只能在合约之外调用 - 它们不能被合约内的其他函数调用。
 
 ## function 的修饰词，如 payable,view 等，如果没写，则是默认值 non-payable.
+
+## constant view pure 关键字的区别与联系
+
+![](./img/2022-03-20-10-37-32.png)  
+如果函数使用了函数外的状态变量，只能用 view 修饰，使用 pure 修饰会报错。如果没有，则都可以修饰，但用 view 会有 warnning。
+
+## 16 进制 big number 转 10 进制
+
+parseInt(hex, 16)
+其中 hex 代表 16 进制值。
