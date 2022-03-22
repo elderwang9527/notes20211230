@@ -7,3 +7,18 @@
 
 ![](./img/2022-03-20-21-36-21.png)  
 2、我们在使用 v-for 的时候，在 v-for 后添加 v-bind:key="item"
+
+### vue 刷新页面的方法
+
+![](./img/2022-03-21-14-32-20.png)  
+https://www.cnblogs.com/yinn/p/9056731.html  
+注意，还需要在 app.vue 的 data 中设置 isRouterAlive
+
+![](./img/2022-03-21-14-33-55.png)  
+![](./img/2022-03-21-14-34-42.png)
+此外，如果是 dapp，由于存在延迟，还需设置一个定时器，参考教程https://www.cnblogs.com/qwer123dsada/p/14636050.html
+
+### v-for 循环获取 index
+
+https://www.jianshu.com/p/4005aeea0ea1  
+注意三个地方都写 index，而不是不写或者写 this.index
