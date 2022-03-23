@@ -22,3 +22,8 @@ https://www.cnblogs.com/yinn/p/9056731.html
 
 https://www.jianshu.com/p/4005aeea0ea1  
 注意三个地方都写 index，而不是不写或者写 this.index
+
+### computed 计算属性极简实例
+
+![](./img/2022-03-22-11-31-54.png)  
+https://www.cnblogs.com/chaixiaozhi/p/8688820.html
