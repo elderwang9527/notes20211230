@@ -42,3 +42,93 @@ console.log(c)
 ### 函数体里设置如 uint 之类的临时变量，不能加 memory 之类的修饰词。
 
 ![](./img/2022-03-28-22-10-17.png)
+
+---
+
+### 字符串之间不能直接互相对比，要做如图 abi.encode keccak256，对比 hash 值操作
+
+![](./img/2022-03-30-14-08-03.png)
+
+---
+
+### solidity 没有原生取绝对值的方法，但可以自己定义
+
+https://ethereum.stackexchange.com/questions/121107/how-absolute-value-work-in-solidity
+
+```
+function abs(int x) private pure returns (int) {
+    return x >= 0 ? x : -x;
+}
+```
+
+返回值不能写为 uint ，原因见下条
+
+---
+
+### 如果参数是 int，即使知道返回值是非负数，也不能返回 uint。
+
+![](./img/2022-03-30-15-34-39.png)  
+![](./img/2022-03-30-15-34-56.png)
+
+---
+
+### 求平方根，sqrt，无原生方法，自己定义
+
+```
+pragma solidity ^0.4.18;
+contract  MathSqrt {
+  function sqrt(uint x) public pure returns(uint) {
+    uint z = (x + 1 ) / 2;
+    uint y = x;
+    while(z < y){
+      y = z;
+      z = ( x / z + z ) / 2;
+    }
+    return y;
+  }
+}
+
+```
+
+https://learnblockchain.cn/question/60
+
+---
+
+### 正负数相互转换，uint int 转换
+
+When converting var from int to uint:
+
+```
+if(var < 0) {
+    uint(-var);
+}
+else {
+    uint(var);
+}
+```
+
+When converting var from uint to int:
+
+```
+if(var >= uint(-1) {
+    //can't cast - out of range of int max
+}
+else {
+    int(var);
+}
+```
+
+https://ethereum.stackexchange.com/questions/6947/math-operation-between-int-and-uint
+
+```
+     function Int2Uint(int256 _intA) public view returns (uint256) {
+        if (_intA < 0) {
+            return uint256(-_intA);
+        } else {
+            return uint256(_intA);
+        }
+    }
+
+```
+
+function 写法
