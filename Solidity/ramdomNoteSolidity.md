@@ -132,3 +132,9 @@ https://ethereum.stackexchange.com/questions/6947/math-operation-between-int-and
 ```
 
 function 写法
+
+---
+
+### 数组赋值时出现问题，动静态不同，要么用 push，要么定义为静态
+
+![](./img/2022-03-31-14-09-04.png)
