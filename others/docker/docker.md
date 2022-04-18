@@ -1,4 +1,4 @@
-win10上彻底删除docker：https://www.pythonsky.cn/technical-talk/477.html
+## win10 上彻底删除 docker：https://www.pythonsky.cn/technical-talk/477.html
 
 ![](./img/2022-01-08-16-12-33.png)
 ![](./img/2022-01-08-16-12-48.png)
@@ -31,3 +31,16 @@ win10上彻底删除docker：https://www.pythonsky.cn/technical-talk/477.html
     #Get-ItemProperty HKCU:\software\microsoft\windows\currentversion\UFH\SHC | ForEach-Object {Get-ItemProperty $_.PSPath} | Where-Object { $_.ToString().Contains("Docker for Windows.exe") } | Remove-Item -Recurse -Force $_.PSPath
     #Get-ItemProperty HKCU:\software\microsoft\windows\currentversion\UFH\SHC | Where-Object { $(Get-ItemPropertyValue $_) -Contains "Docker" }
 ```
+
+## docker、docker-compose、docker swarm 和 k8s 的区别
+
+![](./img/2022-04-17-16-28-27.png)  
+https://www.jianshu.com/p/2a9ae69c337d
+
+## ubuntu 安装 docker-compose，docker engine
+
+https://docs.docker.com/compose/install/ 提示安装 docker-compose 时要先安装 docekr engine，所以找到此教程 https://docs.docker.com/engine/install/ubuntu/
+
+先 sudo apt-get remove docker docker-engine docker.io containerd runc 删掉可能安装的旧版本
+
+然后 Set up the repository https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository (注意 Install Docker Engine 这一节只做第一步就已经完成安装 docker engine，之后再根据https://docs.docker.com/compose/install/ 即可安装 docker-compose)
