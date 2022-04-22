@@ -1,4 +1,44 @@
-## win10 上彻底删除 docker：https://www.pythonsky.cn/technical-talk/477.html
+## docker 常用命令
+
+https://www.runoob.com/docker/docker-container-usage.html 容器相关  
+https://www.runoob.com/docker/docker-image-usage.html 镜像相关
+
+docker image ls 显示所有 image
+docker container ls 显示所有 container
+docker rmi id 移除 image  
+docker rm id 移除 container  
+docker ps 显示正在运行的容器  
+docker container ls 显示正在运行的容器 （更新的方法）
+docker ps -a 显示所有容器  
+docker container ls 显示正在运行的容器
+docker logs id 查看容器输出内容  
+docker pull \*\*\* 获取 image
+
+以下命令使用 ubuntu 镜像启动一个容器，参数为以命令行模式进入该容器：  
+docker run -it ubuntu /bin/bash  
+-i: 交互式操作。  
+-t: 终端。  
+ubuntu: ubuntu 镜像。  
+/bin/bash：放在镜像名后的是命令，这里我们希望有个交互式 Shell，因此用的是 /bin/bash。  
+要退出终端，直接输入 exit
+
+docker start b750bbbcfd88 启动一个已停止的容器
+
+docker run -itd --name ubuntu-test ubuntu /bin/bash 在大部分的场景下，我们希望 docker 的服务是在后台运行的，我们可以过 -d 指定容器的运行模式。加了 -d 参数默认不会进入容器，想要进入容器需要使用指令 docker exec （下面会介绍到）。
+
+docker stop id 停止容器
+docker restart <容器 ID> 停止的容器可以通过 docker restart 重启：
+
+docker exec：推荐大家使用 docker exec 命令，因为此命令会退出容器终端，但不会导致容器的停止。  
+docker exec -it 243c32535da7 /bin/bash 实例
+
+## docker 里 Image 和 container 区别
+
+Image 和 container 可以看作面向对象思想中的类和对象。container 是 Image 的实例化
+
+## win10 上彻底删除 docker
+
+https://www.pythonsky.cn/technical-talk/477.html
 
 ![](./img/2022-01-08-16-12-33.png)
 ![](./img/2022-01-08-16-12-48.png)
