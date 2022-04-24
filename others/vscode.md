@@ -1,8 +1,7 @@
 ## vscode 预览 markdown，按 ctrl k 后放下 ctrl 再按 v。
 
----
-
 ## vscode 解决 windows 换行 crlf 与 lf 冲突 ^M 问题
+
 https://blog.csdn.net/glorydx/article/details/110958739
 一劳永逸的解决方法
 如果你所有的同事都是使用 windows 系统，
@@ -17,6 +16,7 @@ git config --global core.autocrlf false
 ---
 
 ## 避免 json 注释报错
+
 ![](./img/2022-02-02-01-04-00.png)
 
 sol 文件里出现 import 报错，将 solidity 插件降到 0.0135。直接降可能失败，下载单独的文件，再将其拖入 vscode 的插件栏来安装。
@@ -39,8 +39,8 @@ VSCode 关闭右侧预览功能 缩略图
 
 ---
 
-## 在指定位置查找指定内容       
+## 在指定位置查找指定内容
 
-![](./img/2022-04-01-21-37-24.png)      
+![](./img/2022-04-01-21-37-24.png)
 
----
+## 设置用户代码片段，参照 markdown.md
