@@ -18,6 +18,10 @@ yarn install
 yarn codegen （提取项目中 schema.graphql 定义的 entity，并生成对应的以 typescript 编译的实体 model）  
 yarn build 完成编译，生成 dist 文件夹
 
+![](./img/2022-04-27-16-54-05.png)  
+![](./img/2022-04-27-16-56-02.png)  
+（add，作业答案）schema.graphql 定义了简单实体类型，field 是支持的数据类型，src/mapping 里使用了三个 project.yaml 中定义的方法，分别处理 block，event，extrinsic 数据。
+
 ![](./img/2022-04-17-13-58-25.png)  
 docker-compose pull (需要打开 docker-desktop，不然会报错)
 
@@ -29,6 +33,4 @@ subqlnode 根据用户提供的？？？中的 endpoint 获取链上数据并缓
 最终 subqlquery 和？ graphql engine 访问数据库，让我们通过 playground 和？api 查询这些已经转换的数据。
 
 ![](./img/2022-04-17-14-26-04.png)  
-docker-compose up (会遇到报错，暂时未解决)      
-
-
+docker-compose up (会遇到报错，暂时未解决)

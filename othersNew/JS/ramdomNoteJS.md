@@ -30,3 +30,9 @@ parseInt(3.14159) => 3
 四舍五入 Math.round(3.14159) => 3
 
 ---
+
+## package.json 和 package-lock.json 的区别
+
+https://zhuanlan.zhihu.com/p/343698322    
+package-lock.json 是在运行“npm install”时生成的一个文件，用于记录当前状态下项目中实际安装的各个 package 的版本号、模块下载地址、及这个模块又依赖了哪些依赖。      
+为什么有了 package.json，还需要 package-lock.json 文件呢，当 node_modules 文件夹并不存在或被删除时，需要用到 npm install 重新装载全部依赖时，通过 package-lock.json 可以直接表明下载地址和相关依赖，相对下载速度也更快，也不容易报错。
