@@ -36,4 +36,5 @@ filter, specversion specversion 不同，type 会不同
 ![](./img/2022-04-27-22-51-48.png)  
 上节课中有说，原理是 subqlnode 通过 polkadotapi 在 chain 上获取原始数据，但大多情况下这些数据无法在项目中直接使用。根据业务需求，设置实体样式，方便储存数据，所以使用了 graphql schema 标准。后续还有很多内容，需要时看视频。       
 
-yarn codegen生成
+![](./img/2022-04-28-09-17-32.png)
+yarn codegen生成以typescript构成的实体对象和接口。（看视频   ）
