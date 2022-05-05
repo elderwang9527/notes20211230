@@ -144,3 +144,7 @@ function 写法
 https://learnblockchain.cn/question/3521  
 https://learnblockchain.cn/docs/ethers.js/api-contract.html#override
 ![](./img/2022-05-03-13-25-30.png)
+
+### 如何遍历 mapping 映射
+
+需要新建一个数组，和一个初始为 0 的 uint。每次 mapping 增加内容时也同时给此数组增加内容，uint 加 1。这样就能以 uint 为 length，数组为内容遍历。

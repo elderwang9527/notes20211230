@@ -2,3 +2,8 @@
 
 https://learnblockchain.cn/question/3518  
 ![](./img/2022-05-02-23-00-59.png)
+
+### vue 通过同样方法点击不同 id，console.log 不同 id 的方法。
+
+![](./img/2022-05-04-14-33-03.png)  
+![](./img/2022-05-04-14-33-24.png)

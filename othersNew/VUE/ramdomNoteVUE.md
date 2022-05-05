@@ -6,7 +6,9 @@
 我们可以更改 vetur 配置 ：vscode 文件->首选项->设置->搜索 vetur.validation.Template，将这一项去掉就可以了
 
 ![](./img/2022-03-20-21-36-21.png)  
-2、我们在使用 v-for 的时候，在 v-for 后添加 v-bind:key="item"
+2、我们在使用 v-for 的时候，在 v-for 后添加 v-bind:key="item"  
+![](./img/2022-05-04-15-21-30.png)  
+(add,新增更好的写法，其中还加入了自动生成的 style)
 
 ---
 
