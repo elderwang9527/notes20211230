@@ -10,4 +10,6 @@
 parenthesis，圆括号
 
 ![](./img/2022-03-18-17-22-37.png)  
-用 calldata 可以节省 gas，如图，如果最后一个 memory 换成 calldata，就省去了一个复制的步骤，节省了 gas。（需要它被 passing 到其它 function 时才起作用，因为避免了复制的步骤。）
+用 calldata 可以节省 gas，如图，如果最后一个 memory 换成 calldata，就省去了一个复制的步骤，节省了 gas。（需要它被 passing 到其它 function 时才起作用，因为避免了复制的步骤。）  
+add(有时只能用 memory，用 calldata 会报错。)  
+reviewed 2022/05/05
