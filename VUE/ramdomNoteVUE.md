@@ -3,6 +3,8 @@
 https://learnblockchain.cn/question/3518  
 ![](./img/2022-05-02-23-00-59.png)
 
+add(https://www.cnblogs.com/lixiyong/p/15799784.html，大概此文中第三种错误)
+
 ### vue 通过同样方法点击不同 id，console.log 不同 id 的方法。
 
 ![](./img/2022-05-04-14-33-03.png)  
