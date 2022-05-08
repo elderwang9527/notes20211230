@@ -60,3 +60,19 @@ config 文件仍使用~/.ssh/id_rsa_one 方式，且注意修改掉多余的空�
 ![](./img/2022-02-28-10-28-53.png)  
 注意使用第二个库 git clone 时：git clone git@two.github.com:two 的用户名/learngit.git （截图中 “two 的用户名”前多了个空格）。  
 git clone 下来后设置 git config user.name "two_name" ; git config user.email "two_email"
+
+### github 使用技巧
+
+1，按 s 直接到搜索框
+
+2，搜索界面左下角，高级搜索，还有更多搜索选项需要查 github 官方文档
+
+3，仓库内 t 键盘既可以搜索所有文件，不用依次进入文件夹
+
+4， 按 l 跳转到某行，在某行左侧三点处可以生成该行永久链接
+
+5，ctrl k 打开命令面板
+
+6，仓库界面按。键，生成网页版 vscode
+
+7，项目地址前加上 gitpod.io/#/前缀，自动装依赖，生成 docker 镜像等。

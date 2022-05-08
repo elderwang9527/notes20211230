@@ -148,3 +148,8 @@ https://learnblockchain.cn/docs/ethers.js/api-contract.html#override
 ### 如何遍历 mapping 映射
 
 需要新建一个数组，和一个初始为 0 的 uint。每次 mapping 增加内容时也同时给此数组增加内容，uint 加 1。这样就能以 uint 为 length，数组为内容遍历。
+
+### ethers.js 如何监听事件 event
+
+![](./img/2022-05-07-19-58-40.png)  
+https://ethereum.stackexchange.com/questions/87643/how-to-listen-to-contract-events-using-ethers-js
