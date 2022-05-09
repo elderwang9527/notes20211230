@@ -76,3 +76,12 @@ git clone 下来后设置 git config user.name "two_name" ; git config user.emai
 6，仓库界面按。键，生成网页版 vscode
 
 7，项目地址前加上 gitpod.io/#/前缀，自动装依赖，生成 docker 镜像等。
+
+### github 搜索完全一致的代码
+
+如搜索 provider.on 显示结果均为 provider on 之类的。参考此答案，由于 github 搜索机制，带有一些标点符号都会被忽略。但可以使用 google 如下所示搜索。
+
+https://stackoverflow.com/questions/26433561/how-to-search-on-github-to-get-exact-string-matches-including-special-character
+
+"provider.on" site::https://github.com  
+"provider.on" site::https://gist.github.com

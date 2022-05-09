@@ -153,3 +153,11 @@ https://learnblockchain.cn/docs/ethers.js/api-contract.html#override
 
 ![](./img/2022-05-07-19-58-40.png)  
 https://ethereum.stackexchange.com/questions/87643/how-to-listen-to-contract-events-using-ethers-js
+
+### 前端调用如遇错误等怎么报错给前端
+
+try{ ... } catch (err) { alert(err.data.message); }
+
+...处填上主代码。
+
+### solidity for 循环，和 js 类似，但是需要声明 uint i。
