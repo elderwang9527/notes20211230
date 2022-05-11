@@ -10,3 +10,7 @@ add(https://www.cnblogs.com/lixiyong/p/15799784.html，大概此文中第三种�
 
 ![](./img/2022-05-04-14-33-03.png)  
 ![](./img/2022-05-04-14-33-24.png)
+
+### vue刷新页面的方法
+https://blog.csdn.net/yaxuan88521/article/details/123307992     
+![](./img/2022-05-10-18-30-10.png)      
