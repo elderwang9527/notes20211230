@@ -54,3 +54,8 @@ https://blog.csdn.net/yaxuan88521/article/details/123307992
 2，main.js 里引入并用到 vue 实例中。
 
 以上所有代码无法缓存设置，缓存设置的方法在新增加的提交上显示，使用 localstorage 替代 cookies。
+
+### 移入移出事件，mouseover 和 mouseout， mouseenter 和 mouseleave
+![](./img/2022-05-15-09-41-27.png)      
+https://blog.csdn.net/weixin_43899065/article/details/117675803
+一般情况下都不推荐使用 mouseover 与 mouseout 最好使用 mouseleave 与 mouseenter，因为不冒泡。
