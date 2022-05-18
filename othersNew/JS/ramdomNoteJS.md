@@ -42,3 +42,18 @@ package-lock.json 是在运行“npm install”时生成的一个文件，用于
 ![](./img/2022-05-08-19-16-38.png)
 
 ## 有时候以为是数字的类型其实是字符串，就容易出现错误，可以 parseInt(string)转换为数字
+
+## localStorage 用法。
+
+https://www.csdn.net/tags/NtTaAgysNzM1NTQtYmxvZwO0O0OO0O0O.html  
+localStorage.aaa = 'bbb';
+
+//删除某个
+localStorage.removeItem("hou")
+
+//删除所有
+localStorage.clear();
+
+实际使用中，似乎需要在 localStorage 前加 window。
+
+add, localStorage 似乎无法存储布尔值，false，true 会被视为字符串，可能会引起一些 bug。可用 aaa = bbb == "true" 这样来赋值 bbb 给 aaa。
