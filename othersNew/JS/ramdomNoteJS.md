@@ -57,3 +57,23 @@ localStorage.clear();
 实际使用中，似乎需要在 localStorage 前加 window。
 
 add, localStorage 似乎无法存储布尔值，false，true 会被视为字符串，可能会引起一些 bug。可用 aaa = bbb == "true" 这样来赋值 bbb 给 aaa。
+
+## 一个数组删除另一个数组中拥有的所有元素
+
+![](./img/2022-05-18-14-06-56.png)
+
+## 判断某数组是否是另一数组的子集。
+
+![](./img/2022-05-18-18-02-28.png)  
+https://blog.csdn.net/yimawujiang/article/details/88722195
+
+```
+var arr=[1,2,3,null,NaN,undefined,Infinity,'']
+var brr=[0,1,2,3,4,null,NaN,undefined,Infinity,'']
+if(!Array.prototype.subsetTo){
+	Array.prototype.subsetTo=function(arr){
+		return this.every(v=>arr.includes(v))
+	}
+}
+console.log(arr.subsetTo(brr))//ture
+```
