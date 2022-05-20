@@ -77,3 +77,8 @@ if(!Array.prototype.subsetTo){
 }
 console.log(arr.subsetTo(brr))//ture
 ```
+
+## continue break return 区别
+
+https://www.cnblogs.com/itgezhu/p/11226852.html  
+简单来说 continue 单次循环不计，break 之后所有循环不计，return 不仅终止之后所有循环，还结束循环体之外函数体内之后的所有代码
