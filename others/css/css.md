@@ -33,3 +33,24 @@ https://www.runoob.com/w3cnote/flex-grammar.html
 
 https://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html  
 网格布局（Grid）是最强大的 CSS 布局方案。比 flex 更好。
+
+## map 标签和 area 元素单图多区域点击
+
+https://www.jb51.net/css/359062.html  
+![](./img/2022-05-22-19-05-55.png)
+
+## 图片，链接标签各元素的意思
+
+href：要转到的链接  
+target：转过去的方式  
+alt：当图片无法显示时显示的文字  
+titile：鼠标在图片上时显示的文字
+
+### target
+
+target="\_blank":在新窗口中浏览新的页面。
+target="\_self":在同一个窗口打开新的页面。
+target="\_parent":在父窗口中打开新的页面。（页面中使用框架才有用）
+target="\_top" :以整个浏览器作为窗口显示新页面。（突破了页面框架的限制）
+
+没有指定<a>的 target 属性值时，默认是"\_blank"
