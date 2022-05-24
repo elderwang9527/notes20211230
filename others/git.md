@@ -20,6 +20,9 @@ git config user.email "email"
 
 git config --global alias.aaa '!f() { git add -A . && git commit -m "$@" && git push origin main; }; f'
 
+git config --global alias.zzz '!f() { git add -A . && git commit -m "$@";}; f'
+add，只提交到本地，不上传到 github。git zzz （有错误，暂不知道什么原因）
+
 楼上提到了 git revert。其实，git reset --hard 和 git revert 都可以实现“回滚代码”。但区别在于：
 
 git revert 会把你的本地变成 A -> B -> C -> D -> E。其中，E 干的事儿是删除 C 和 D。这样做的好处在于，你 git push origin master 就不会有上面的报错了。但，历史线上还是会保留 C 和 D 这两个 commit。如果使用这个命令，记得要 add 然后 commit。
