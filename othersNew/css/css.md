@@ -32,7 +32,9 @@ https://www.runoob.com/w3cnote/flex-grammar.html
 2009 年，W3C 提出了一种新的方案—-Flex 布局，可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能。
 
 https://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html  
-网格布局（Grid）是最强大的 CSS 布局方案。比 flex 更好。
+网格布局（Grid）是最强大的 CSS 布局方案。比 flex 更好。  
+![](./img/2022-05-25-16-02-27.png)
+add，grid 水平居中的方法，左右各添加一个无用的 div，宽度为 1fr。
 
 ## map 标签和 area 元素单图多区域点击
 
@@ -54,3 +56,5 @@ target="\_parent":在父窗口中打开新的页面。（页面中使用框架�
 target="\_top" :以整个浏览器作为窗口显示新页面。（突破了页面框架的限制）
 
 没有指定<a>的 target 属性值时，默认是"\_blank"
+
+## style 内联样式 中 backgroundcolor 的写法：style="backgroundColor:"

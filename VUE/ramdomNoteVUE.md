@@ -67,3 +67,25 @@ https://blog.csdn.net/weixin_43899065/article/details/117675803
 https://blog.csdn.net/qq_40649432/article/details/116589017  
 ![](./img/2022-05-18-11-29-18.png)  
 注意第二种方法需要加入 mounted() {window.Vue = this;},
+
+### vue 引入 iconfont 图标
+
+https://www.jianshu.com/p/99e3fe476138  
+![](./img/2022-05-25-13-34-27.png)  
+官网使用帮助里可看到，单色最好选 font class，多色就选 symbol，但有些浏览器不支持。
+
+### 按照条件设置 class 或 style
+
+![](./img/2022-05-25-18-20-41.png)
+
+```
+<div :class="`fonts ${read && 'isread'}`">123</div>
+```
+
+使用``在里面进行判断,默认都拥有 fonts 的样式，如果 read 为 true 则显示 isread 的样式，如果为 false 则不显示
+
+![](./img/2022-05-25-18-33-16.png)  
+https://blog.csdn.net/happy81997/article/details/103582699
+
+![](./img/2022-05-25-19-45-51.png)
+style 的案例。

@@ -21,7 +21,8 @@ git config user.email "email"
 git config --global alias.aaa '!f() { git add -A . && git commit -m "$@" && git push origin main; }; f'
 
 git config --global alias.zzz '!f() { git add -A . && git commit -m "$@";}; f'
-add，只提交到本地，不上传到 github。git zzz （有错误，暂不知道什么原因）
+add，只提交到本地，不上传到 github。git zzz （有错误，暂不知道什么原因）  
+add, 合并 git add 和 git commit -m 只用写为 git commit -am 即可。
 
 楼上提到了 git revert。其实，git reset --hard 和 git revert 都可以实现“回滚代码”。但区别在于：
 
