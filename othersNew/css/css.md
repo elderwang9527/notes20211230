@@ -58,3 +58,7 @@ target="\_top" :以整个浏览器作为窗口显示新页面。（突破了页�
 没有指定<a>的 target 属性值时，默认是"\_blank"
 
 ## style 内联样式 中 backgroundcolor 的写法：style="backgroundColor:"
+
+## 让 div 的背景透明而文字不透明的方法。以及给 div 增加圆润边角。
+
+![](./img/2022-05-26-11-02-11.png)

@@ -84,3 +84,28 @@ https://www.cnblogs.com/itgezhu/p/11226852.html
 简单来说 continue 单次循环不计，break 之后所有循环不计，return 不仅终止之后所有循环，还结束循环体之外函数体内之后的所有代码
 
 ## 后台输出的是[object Object]，看不到具体的内容，此时只需在前端页面上利用 JSON.stringify()将该传输数据转换成与 json 文件中格式一致就可以解决问题。
+
+## 计算字符串长度
+
+```
+calculatebyte( sTargetStr ) {
+     var sTmpStr, sTmpChar;
+     var nOriginLen = 0;
+     var nStrLength = 0;
+
+     sTmpStr = new String(sTargetStr);
+     nOriginLen = sTmpStr.length;
+
+     for ( var i=0 ; i < nOriginLen ; i++ ) {
+       sTmpChar = sTmpStr.charAt(i);
+
+       if (escape(sTmpChar).length > 4) {
+               nStrLength += 2;
+       } else if (sTmpChar!='/r') {
+               nStrLength ++;
+       }
+     }
+     return nStrLength;
+   },
+
+```
