@@ -89,3 +89,9 @@ https://blog.csdn.net/happy81997/article/details/103582699
 
 ![](./img/2022-05-25-19-45-51.png)
 style 的案例。
+
+### vue css 使用 data 中的变量
+
+![](./img/2022-05-27-16-13-17.png)  
+https://blog.csdn.net/qq_37899622/article/details/120546933  
+实际使用中，可以不单独写 data color 和 methods setUI，直接使用 this.$refs.UI.style.setProperty('--color', this.color) ，this.color 换成具体数值就行
