@@ -44,3 +44,7 @@ VSCode 关闭右侧预览功能 缩略图
 ![](./img/2022-04-01-21-37-24.png)
 
 ## 设置用户代码片段，参照 markdown.md
+
+## 切换中英文
+
+ctrl shift p，display language
