@@ -109,3 +109,19 @@ calculatebyte( sTargetStr ) {
    },
 
 ```
+
+## 保留小数点后几位，整数自动补零。
+
+```
+ getFloat(number, n) {
+      n = n ? parseInt(n) : 0;
+      if (n <= 0) {
+        return Math.round(number);
+      }
+      number = Math.round(number * Math.pow(10, n)) / Math.pow(10, n); //四舍五入
+      number = Number(number).toFixed(n); //补足位数
+      return number;
+    },
+```
+
+![](./img/2022-06-07-09-28-24.png)
