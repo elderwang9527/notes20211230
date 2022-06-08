@@ -94,14 +94,14 @@ style 的案例。
 
 ![](./img/2022-05-27-16-13-17.png)  
 https://blog.csdn.net/qq_37899622/article/details/120546933  
-实际使用中，可以不单独写 data color 和 methods setUI，直接使用 this.$refs.UI.style.setProperty('--color', this.color) ，this.color 换成具体数值就行
+实际使用中，可以不单独写 data color 和 methods setUI，直接使用 this.$refs.UI.style.setProperty('--color', this.color) ，this.color 换成具体数值就行  
+add，有些情况下似乎无效，暂未找出原因。
 
 ### 误区，行内样式不应该驼峰命名，而是应该横线命名，vscode 保存时可能将大写转为小写导致出错
 
 ![](./img/2022-06-02-15-55-09.png)
 
+### 同一个方法传不同参数
 
-### 同一个方法传不同参数        
-![](./img/2022-06-05-14-20-35.png)      
-![](./img/2022-06-05-14-21-05.png)      
-
+![](./img/2022-06-05-14-20-35.png)  
+![](./img/2022-06-05-14-21-05.png)
