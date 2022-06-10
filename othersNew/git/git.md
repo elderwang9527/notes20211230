@@ -89,3 +89,10 @@ https://stackoverflow.com/questions/26433561/how-to-search-on-github-to-get-exac
 
 "provider.on" site::https://github.com  
 "provider.on" site::https://gist.github.com
+
+### 修改源地址，.git config里直接修改。     
+
+### git 遇到网络迟缓或timeout报错     
+https://www.csdn.net/tags/NtzaggxsMTM1MC1ibG9n.html     
+https://www.ipaddress.com/          
+mac更新hosts命令：sudo killall -HUP mDNSResponder;say DNS cache has been flushed

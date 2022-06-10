@@ -28,8 +28,10 @@ VSCode 关闭右侧预览功能 缩略图
 
 ## vscode 快捷键设置
 
-切换侧边栏，默认为 ctrl b，换为 ctrl b 加 ctrl b  
+切换侧边栏，默认为 ctrl b，换为 ctrl b 加 ctrl b  （add，mac里叫主侧栏）
 切换活动栏，默认未设置，换位 ctrl b 加 ctrl v
+
+add，关闭右侧缩略图，预览功能。设置，搜索editor.minimap.enabled。取消勾选。
 
 ---
 
@@ -49,3 +51,6 @@ add，需要先输入内容，再框选指定区域，再点击此处。
 ## 切换中英文
 
 ctrl shift p，display language
+
+## vscode 显示/设置隐藏文件夹       
+设置里搜exclude，修改对应后缀。
