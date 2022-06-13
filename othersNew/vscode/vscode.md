@@ -54,3 +54,14 @@ ctrl shift p，display language
 
 ## vscode 显示/设置隐藏文件夹       
 设置里搜exclude，修改对应后缀。
+
+## 不同系统下找到settings.json          
+You can change the settings.json from your user preferences. This changes are global. Therefore it will affect all of your projects. Here are 2 ways to reach that global settings.json file.
+
+File -> Preferences -> Settings -> Extensions -> Scroll down and find "Edit in settings.json"
+Or in these paths in your OS
+Windows %APPDATA%\Code\User\settings.json
+macOS $HOME/Library/Application Support/Code/User/settings.json
+Linux $HOME/.config/Code/User/settings.json     
+
+https://supunkavinda.blog/vscode-editing-settings-json

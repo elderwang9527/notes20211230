@@ -72,4 +72,7 @@ end tell
 ```
 
 ### iTerm2 设置主题        
-https://iterm2colorschemes.com/ 选择主题，点击主题名获得新页面，将新页面所有内容保存着aaa.itermcolors文件里。进入iterm，cmd i，colors，color presets，import。选择aaa文件。之后aaa文件会出现在color presets里，勾选即可。
+https://iterm2colorschemes.com/ 选择主题，点击主题名获得新页面，将新页面所有内容保存着aaa.itermcolors文件里。进入iterm，cmd i，colors，color presets，import。选择aaa文件。之后aaa文件会出现在color presets里，勾选即可。		
+
+### iTerm2 快捷键
+cmd d，垂直分屏，跟系统显示桌面快捷键冲突，取消掉系统快捷键。

@@ -9,9 +9,12 @@
 ![](img/pasteImage-2022-06-11-17-10-56.png)     
 set4个坐标
 
-### 打开iterm2并进入指定目录实例。
-automator.app，新建文稿，快速操作，运行applescript。粘贴以下代码。
+
+### 快捷键打开iterm2并进入指定目录实例。
+automator.app，新建文稿，快速操作，运行applescript。粘贴以下代码。cmd保存，键盘，快捷键，服务，通用，点选并配置快捷键即可。
+
 ```
+--此段代码有bug
 tell application "iTerm"
 	activate
 end tell
@@ -30,3 +33,18 @@ end tell
 keystroke里不能输入数字，用key code代替。
 key code 列表。
 https://eastmanreference.com/complete-list-of-applescript-key-codes
+
+
+```
+--使用这段代码
+tell application "iTerm"
+	reopen
+	activate
+	tell current window
+		--create tab with default profile  
+		tell current session
+			write text "cd ~/Desktop/01workspace"
+		end tell
+	end tell
+end tell
+```

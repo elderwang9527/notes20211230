@@ -96,3 +96,5 @@ https://stackoverflow.com/questions/26433561/how-to-search-on-github-to-get-exac
 https://www.csdn.net/tags/NtzaggxsMTM1MC1ibG9n.html     
 https://www.ipaddress.com/          
 mac更新hosts命令：sudo killall -HUP mDNSResponder;say DNS cache has been flushed
+
+### 回退到了之前版本，想再回退到最新版本。使用git reflog，找到最新版本，但只能本地使用。
