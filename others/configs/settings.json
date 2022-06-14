@@ -1,0 +1,53 @@
+{
+  "workbench.colorTheme": "Default Dark+",
+  "editor.fontLigatures": null,
+  "files.autoSave": "afterDelay",
+
+  "pasteImage.path": "${currentFileDir}/img",
+  "pasteImage.basePath": "${currentFileDir}",
+  "pasteImage.forceUnixStyleSeparator": true,
+  "pasteImage.prefix": "/",
+  "pasteImage.insertPattern": "${imageSyntaxPrefix}./img/${imageFileName}${imageSyntaxSuffix}",
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+
+  "editor.formatOnSave": true,
+  "solidity.formatter": "prettier", // This is the default so it might be missing.
+  "[solidity]": {
+    "editor.defaultFormatter": "JuanBlanco.solidity"
+  },
+  "files.associations": {
+    "*.json": "jsonc"
+  },
+  "extensions.autoUpdate": false,
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "emmet.preferences": {},
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "editor.minimap.enabled": false,
+  "[markdown]": {
+    "editor.quickSuggestions": true
+  },
+  "vetur.format.defaultFormatter.css": "none",
+  "vetur.format.defaultFormatter.scss": "none",
+  "vetur.format.defaultFormatter.less": "none",
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "[git-commit]": {
+  
+    "editor.rulers": [
+      72
+    ],
+    "workbench.editor.restoreViewState": false
+  },
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": ""
+}
