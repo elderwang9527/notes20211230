@@ -81,15 +81,8 @@ tell application "iTerm"
 end tell
 ```
 
-### iTerm2 设置主题
+### permission denied 错误
 
-https://iterm2colorschemes.com/ 选择主题，点击主题名获得新页面，将新页面所有内容保存着 aaa.itermcolors 文件里。进入 iterm，cmd i，colors，color presets，import。选择 aaa 文件。之后 aaa 文件会出现在 color presets 里，勾选即可。
-
-### iTerm2 快捷键
-
-cmd d，垂直分屏，跟系统显示桌面快捷键冲突，取消掉系统快捷键。
-
-### permission denied错误		
-sudo chmod -R 777 某一目录		
--R 是指级联应用到目录里的所有子目录和文件		
-777 是所有用户都拥有最高权限		
+sudo chmod -R 777 某一目录
+-R 是指级联应用到目录里的所有子目录和文件
+777 是所有用户都拥有最高权限

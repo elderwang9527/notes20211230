@@ -8,3 +8,5 @@ nrm test 测速各个源
 ### mac npm permission deny 报错
 
 sudo su，之后 npm 命令后加上--unsafe-perm
+
+### 很多 npm install 无法安装的依赖，使用 yarn add 能安装
