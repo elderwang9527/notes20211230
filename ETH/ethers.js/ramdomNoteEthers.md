@@ -31,16 +31,20 @@ async function functionName() {
     provider
   );
   const wallet3 = await new ethers.Wallet(
-    "0x5de4111afa1a4b94908f83103eb1f1706367c2e68ca870fc3fb9a804cdab365a"
+    "0x5de4111afa1a4b94908f83103eb1f1706367c2e68ca870fc3fb9a804cdab365a",
+    provider
   );
   const wallet4 = await new ethers.Wallet(
-    "0x7c852118294e51e653712a81e05800f419141751be58f605c371e15141b007a6"
+    "0x7c852118294e51e653712a81e05800f419141751be58f605c371e15141b007a6",
+    provider
   );
   const wallet5 = await new ethers.Wallet(
-    "0x47e179ec197488593b187f80a00eb0da91f1b9d0b13f8733639f19c30a34926a"
+    "0x47e179ec197488593b187f80a00eb0da91f1b9d0b13f8733639f19c30a34926a",
+    provider
   );
   const wallet6 = await new ethers.Wallet(
-    "0x8b3a350cf5c34c9194ca85829a2df0ec3153be0318b5e2d3348e872092edffba"
+    "0x8b3a350cf5c34c9194ca85829a2df0ec3153be0318b5e2d3348e872092edffba",
+    provider
   );
   const marketaddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
   //为避免import，require等冲突，此脚本需放在非项目目录里，但要将项目目录里的artifacts文件夹拷贝到此脚本目录下
