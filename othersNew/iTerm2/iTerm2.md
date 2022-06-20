@@ -18,4 +18,17 @@ add，以上方法只能临时设置，如需设置默认颜色组，还需在 g
 
 ### iTerm2 快捷键
 
-cmd d，垂直分屏，跟系统显示桌面快捷键冲突，取消掉系统快捷键。
+cmd d，垂直分屏，跟系统显示桌面快捷键冲突，取消掉系统快捷键。  
+cmd k, clear  
+Option + Command + / 显示近期打开过的目录。
+
+crl k, 或 esc D，删除当前光标右边所有。(add,crl k 全删，esc d，部分删)
+crl w, 删除左边。
+⌘ + ⌥ + B 按键回放。
+sft cmd m, mark  
+sft cmd j, to mark.
+
+### 使用技巧
+
+Smart Selection  
+在 iTerm2 中，双击选中，三击选中整行，四击智能选中（智能规则可配置：https://iterm2.com/documentation-smart-selection.html），可以识别网址，引号引起的字符串，邮箱地址等。
