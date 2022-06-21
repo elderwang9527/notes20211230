@@ -125,3 +125,62 @@ calculatebyte( sTargetStr ) {
 ```
 
 ![](./img/2022-06-07-09-28-24.png)
+
+## 延迟执行代码，settimeout 正确写法，自建 sleep 函数
+
+```
+function delay() {
+  setTimeout(() => {
+    console.log("aaa");
+  }, 1000);
+}
+async function main() {
+  await delay();
+  await delay();
+  await delay();
+}
+main();
+
+```
+
+以上，会延迟一秒直接打印三次。
+
+```
+
+function delay() {
+  return new Promise((resolve) => {
+    console.log("aaa");
+    setTimeout(resolve, 3000);
+  });
+}
+async function main() {
+  await delay();
+  await delay();
+  await delay();
+}
+main();
+
+```
+
+以上正确
+
+```
+function sleep(time) {
+  var timeStamp = new Date().getTime();
+  var endTime = timeStamp + time;
+  while (true) {
+    if (new Date().getTime() > endTime) {
+      return;
+    }
+  }
+}
+
+async function main() {
+  console.log("aaa");
+  sleep(3000);
+  console.log("bbb");
+}
+main();
+```
+
+更简便的方法，自建 sleep 函数。
