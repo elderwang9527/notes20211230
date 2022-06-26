@@ -184,3 +184,7 @@ main();
 ```
 
 更简便的方法，自建 sleep 函数。
+
+### 获得 1-n 之间的随机数，包括 1 和 n。
+
+Math.floor(Math.random() \* n) + 1;

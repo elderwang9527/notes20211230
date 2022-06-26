@@ -28,10 +28,10 @@ VSCode 关闭右侧预览功能 缩略图
 
 ## vscode 快捷键设置
 
-切换侧边栏，默认为 ctrl b，换为 ctrl b 加 ctrl b  （add，mac里叫主侧栏）
+切换侧边栏，默认为 ctrl b，换为 ctrl b 加 ctrl b （add，mac 里叫主侧栏）
 切换活动栏，默认未设置，换位 ctrl b 加 ctrl v
 
-add，关闭右侧缩略图，预览功能。设置，搜索editor.minimap.enabled。取消勾选。
+add，关闭右侧缩略图，预览功能。设置，搜索 editor.minimap.enabled。取消勾选。
 
 ---
 
@@ -52,16 +52,20 @@ add，需要先输入内容，再框选指定区域，再点击此处。
 
 ctrl shift p，display language
 
-## vscode 显示/设置隐藏文件夹       
-设置里搜exclude，修改对应后缀。
+## vscode 显示/设置隐藏文件夹
 
-## 不同系统下找到settings.json          
+设置里搜 exclude，修改对应后缀。
+
+## 不同系统下找到 settings.json
+
 You can change the settings.json from your user preferences. This changes are global. Therefore it will affect all of your projects. Here are 2 ways to reach that global settings.json file.
 
 File -> Preferences -> Settings -> Extensions -> Scroll down and find "Edit in settings.json"
 Or in these paths in your OS
 Windows %APPDATA%\Code\User\settings.json
 macOS $HOME/Library/Application Support/Code/User/settings.json
-Linux $HOME/.config/Code/User/settings.json     
+Linux $HOME/.config/Code/User/settings.json
 
 https://supunkavinda.blog/vscode-editing-settings-json
+
+## 搜索文件名而不是搜索文件里的内容，cmd p，ctrl p。cmd shift p 则是搜索命令。
