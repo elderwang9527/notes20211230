@@ -169,3 +169,12 @@ try{ ... } catch (err) { alert(err.data.message); }
 ### 刚部署合约后执行第一次操作，合约可能不能正常执行，可能是因为此时合约还没有余额，无法支付手续费。最好创建合约后先不调用合约方法，不然可能导致第一笔交易损失。先给合约地址转入少量费用，再执行合约调用。
 
 ### 智能合约编写习惯，修改了变量值后，就一定要报出事件，来向链外汇报所做的修改。
+
+### 引入 console.log
+
+https://learnblockchain.cn/article/1371  
+当项目文件夹不是 vscode 当前根目录时会报错，修改：  
+// import "hardhat/console.sol";  
+import "../node_modules/hardhat/console.sol";  
+https://ethereum.stackexchange.com/questions/111568/hardhat-console-cant-be-resolved-in-vscode  
+add，此时报错只是 vscode 报错，hardhat 编译不会报错。而如果使用以上方法，vscode 不报错，但编译会报错。
