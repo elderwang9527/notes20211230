@@ -32,3 +32,14 @@ sft cmd j, to mark.
 
 Smart Selection  
 在 iTerm2 中，双击选中，三击选中整行，四击智能选中（智能规则可配置：https://iterm2.com/documentation-smart-selection.html），可以识别网址，引号引起的字符串，邮箱地址等。
+
+### tmux integration
+
+![](./img/2022-06-29-22-36-12.png)
+
+### 安装 tmux，以及 tmux 不会中断任务原理。
+
+https://zhuanlan.zhihu.com/p/106300185
+
+![](./img/2022-06-29-22-39-44.png)  
+add，screen 方式也有不会中断任务特性。暂时先用 screen。
