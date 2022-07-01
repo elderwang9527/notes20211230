@@ -43,3 +43,7 @@ https://zhuanlan.zhihu.com/p/106300185
 
 ![](./img/2022-06-29-22-39-44.png)  
 add，screen 方式也有不会中断任务特性。暂时先用 screen。
+
+### 访达界面打开 iterm2
+
+顶部显示，显示路径栏（底部出现路径），路径右键，服务，new iterm2

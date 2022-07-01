@@ -86,3 +86,7 @@ end tell
 sudo chmod -R 777 某一目录
 -R 是指级联应用到目录里的所有子目录和文件
 777 是所有用户都拥有最高权限
+
+### 剪切
+
+cmd c，cmd option v
