@@ -23,6 +23,9 @@ cmd t：在当前终端新增一个页面。
 cmd 上：访达中到上级目录。（可以访达，显示，分栏。则更方便）
 cmd shift z: 恢复撤销。与 win10 里 ctrl y 一样。
 cmd shift .: 访达中显示隐藏 隐藏文件。
+cmd opt 左右键：不同 tab 左右切换。control tab 只能单方向切换。
+cmd shift m: chrome 不同用户之间切换
+cmd ·：据说能切换同一程序不同窗口，但在 chrome 实验无效。
 
 ### mac 启动拖选
 

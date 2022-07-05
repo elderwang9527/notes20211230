@@ -68,3 +68,12 @@ target="\_top" :以整个浏览器作为窗口显示新页面。（突破了页�
 ![](./img/2022-06-02-15-39-52.png)  
 background: -webkit-linear-gradient(bottom,hsla(0,0%,59%,.15),hsla(0,0%,59%,0),white) no-repeat;  
 https://dandelioncloud.cn/article/details/1482539430694158337
+
+## 字体相关解释
+
+![](./img/2022-07-04-19-55-24.png)  
+http://zh.html.net/tutorials/css/lesson4.php
+
+## 解决鼠标移动到文字上变光标
+
+cursor: default;
