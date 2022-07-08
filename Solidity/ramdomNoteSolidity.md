@@ -178,3 +178,17 @@ https://learnblockchain.cn/article/1371
 import "../node_modules/hardhat/console.sol";  
 https://ethereum.stackexchange.com/questions/111568/hardhat-console-cant-be-resolved-in-vscode  
 add，此时报错只是 vscode 报错，hardhat 编译不会报错。而如果使用以上方法，vscode 不报错，但编译会报错。
+
+### 限制输入字符串长度
+
+![](./img/2022-07-07-09-43-23.png)
+
+```
+
+ function testStringLen(string memory testword) public returns (uint256) {
+console.log(encode(string));
+return 1;
+}
+```
+
+能在大致范围控制，但无法精确控制
