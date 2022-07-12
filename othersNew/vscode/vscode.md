@@ -69,3 +69,9 @@ Linux $HOME/.config/Code/User/settings.json
 https://supunkavinda.blog/vscode-editing-settings-json
 
 ## 搜索文件名而不是搜索文件里的内容，cmd p，ctrl p。cmd shift p 则是搜索命令。
+
+## 批量替换空格，需开启正则表达式
+
+![](./img/2022-07-11-13-14-38.png)
+
+## 无鼠标 mac vscode，cmd option 上下可批量增加光标
