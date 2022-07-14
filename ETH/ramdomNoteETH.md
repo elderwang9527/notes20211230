@@ -8,3 +8,9 @@
 ● 当 nonce 太大，交易会一直处于队列之中，直到补齐开始 nonce 到那个值之间的 nonce，那么交易依旧可以被执行。
 
 https://zhuanlan.zhihu.com/p/312917514
+
+### 自动在 metamask 添加网络：https://chainlist.org/zh
+
+### 以太坊 eth 单位换算
+
+![](./img/2022-01-12-11-30-46.png)
