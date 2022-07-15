@@ -64,3 +64,7 @@ async function functionName() {
 functionName();
 
 ```
+
+## ethers 获得的结构体数组，直接整个获取得到的整个数据不符合 js 格式。但可以通过数组下标.属性名的方式获得具体数据。
+
+![](./img/2022-07-14-16-05-26.png)
