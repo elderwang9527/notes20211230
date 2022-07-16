@@ -68,3 +68,19 @@ functionName();
 ## ethers 获得的结构体数组，直接整个获取得到的整个数据不符合 js 格式。但可以通过数组下标.属性名的方式获得具体数据。
 
 ![](./img/2022-07-14-16-05-26.png)
+
+## 获取某地址余额的脚本
+
+`
+async function getBal() {
+const { ethers } = require("ethers");
+
+const provider = new ethers.providers.JsonRpcProvider();
+const balance = await provider.getBalance(
+"0x5FbDB2315678afecb367f032d93F642f64180aa3"
+);
+console.log(parseInt(balance, 10));
+}
+getBal();
+
+`

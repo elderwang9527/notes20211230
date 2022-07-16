@@ -192,3 +192,20 @@ return 1;
 ```
 
 能在大致范围控制，但无法精确控制
+
+### hardhat: Error: Transaction reverted: function selector was not recognized and there's no fallback function
+
+![](./img/2022-07-15-14-22-25.png)  
+原因是未写回退函数，写入以下就行。
+
+```
+    event Log(string func, address sender, uint256 value, bytes data);
+
+    fallback() external payable {
+        emit Log("fallback", msg.sender, msg.value, msg.data);
+    }
+
+    receive() external payable {
+        emit Log("receive", msg.sender, msg.value, "");
+    }
+```
