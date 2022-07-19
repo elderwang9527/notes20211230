@@ -1,4 +1,3 @@
-安装最新的版本，之后一切默认就行，不必按照视频来。
+安装和配置不完全依赖此教程。不然之后可能出现引入 pandas 时的 numpy 依赖报错问题。
 
-![](./img/2022-07-17-16-56-04.png)
-add,不能一切默认，不然可能用的不是 python3，而是 python1。另外初次安装没有 previously。所以只能选 new，且 base interpreter 选择 which python3 后出现的路径
+解决方法，安装 anaconda，安装完成后 source ~/.bash_profile。然后 prcharm 新建项目时选择 conda 环境，打开项目后需要安装依赖时 cmd , 选择 project：\*\*\* ，python interpreter，再点击加号即可新增依赖。
