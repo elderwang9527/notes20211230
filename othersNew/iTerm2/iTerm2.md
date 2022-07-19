@@ -53,3 +53,7 @@ add，screen 方式也有不会中断任务特性。暂时先用 screen。
 
 ![](./img/2022-07-03-09-24-48.png)  
 cmd opt b
+
+### 关掉 "command + /" find cursor
+
+cmd / 和 pycharm 冲突，不能直接在 iterm 设置里关闭，需要在系统偏好，服务，iterm 里关闭。

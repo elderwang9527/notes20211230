@@ -93,3 +93,5 @@ sudo chmod -R 777 某一目录
 ### 剪切
 
 cmd c，cmd option v
+
+### esc 键失效，删除掉 ishot 截图程序
