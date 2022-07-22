@@ -24,3 +24,7 @@ c，复制。
 便捷获取配置文件所在路径的命令：jupyter notebook --generate-config
 
 修改默认启动文件夹：code /Users/accountname/.jupyter/jupyter_notebook_config.py，然后 c.NotebookApp.notebook_dir = '' 引号里输入路径。
+
+## 清空输出
+
+内核，重启&&清空输出
