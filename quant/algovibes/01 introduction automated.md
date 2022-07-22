@@ -22,7 +22,10 @@ Open.plot() 可以画出折线图
 具体交易策略代码，未显示部分为-1。  
 cumulret = cumulative return 查看近 30 分钟资产的表现。  
 pct_change = percentage change 显示百分比变化  
-cumprod 累计连乘
+cumprod 累计连乘  
+cumulret[-1] 应该是最新一次 cumulret 的数据的意思。  
+while true: 死循环的意思，只有遇到 break 才结束  
+想知道购买资产后怎么表现，所以就用发起 order 得到的 ts 来过滤。过滤为只显示所有 dataframe 中大于 order 的 ts。loc 大约是 location 的意思。
 
 ![](./img/2022-07-20-16-26-38.png)  
 执行交易，返回结果时两个交易，第一个买，第二个卖。
