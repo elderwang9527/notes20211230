@@ -9,3 +9,7 @@ https://stackoverflow.com/questions/70957311/how-can-i-install-python-binance-pa
 在 anaconda，envirment 中移到 base 处，显示其路径/opt/anaconda3。  
 pycharm 新环境中 location 选择 /opt/anaconda3/bin/python3  
 conda excute 默认选择 /opt/anaconda3/bin/conda
+
+## 命令行切换到指定 anaconda 虚拟环境
+
+conda activate ???
