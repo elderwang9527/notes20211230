@@ -9,6 +9,7 @@ https://justmysocks.xyz/justmysocks-v2ray/
 ～/.zshrc 中设置如下：
 alias setproxy="export ALL_PROXY=socks5://127.0.0.1:1080"
 alias unsetproxy="unset ALL_PROXY"
+add，经测试，用 alias 方法有时无效，所以直接使用命令。
 
 之后需要翻墙时先连接好 v2ray 再输入 setproxy。此方法仅针对当前窗口，重启 iTerm2 后代理自动失效。默认端口可能是 1080 或 1086。
 curl https://twitter.com 测试，有返回值代表成功。  
