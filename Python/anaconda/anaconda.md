@@ -10,6 +10,12 @@ https://stackoverflow.com/questions/70957311/how-can-i-install-python-binance-pa
 pycharm 新环境中 location 选择 /opt/anaconda3/bin/python3  
 conda excute 默认选择 /opt/anaconda3/bin/conda
 
+add，以上为安装 anaconda 时选择为所有用户安装时的路径，如安装时一直默认选项，即为单个用户安装，则路径不同。
+
+## pycharm 选择 anaconda 中的虚拟环境。
+
+file，new project，previously configured interpreter。三个点符号，conda envirment，conda executable 里填写 where conda 后输出的路径。interpreter 里填写鼠标放在 anaconda 环境时显示的路径并结尾加/bin/python3.??。或者 conda activate 转到指定环境后再 where python3 获取到路径并将最终 3 改为 3.？？（暂不确定是否选 3 就行还是需要 3.？？）
+
 ## 命令行切换到指定 anaconda 虚拟环境
 
 conda activate ???
@@ -60,3 +66,7 @@ Output in format: Requested package -> Available versions
 add，可能是因为 python-binance，不支持 3.10，只支持 5，6，7
 
 add，用 3.7 又会出现 numpy 错误，而且即使用 3.7 登陆 jupyter，sys.version 仍显示 3.10，可能是因为 3.7 时 jupyter 还未支持的原因。太复杂，暂停使用 jupyter，尝试 pycharm
+
+## jupyter 使用 anaconda 指定环境流程
+
+见 jupyter.md

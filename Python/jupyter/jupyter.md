@@ -28,3 +28,10 @@ c，复制。
 ## 清空输出
 
 内核，重启&&清空输出
+
+## jupyter 使用 anaconda 指定环境流程
+
+有很多种途径，但是只有以下途径未遇到 bug
+conda create -n test37 python=3.7  
+anconda 桌面 home install jupyter，并从桌面 launch jupyter  
+之后依赖从桌面安装，如安装不成功则从 jupyter 页面里 pip install 安装 或类似 pip install --upgrade dateparser==1.1.1 更新

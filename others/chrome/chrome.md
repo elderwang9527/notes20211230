@@ -23,3 +23,5 @@ https://blog.csdn.net/u012107143/article/details/100735550
 
 https://baijiahao.baidu.com/s?id=1718999146383122471&wfr=spider&for=pc
 f12，cmd shift p（ctl shift p），full（Capture full size screenshot）。
+
+### 快速切换不同的 chrome 用户，cmd shift m
