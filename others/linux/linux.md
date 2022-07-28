@@ -15,3 +15,9 @@ npm install -g yarn
 ### ls -a 查看所有文件，包含隐藏文件
 
 ### 每个命令中间输入-y 可以省略安装中输入 Y 的步骤，未测试
+
+### linux 架构选择
+
+https://blog.csdn.net/m0_51197424/article/details/124926395
+![](./img/2022-07-27-11-06-17.png)
+linux 安装软件时可能需要选择架构，输入 arch 就能知道当前 linux 架构

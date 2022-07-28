@@ -70,3 +70,30 @@ add，用 3.7 又会出现 numpy 错误，而且即使用 3.7 登陆 jupyter，s
 ## jupyter 使用 anaconda 指定环境流程
 
 见 jupyter.md
+
+## conda activate envirName 报错：Your shell has not been properly configured to use 'conda activate'.
+
+https://blog.csdn.net/qq_35203425/article/details/103223892
+
+vps ubuntu 安装 anaconda 后命令行未显示 base，就使用 conda activate envirName 会报错：Your shell has not been properly configured to use 'conda activate'，
+此时需要闲 source activate 或 conda activate 显示了 base 后，才能执行 conda activate envirName。而不是按错误提示 conda init shellName(因不知道 shellname 是什么，所以没测试此方法)。
+
+## vps ubuntu 装 anaconda，并让本地电脑访问 jupyter
+
+wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
+https://repo.anaconda.com/archive 可在这里找具体版本，arch 命令找当前 vps 架构如 x86_64 等。
+
+bash Anaconda3-2022.05-Linux-x86_64.sh
+
+q，退出许可证，yes，yes。
+
+source ~/.bashrc，之后如果 conda command not found。则在~/.bashrc 里添加 export PATH=$PATH:/root/anaconda3/bin 再~/.bashrc，再 source activate 激活 base 环境
+
+conda update -n base -c defaults conda
+可通过此命令升级到最新版
+
+jupyter notebook --generate-config 可以得知 config 文件保存路径，修改此文件
+
+c.NotebookApp.ip = 'localhost' 为 c.NotebookApp.ip = '0.0.0.0'，注意另起一行，且无缩进
+
+开启 vps 端口，具体见 vps.md。之后即可通过本地电脑访问 vpsip:port 访问 jupyter
