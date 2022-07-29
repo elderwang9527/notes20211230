@@ -21,3 +21,8 @@ npm install -g yarn
 https://blog.csdn.net/m0_51197424/article/details/124926395
 ![](./img/2022-07-27-11-06-17.png)
 linux 安装软件时可能需要选择架构，输入 arch 就能知道当前 linux 架构
+
+### Linux chattr 命令详解：修改文件系统的权限属性
+
+![](./img/2022-07-28-14-04-35.png)
+http://c.biancheng.net/view/874.html
