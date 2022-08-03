@@ -27,6 +27,8 @@ cmd opt 左右键：不同 tab 左右切换。control tab 只能单方向切换�
 cmd shift m: chrome 不同用户之间切换
 cmd ·：据说能切换同一程序不同窗口，但在 chrome 实验无效。
 
+opt shift h:中文输入法下切换中文标点,英文标点
+
 ### mac 启动拖选
 
 设置，辅助功能，鼠标与触控板，触控板选项，启用拖移。
