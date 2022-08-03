@@ -14,3 +14,16 @@ https://zhuanlan.zhihu.com/p/444428820
 ### vultr vps 开放端口
 
 点击 products，不点具体实例，点上方 firewall，加号 addfiregroup，加号，protocol 选 tcp，指定端口，左侧 link instance。最后也许还要在 vps 里 ufw allow 端口号。
+
+### WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY! Host key for ...... has changed and you have requested strict checking.
+
+![](./img/2022-08-03-15-58-03.png)
+
+code ~/.ssh/known_hosts  
+删掉对应的 ip
+
+### 查看 vps cpu 内存占用率等
+
+https://blog.csdn.net/aili2460/article/details/102316848
+方法一似乎要下载 python，使用方法二：
+wget -qO- bench.sh | bash
