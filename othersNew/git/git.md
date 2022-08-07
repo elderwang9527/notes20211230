@@ -90,11 +90,16 @@ https://stackoverflow.com/questions/26433561/how-to-search-on-github-to-get-exac
 "provider.on" site::https://github.com  
 "provider.on" site::https://gist.github.com
 
-### 修改源地址，.git config里直接修改。     
+### 修改源地址，.git config 里直接修改。
 
-### git 遇到网络迟缓或timeout报错     
-https://www.csdn.net/tags/NtzaggxsMTM1MC1ibG9n.html     
-https://www.ipaddress.com/          
-mac更新hosts命令：sudo killall -HUP mDNSResponder;say DNS cache has been flushed
+### git 遇到网络迟缓或 timeout 报错
 
-### 回退到了之前版本，想再回退到最新版本。使用git reflog，找到最新版本，但只能本地使用。
+https://www.csdn.net/tags/NtzaggxsMTM1MC1ibG9n.html  
+https://www.ipaddress.com/  
+mac 更新 hosts 命令：sudo killall -HUP mDNSResponder;say DNS cache has been flushed
+
+### 回退到了之前版本，想再回退到最新版本。使用 git reflog，找到最新版本，但只能本地使用。
+
+### git clone 不使用 github 提供的目录，自定义目录，后面接目录名就行。
+
+git clone https://github.com/substrate-developer-hub/substrate-node-template ./node-template-ori
