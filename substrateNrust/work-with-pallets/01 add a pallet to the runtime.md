@@ -7,9 +7,13 @@ https://github.com/substrate-developer-hub/substrate-docs/blob/665a30bfd4718b7fb
 （此节以上还有很多内容，省略。）
 
 新增 pallet 需要在配置文件 cargo.toml 中添加一些信息。  
-Substrate runtime 编译为 native platform binary 和 WebAssembly (Wasm) binary 两种形式。所以 Cargo.toml 拥有两种重要信息。  
-1，pallets 作为 runtime 的依赖项被引入，包括要导入的 pallet 的位置和版本。  
-2，在编译原生 Rust 二进制文件时，每个 pallet 中应该启用的特性 features。oooh
+Substrate runtime 编译为 native platform binary 和 WebAssembly (Wasm) binary 两种形式。所以 Cargo.toml 拥有两种重要信息。
+
+- The pallets to be imported as dependencies for the runtime, including the location and version of the pallets to import.
+- The features in each pallet that should be enabled when compiling the native Rust binary. By enabling the standard (std) feature set from each pallet, you can compile the runtime to include functions, types, and primitives that would otherwise be missing when you build the WebAssembly binary.
+
+- 1，pallets 作为 runtime 的依赖项被引入，包括要导入的 pallet 的位置和版本。
+- 2，在编译原生 Rust 二进制文件时，每个 pallet 中应该启用的特性 features。通过从每个托盘启用 standard (std) feature set, you can compile the runtime to include functions, types, and primitives , 否则在创建 WebAssembly binary 时 会缺失。
 
 相关资料 oooe
 
