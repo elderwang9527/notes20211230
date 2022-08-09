@@ -14,6 +14,10 @@ https://docs.substrate.io/tutorials/get-started/build-local-blockchain/
 
 https://docs.substrate.io/tutorials/get-started/simulate-network/
 
+## substrate 宏相关
+
+https://crates.parity.io/frame_support/attr.pallet.html
+
 # rust 相关
 
 ## rust by example
