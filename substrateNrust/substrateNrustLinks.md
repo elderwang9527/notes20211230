@@ -31,3 +31,8 @@ https://rustwiki.org/zh-CN/rust-by-example/
 https://doc.rust-lang.org/book/
 
 https://kaisery.github.io/trpl-zh-cn/title-page.html
+
+## rust 语言圣经及其练习题
+
+https://course.rs/about-book.html  
+https://zh.practice.rs/why-exercise.html
