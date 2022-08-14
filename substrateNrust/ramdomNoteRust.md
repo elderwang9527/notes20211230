@@ -27,7 +27,7 @@ rust 安装了 rust-analyzer 后可能仍无法用 ctrl s 格式化，则按 alt
 ## 2022/08/11
 
 ![](./img/2022-08-11-17-18-57.png)  
-方法里的&self 实际是 self:&self 的语法糖。所以似乎里面用 self 或&self 都行。
+方法里的&self 实际是 self:&Self 的语法糖。所以似乎里面用 self 或&self 都行。
 
 ## 0812
 

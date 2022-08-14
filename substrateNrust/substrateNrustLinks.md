@@ -36,3 +36,7 @@ https://kaisery.github.io/trpl-zh-cn/title-page.html
 
 https://course.rs/about-book.html  
 https://zh.practice.rs/why-exercise.html
+
+## std 标准库
+
+https://doc.rust-lang.org/std/index.html
