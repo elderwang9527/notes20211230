@@ -1,6 +1,6 @@
 omit，easy，hard ，pic
 oooe 内容简单或不重要省略  
-oooh 内容困难省略
+oooh 内容困难但似乎知识点不重要省略，需要时再看
 ooop 直接看截图，不用文字说明
 
 mark，important，hard  
@@ -27,3 +27,8 @@ iiic，incomplete，截图是非完整的，用于比较容易或不重要的知
 do,not，important
 dddn，需要重做的题，因为此题是没有自己解出来，而是看的答案。
 dddi，需要重做的题，虽然自己做出来了，但题很重要，需要复习下。
+
+截图里  
+ooo，origin，原题  
+sss，self，自己的答案  
+aaa，answer，官方答案
