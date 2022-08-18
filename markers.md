@@ -1,4 +1,4 @@
-omit，easy，hard ，pic
+omit，easy，hard ，pic，title
 oooe 内容简单或不重要省略  
 oooh 内容困难但似乎知识点不重要省略，需要时再看
 ooop 直接看截图，不用文字说明
@@ -11,7 +11,7 @@ mmmh 难点知识 mark
 
 later，far，near，ask
 lllf 暂时没理解，短期内很难理解，希望以后理解的知识点。  
-llln 暂时没理解，希望近期可以理解的内容，尽量不用 llln 而用 llla  
+llln 暂时没理解，但可能学了之后内容后会理解的内容
 llla 暂时没理解，尽快去问
 
 review
@@ -32,3 +32,5 @@ dddi，需要重做的题，虽然自己做出来了，但题很重要，需要�
 ooo，origin，原题  
 sss，self，自己的答案  
 aaa，answer，官方答案
+
+N，and，截图的内容包含多个段落时，文字分隔各段落名
