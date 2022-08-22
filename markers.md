@@ -9,10 +9,11 @@ mmmh 难点知识 mark
 
 ？？？ 不确定理解是否正确
 
-later，far，near，ask
+later，far，near，ask ，glance
 lllf 暂时没理解，短期内很难理解，希望以后理解的知识点。  
 llln 暂时没理解，但可能学了之后内容后会理解的内容
-llla 暂时没理解，尽快去问
+llla 暂时没理解，尽快去问  
+lllg 暂时可能不会使用到的内容，只是大致浏览，没有仔细看，需要时再仔细看
 
 review
 rrr 易理解但重要的知识点，需要笔记记下来且复习。
