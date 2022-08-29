@@ -4,9 +4,11 @@ oooh 内容困难但似乎知识点不重要省略，需要时再看
 ooop 直接看截图，不用文字说明
 ot 截图名称已经现实在截图中，就不再写了
 
-mark，important，hard  
+mark，important，hard ，ask，undecide
 mmmi 重要知识 mark  
-mmmh 难点知识 mark
+mmmh 难点知识 mark  
+mmma 需要去尽快请教的问题
+mmmu 先标记，但还不确定是要去请教还是暂时略过的知识点，之后再确定
 
 ？？？ 不确定理解是否正确
 
@@ -39,4 +41,3 @@ N，and，截图的内容包含多个段落时，文字分隔各段落名
 
 extra  
 eee，用于表明该段笔记非当前视频或文字教程里面的一部分，但提供了相关知识点。
-
