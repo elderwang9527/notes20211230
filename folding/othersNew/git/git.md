@@ -103,3 +103,7 @@ mac 更新 hosts 命令：sudo killall -HUP mDNSResponder;say DNS cache has been
 ### git clone 不使用 github 提供的目录，自定义目录，后面接目录名就行。
 
 git clone https://github.com/substrate-developer-hub/substrate-node-template ./node-template-ori
+
+### 默认初始分支设置为 main
+
+git config --global init.defaultBranch main
