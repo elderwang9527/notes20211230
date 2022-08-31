@@ -4,11 +4,12 @@ oooh 内容困难但似乎知识点不重要省略，需要时再看
 ooop 直接看截图，不用文字说明
 ot 截图名称已经现实在截图中，就不再写了
 
-mark，important，hard ，ask，undecide
+mark，important，hard ，ask，undecide，notimportant
 mmmi 重要知识 mark  
 mmmh 难点知识 mark  
 mmma 需要去尽快请教的问题
 mmmu 先标记，但还不确定是要去请教还是暂时略过的知识点，之后再确定
+mmmn 没全搞懂，但是不搞懂应该对理解整体没有影响。
 
 ？？？ 不确定理解是否正确
 

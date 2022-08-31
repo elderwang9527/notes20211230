@@ -79,3 +79,13 @@ https://supunkavinda.blog/vscode-editing-settings-json
 ## 不回退代码，但让代码自动更新到跟以前某次提交完全一样，即可以保留中间所有的提交。
 
 各种方法似乎都有问题，最好是复制当前的代码到另一个文件夹，并将该文件夹回退到指定版本，再用该文件夹到文件复制到原文件夹，但.git 不复制，最后再原文件夹新增提交即可。
+
+## 多项目或文件夹运行
+
+1，Project Manager 插件
+很多项目时才需要，暂时不用
+
+2，ctrl r 切换
+
+3，window.nativeTabs  
+似乎只有 mac 才行，设置里搜索 window.nativeTabs 开启，之后窗口，新建标签页即可。
