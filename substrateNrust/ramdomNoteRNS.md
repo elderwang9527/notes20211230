@@ -38,3 +38,14 @@ add，注意这里 impl 定义方法时用的是 self 而不是&self，其实 se
 
 ![](./img/2022-08-12-14-07-48.png)  
 范型 impl 时，不仅可以\<T>还可以类似\<f32>这样针对具体类型
+
+## 220901
+
+### rust 的 from 和 into
+
+![](./img/2022-09-01-13-56-25.png)  
+https://www.cnblogs.com/jiangbo4444/p/15626930.html  
+基础类型可以通过 as 关键字进行转换，如果是自定义类型，则通过 From 和 Into 进行转换。  
+如 impl from for Atype, 则 Atype::from(Btype) = x，x 也为 Atype。  
+如果实现了 From，则自动获得了 Into，不过需要手动指明类型。  
+let x: Atype = Btype.into();
