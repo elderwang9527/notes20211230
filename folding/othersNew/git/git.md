@@ -107,3 +107,7 @@ git clone https://github.com/substrate-developer-hub/substrate-node-template ./n
 ### 默认初始分支设置为 main
 
 git config --global init.defaultBranch main
+
+### git push 时报错 Support for password authentication was removed on August 13, 2021
+
+此时 git push 时并不是输入密码，而是粘贴 Personal access tokens，https://github.com/settings/tokens，注意此token会定期expired，更新后git push 时需重新粘贴此 token。
