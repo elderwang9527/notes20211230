@@ -89,3 +89,7 @@ https://supunkavinda.blog/vscode-editing-settings-json
 
 3，window.nativeTabs  
 似乎只有 mac 才行，设置里搜索 window.nativeTabs 开启，之后窗口，新建标签页即可。
+
+## 删除所有注释
+
+安装 Remove Comments 插件 按住 CTRL + SHIFT + P 选中 Remove All Comments 就可以删除代码中所有注释了。
