@@ -111,3 +111,8 @@ git config --global init.defaultBranch main
 ### git push 时报错 Support for password authentication was removed on August 13, 2021
 
 此时 git push 时并不是输入密码，而是粘贴 Personal access tokens，https://github.com/settings/tokens，注意此token会定期expired，更新后git push 时需重新粘贴此 token。
+
+### github 精准搜索
+
+实例："type KittyIndex" path:runtime/src language:rust filename:lib.rs NOT excludedword
+另外搜索时间限制似乎有问题，加了就搜不到代码了，可能不是限制的代码，而是 commit 名或描述名？？？？ddda
