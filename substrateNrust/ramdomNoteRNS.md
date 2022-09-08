@@ -130,3 +130,18 @@ rustup default nightly
 add  
 rustup show 查看当前使用的版本。
 rustup check 查看当前版本和最新版本
+
+### rust 缓存相关，cache，.cargo, Blocking waiting for file lock
+
+![](./img/2022-09-07-11-56-19.png)
+https://zhuanlan.zhihu.com/p/471229377
+
+### map_err
+
+此方法仅作用于 Result 类型，并允许将失败的值从 E 转换为其他类型的 H，但仅当值为 Err 值时才有效。map_err 不兼容于 Option 类型，因为使用 None 执行任何操作都是无意义的。
+
+应用场景应该是如果结果为 OK，则直接使用它的值，不做更多处理。而如果 err 了，不报错，而是返回另一个值时用到这个。
+
+### 不显示节点输出，而是将输出存在一个文件上。
+
+./target/release/node-template --dev 2>&1 | tee /filepath/output.log 用这条命令来跑，输出日志都在 output.log 文件里了，想找什么在里面找就行了。
