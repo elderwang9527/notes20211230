@@ -21,3 +21,7 @@ add，mac 下是 cmd shift p，不是输入>Preferences: Configure User Snippets
 
 }
 ```
+
+![](./img/2022-09-08-11-02-21.png)  
+add220908，这种全局方法似乎对其它语言如 rust 无效，可如图点击，之后选择单独语言设置。  
+或直接命令行 code ~/Library/Application\ Support/Code/User/snippets/rust.json

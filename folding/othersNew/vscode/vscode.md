@@ -93,3 +93,7 @@ https://supunkavinda.blog/vscode-editing-settings-json
 ## 删除所有注释
 
 安装 Remove Comments 插件 按住 CTRL + SHIFT + P 选中 Remove All Comments 就可以删除代码中所有注释了。
+
+## 在特定工作区禁用某插件
+
+找到该插件，点击 disable 下拉框，disable（workspace）

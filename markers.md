@@ -7,7 +7,7 @@ ot 截图名称已经现实在截图中，就不再写了
 mark，important，hard ，ask，undecide，notimportant，small，far
 mmmi 重要知识  
 不再使用 mmmh 难点知识  
-减少右手食指使用，2220903 开始 mmm 变为 ddd。
+减少右手食指使用，220903 开始 mmm 变为 ddd。
 ddda mmma 需要去尽快请教的问题
 dddu mmmu 先标记，但还不确定是要去请教还是暂时略过的知识点，之后再确定
 dddn mmmn 没全搞懂，但是不搞懂应该对理解整体没有影响。
