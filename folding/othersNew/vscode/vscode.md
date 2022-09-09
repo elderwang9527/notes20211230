@@ -97,3 +97,20 @@ https://supunkavinda.blog/vscode-editing-settings-json
 ## 在特定工作区禁用某插件
 
 找到该插件，点击 disable 下拉框，disable（workspace）
+
+## 对比文件夹内容插件 Compare Folders
+
+命令行：COMPARE_FOLDERS=DIFF code ./folder1 ./folder2
+settings.json 设置
+
+```
+  "compareFolders.excludeFilter": [
+    "**/node_modules",
+    "**/.svn",
+    "**/.git",
+    "**/target"
+  ],
+  "compareFolders.ignoreAllWhiteSpaces": true,
+  "compareFolders.ignoreEmptyLines": true,
+  "compareFolders.ignoreLineEnding": true
+```
