@@ -117,3 +117,9 @@ git config --global init.defaultBranch main
 实例："type KittyIndex" path:runtime/src language:rust filename:lib.rs NOT excludedword
 另外搜索时间限制似乎有问题，加了就搜不到代码了，可能不是限制的代码，而是 commit 名或描述名  
 add220910,可以通过搜索页面右上角 search option 按时间排序搜索结果。
+
+### git 删除某一指定 commit
+
+![](./img/2022-09-10-16-36-41.png)
+https://www.cnblogs.com/rxysg/p/15672210.html  
+此方法有问题，本地显示有问题，且 push 到远程时会出错。

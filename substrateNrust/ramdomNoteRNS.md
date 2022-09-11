@@ -145,3 +145,11 @@ https://zhuanlan.zhihu.com/p/471229377
 ### 不显示节点输出，而是将输出存在一个文件上。
 
 ./target/release/node-template --dev 2>&1 | tee /filepath/output.log 用这条命令来跑，输出日志都在 output.log 文件里了，想找什么在里面找就行了。
+
+### add220910 substrate 中，mock.rs 文件可能类似于 runtime/librs，是用来模拟 runtime 的。所以它们很多代码类似。比如都要 impl pallet_name::Config for Runtime/Test
+
+### add220910 assert_noop!
+
+Evaluate an expression, assert it returns an expected Err value and that runtime storage has not been mutated (i.e. expression is a no-operation).
+计算一个表达式，断言它返回一个预期的 Err 值，并且运行时存储没有被改变(即表达式是一个无操作)。
+断言表达式是无效操作，没改变链上存储。
