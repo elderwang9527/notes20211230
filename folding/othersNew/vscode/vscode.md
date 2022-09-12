@@ -114,3 +114,7 @@ settings.json 设置
   "compareFolders.ignoreEmptyLines": true,
   "compareFolders.ignoreLineEnding": true
 ```
+
+## 搜索文件夹
+
+cmd p，foldname/，注意最后加了/
