@@ -14,7 +14,12 @@
 
 ![](./img/2022-09-11-09-56-41.png)  
 松散耦合  
-比如 currency 这 trait，定义了如 transfer 方法。但其它 pallet 在使用 native token 时，不一定需要和 balance pallet 绑定在一起（可能 Currency trait 定义在的 balance pallet 里？？？？），它也可以使用其它实现了 transfer 的 pallet。这样就可以在其它 pallet 里定义一个动态的类型（这里是 type mycurrency），此 mycurrency type 实现了 Currency trait。但实现 trait 的模块不一定是 balances，要看 runtime 勾结时绑定的是哪个。这样就实现了松散的耦合。ddda
+比如 currency 这 trait，定义了如 transfer 方法。但其它 pallet 在使用 native token 时，不一定需要和 balance pallet 绑定在一起（可能 Currency trait 定义在的 balance pallet 里？？？？），它也可以使用其它实现了 transfer 的 pallet。这样就可以在其它 pallet 里定义一个动态的类型（这里是 type mycurrency），此 mycurrency type 实现了 Currency trait。但实现 trait 的模块不一定是 balances，要看 runtime 勾结时绑定的是哪个。这样就实现了松散的耦合。dfdda
+
+![](./img/2022-09-12-16-56-09.png)  
+--=  
+![](./img/2022-09-12-17-29-46.png)  
+add220912，接上节，视频没太看明白，所以搜了官网教程。在群里得到了解答。对于不太明白的代码先依样画葫芦，以后再更深的理解。
 
 ![](./img/2022-09-11-10-19-57.png)  
 实际中如果需要，也可以使用强关联，紧密耦合。  
