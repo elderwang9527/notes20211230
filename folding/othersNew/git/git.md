@@ -123,3 +123,5 @@ add220910,可以通过搜索页面右上角 search option 按时间排序搜索�
 ![](./img/2022-09-10-16-36-41.png)
 https://www.cnblogs.com/rxysg/p/15672210.html  
 此方法有问题，本地显示有问题，且 push 到远程时会出错。
+
+### 本地 git 提交数少于远程提交数（可能是回退到了之前的 commit），想 push 到远程，又不想合并远程内容的话，就 git push origin main -f。但这样远程多余的 commit 会消失。

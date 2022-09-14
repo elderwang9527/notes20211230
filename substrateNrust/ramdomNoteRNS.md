@@ -153,3 +153,12 @@ https://zhuanlan.zhihu.com/p/471229377
 Evaluate an expression, assert it returns an expected Err value and that runtime storage has not been mutated (i.e. expression is a no-operation).
 计算一个表达式，断言它返回一个预期的 Err 值，并且运行时存储没有被改变(即表达式是一个无操作)。
 断言表达式是无效操作，没改变链上存储。
+
+## 220913
+
+### 关于 kitties-advance5 中的 pallet-randomness-collective-flip
+
+![](./img/2022-09-13-11-46-22.png)
+如图，在 pallet/cargotoml 中它是放在 dev-dependencies 里的。因为 kitties/lib 里只是定义了 randomeness，实际上没有用到它来实现 randomness，而是在 runtime/lib 需要 pallet-randomness-collective-flip 来具体实现 type randomness。所以 pallet-randomness-collective-flip 放在了 runtime/cargotoml 里的 dependencies 里，而放在 kitties/cargotoml 里的 dev-dependencies 原因是 mock.rs 需要用到它。
+
+### 官网文档似乎很多搜索不准确，可能是版本的问题，最好直接在本地 substrate 库里搜 name = "create-name"

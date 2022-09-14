@@ -118,3 +118,8 @@ settings.json 设置
 ## 搜索文件夹
 
 cmd p，foldname/，注意最后加了/
+
+## 快捷键
+
+ctrl -，go back  
+ctrl shift -， forward
