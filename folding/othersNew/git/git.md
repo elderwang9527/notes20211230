@@ -125,3 +125,9 @@ https://www.cnblogs.com/rxysg/p/15672210.html
 此方法有问题，本地显示有问题，且 push 到远程时会出错。
 
 ### 本地 git 提交数少于远程提交数（可能是回退到了之前的 commit），想 push 到远程，又不想合并远程内容的话，就 git push origin main -f。但这样远程多余的 commit 会消失。
+
+### 更改 git remote origin，也就是 git clone 一个项目后，可以将新增的 commit 上传到自己新建的库
+
+首先在 github 新建一个 repo  
+git remote remove origin    
+git remote add origin git@github.com:rusty-peilin/new-repo.git
