@@ -5,13 +5,13 @@ ooop 直接看截图，不用文字说明
 ooov 忽略笔记，看视频。
 ot 截图名称已经现实在截图中，就不再写了
 
-mark，important，hard ，ask，undecide，notimportant，small，far
+mark，important，hard ，ask，undecide，need，small，far
 mmmi 重要知识  
 不再使用 mmmh 难点知识  
 减少右手食指使用，220903 开始 mmm 变为 ddd。
 ddda mmma 需要去尽快请教的问题
 dddu mmmu 先标记，但还不确定是要去请教还是暂时略过的知识点，之后再确定
-dddn mmmn 没全搞懂，但是不搞懂应该对理解整体没有影响。
+dddn mmmn 较难理解，且目前理解意义不大，需要理解时才认真学的知识点
 ddds mmms 小问题，不急着弄清楚，合适的机会再问  
 dddf mmmf 难度较大，较长时间后才需搞懂的问题
 
