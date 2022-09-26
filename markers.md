@@ -1,9 +1,10 @@
-omit，easy，hard ，pic，title，video
+omit，easy，hard ，pic，title，video，not
 oooe 内容简单或不重要省略  
 oooh 内容困难但似乎知识点不重要省略，需要时再看
 ooop 直接看截图，不用文字说明  
 ooov 忽略笔记，看视频。
-ot 截图名称已经现实在截图中，就不再写了
+ooot 截图名称已经现实在截图中，就不再写了  
+ooon 截图内容与所做笔记无关，只是需要做笔记的时候视频刚好显示到此处
 
 mark，important，hard ，ask，undecide，need，small，far
 mmmi 重要知识  

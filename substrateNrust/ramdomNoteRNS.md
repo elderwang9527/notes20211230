@@ -119,7 +119,7 @@ rustup self update
 
 rustup install nightly
 
-指定版本
+安装指定版本
 
 rustup install nightly-2018-07-18
 
@@ -130,6 +130,8 @@ rustup default nightly
 add  
 rustup show 查看当前使用的版本。
 rustup check 查看当前版本和最新版本
+
+add220925 查看所有 rustc release 版本 https://github.com/rust-lang/rust/blob/master/RELEASES.md
 
 ### rust 缓存相关，cache，.cargo, Blocking waiting for file lock
 
