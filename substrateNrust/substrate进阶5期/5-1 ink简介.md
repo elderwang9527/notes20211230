@@ -3,7 +3,7 @@
 ![](./img/2022-09-25-00-42-26.png)  
 --=  
 ![](./img/2022-09-25-00-43-31.png)  
-此次用 4.0.0alpha 版本
+此次用 4.0.0alpha 版本  
 ink 是 rust 写的 dsl，能编译成 wasm，此 wasm 能在 substrate 上运行  
 rust 已有各种库，只要这些库能编译成 wasm，都能拿给 ink 用，这是相比 solidity，move 等的优点。如能原生的解析 json 文件，实现 zk 等
 

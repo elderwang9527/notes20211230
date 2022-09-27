@@ -129,5 +129,5 @@ https://www.cnblogs.com/rxysg/p/15672210.html
 ### 更改 git remote origin，也就是 git clone 一个项目后，可以将新增的 commit 上传到自己新建的库
 
 首先在 github 新建一个 repo  
-git remote remove origin    
+git remote remove origin  
 git remote add origin git@github.com:rusty-peilin/new-repo.git
