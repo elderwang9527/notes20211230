@@ -16,3 +16,15 @@ curl https://twitter.com 测试，有返回值代表成功。
 add, curl https://twitter.com 有时候无结果，用 curl https://www.youtube.com 测试。
 
 https://www.jianshu.com/p/0470d0dc3e64
+
+add220929
+https://github.com/Fndroid/clash_for_windows_pkg/releases  
+或 https://github.com/rusty-peilin/clash4window 下载
+然后  
+![](./img/2022-09-29-17-10-48.png)  
+最后 general port 里还要输入个随机 port，就行了  
+订阅链接可选  
+https://miru.cloud//auth/register  
+https://portal.shadowsocks.nz/  
+第一个试了，第二个没试过  
+这样的好处是像 lets vpn 那样可选很多线路，且终端也能翻墙
