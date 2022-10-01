@@ -28,3 +28,5 @@ https://miru.cloud//auth/register
 https://portal.shadowsocks.nz/  
 第一个试了，第二个没试过  
 这样的好处是像 lets vpn 那样可选很多线路，且终端也能翻墙
+add  
+重启后 port 可能会变成其它值导致无法翻墙，手动设置为上次的 port 值即可
