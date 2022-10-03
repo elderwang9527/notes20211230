@@ -123,3 +123,11 @@ cmd p，foldname/，注意最后加了/
 
 ctrl -，go back  
 ctrl shift -， forward
+
+## 221002
+
+## 合并 windows 为 tabs
+
+window =》merge all window
+
+## code -all/-a . 在当前 tab 添加文件夹的形式，而不是新增 window 的形式
