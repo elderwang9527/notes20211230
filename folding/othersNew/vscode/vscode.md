@@ -128,6 +128,38 @@ ctrl shift -， forward
 
 ## 合并 windows 为 tabs
 
-window =》merge all window
+window =》merge all window  
+将 merge all window 设置为了 cmd option e  
+将 next window tab 设置为了 cmd e cmd e
 
 ## code -all/-a . 在当前 tab 添加文件夹的形式，而不是新增 window 的形式
+
+## 221003
+
+## 修改 tab 颜色
+
+![](./img/2022-10-03-11-36-16.png)
+
+```
+  "workbench.colorCustomizations": {
+    "tab.activeBackground": "#ff0000"
+    // "window.activeBorder": "#2f00ff",
+    // "tab.activeBorderTop": "#f700ff",
+    // "panelTitle.activeBorder": "#0011ff",
+    // "titleBar.activeBackground": "#95ff00",
+  },
+```
+
+输入任意字母会自动联想选项  
+只能修改当前工作区 tab 颜色，不同工作区 tab 颜色可能是 mac 系统决定，vscode 无法改变，可以在 mac 设置，通用，外观设置深色加强 tab 对比度
+
+## 修改 pasteimage 插件的图片显示方式，并设置图片高度为 333px
+
+```
+  "pasteImage.path": "${currentFileDir}/img",
+  "pasteImage.basePath": "${currentFileDir}",
+  "pasteImage.forceUnixStyleSeparator": true,
+  "pasteImage.prefix": "/",
+  // "pasteImage.insertPattern": "${imageSyntaxPrefix}./img/${imageFileName}${imageSyntaxSuffix}",
+  "pasteImage.insertPattern": "<img src='./img/${imageFileName}' height=333px>",
+```

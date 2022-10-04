@@ -11,3 +11,14 @@
 注意截图有错，{} \; 之间有空格  
 add
 需要输入 y 并回车，只回车无效
+
+## sed 命令实例
+
+<img src='./img/2022-10-03-20-33-42.png' height=333px></img>
+
+```
+sed -i '' -e 's/hello/nihao/g' -e 's/world/shijie/g' *.md
+
+```
+
+mac 系统需加''，用于备份文件扩展名，不需要时留空

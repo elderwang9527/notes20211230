@@ -25,3 +25,22 @@ add，mac 下是 cmd shift p，不是输入>Preferences: Configure User Snippets
 ![](./img/2022-09-08-11-02-21.png)  
 add220908，这种全局方法似乎对其它语言如 rust 无效，可如图点击，之后选择单独语言设置。  
 或直接命令行 code ~/Library/Application\ Support/Code/User/snippets/rust.json
+
+## 221003
+
+## markdown 截图插件修改为可控制大小
+
+<img src='./img/2022-10-03-20-42-42.png' height=333px>      
+```
+
+"pasteImage.path": "${currentFileDir}/img",
+  "pasteImage.basePath": "${currentFileDir}",
+"pasteImage.forceUnixStyleSeparator": true,
+"pasteImage.prefix": "/",
+// "pasteImage.insertPattern": "${imageSyntaxPrefix}./img/${imageFileName}${imageSyntaxSuffix}",
+  // "pasteImage.insertPattern": "<img src='./img/${imageFileName}' >",
+"pasteImage.insertPattern": "<img src='./img/${imageFileName}' height=333px>",
+
+```
+
+```
