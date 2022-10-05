@@ -2,15 +2,15 @@
 
 ## vscode 解决 windows 换行 crlf 与 lf 冲突 ^M 问题
 
-https://blog.csdn.net/glorydx/article/details/110958739
-一劳永逸的解决方法
-如果你所有的同事都是使用 windows 系统，
-vscode 点击文件 --》首选项 --》 设置 --》 搜索 eol，改变 eol 为\n(指 lf)或者改为(\r\n)，有一个统一的标准就好了。
-git 在维护版本库的时候统一使用的是 LF，这样就可以保证文件跨平台的时候保持一致。
-在 Linux 下默认的换行符也是 LF，那也就不存在什么问题。
-在 Windows 下默认的换行符是 CRLF，那么我们需要保证在文件提交到版本库的时候文件的换行符是 LF，通常来说有两种方法：
-如果你同事中有使用其它系统开发的
-你需要先执行上面的操作，再行 以下代码才能解决
+https://blog.csdn.net/glorydx/article/details/110958739  
+一劳永逸的解决方法  
+如果你所有的同事都是使用 windows 系统，  
+vscode 点击文件 --》首选项 --》 设置 --》 搜索 eol，改变 eol 为\n(指 lf)或者改为(\r\n)，有一个统一的标准就好了。  
+git 在维护版本库的时候统一使用的是 LF，这样就可以保证文件跨平台的时候保持一致。  
+在 Linux 下默认的换行符也是 LF，那也就不存在什么问题。  
+在 Windows 下默认的换行符是 CRLF，那么我们需要保证在文件提交到版本库的时候文件的换行符是 LF，通常来说有两种方法：  
+如果你同事中有使用其它系统开发的  
+你需要先执行上面的操作，再行 以下代码才能解决  
 git config --global core.autocrlf false
 
 ---
@@ -23,15 +23,6 @@ sol 文件里出现 import 报错，将 solidity 插件降到 0.0135。直接降
 
 VSCode 关闭右侧预览功能 缩略图  
 关闭方法：点击文件-首选项-设置,搜索"editor.minimap.enabled",默认值为打钩,我们只需要把钩去掉即可；
-
----
-
-## vscode 快捷键设置
-
-切换侧边栏，默认为 ctrl b，换为 ctrl b 加 ctrl b （add，mac 里叫主侧栏）
-切换活动栏，默认未设置，换位 ctrl b 加 ctrl v
-
-add，关闭右侧缩略图，预览功能。设置，搜索 editor.minimap.enabled。取消勾选。
 
 ---
 
@@ -60,10 +51,10 @@ ctrl shift p，display language
 
 You can change the settings.json from your user preferences. This changes are global. Therefore it will affect all of your projects. Here are 2 ways to reach that global settings.json file.
 
-File -> Preferences -> Settings -> Extensions -> Scroll down and find "Edit in settings.json"
-Or in these paths in your OS
-Windows %APPDATA%\Code\User\settings.json
-macOS $HOME/Library/Application Support/Code/User/settings.json
+File -> Preferences -> Settings -> Extensions -> Scroll down and find "Edit in settings.json"  
+Or in these paths in your OS  
+Windows %APPDATA%\Code\User\settings.json  
+macOS $HOME/Library/Application Support/Code/User/settings.json  
 Linux $HOME/.config/Code/User/settings.json
 
 https://supunkavinda.blog/vscode-editing-settings-json
@@ -82,7 +73,7 @@ https://supunkavinda.blog/vscode-editing-settings-json
 
 ## 多项目或文件夹运行
 
-1，Project Manager 插件
+1，Project Manager 插件  
 很多项目时才需要，暂时不用
 
 2，ctrl r 切换
@@ -100,7 +91,7 @@ https://supunkavinda.blog/vscode-editing-settings-json
 
 ## 对比文件夹内容插件 Compare Folders
 
-命令行：COMPARE_FOLDERS=DIFF code ./folder1 ./folder2
+命令行：COMPARE_FOLDERS=DIFF code ./folder1 ./folder2  
 settings.json 设置
 
 ```
@@ -119,18 +110,11 @@ settings.json 设置
 
 cmd p，foldname/，注意最后加了/
 
-## 快捷键
-
-ctrl -，go back  
-ctrl shift -， forward
-
 ## 221002
 
 ## 合并 windows 为 tabs
 
-window =》merge all window  
-将 merge all window 设置为了 cmd option e  
-将 next window tab 设置为了 cmd e cmd e
+window =》merge all window
 
 ## code -all/-a . 在当前 tab 添加文件夹的形式，而不是新增 window 的形式
 
@@ -160,6 +144,25 @@ window =》merge all window
   "pasteImage.basePath": "${currentFileDir}",
   "pasteImage.forceUnixStyleSeparator": true,
   "pasteImage.prefix": "/",
-  // "pasteImage.insertPattern": "${imageSyntaxPrefix}./img/${imageFileName}${imageSyntaxSuffix}",
-  "pasteImage.insertPattern": "<img src='./img/${imageFileName}' height=333px>",
+  // "pasteImage.insertPattern": "${imageSyntaxPrefix}./img/${imageFileName}${imageSyntaxSuffix}</img>",
+  "pasteImage.insertPattern": "<img src='./img/${imageFileName}' height=333px> </img>",
 ```
+
+需写 </img>，不然可能图片后的文字不换行
+
+## 重要快捷键
+
+ctrl -，go back  
+ctrl shift -， forward  
+cmd option 左右切换文件 tab
+
+## 快捷键修改
+
+打开 vscode 自带终端，cmd t，原命令变为 ctl cmd t(原命令 go to symbol in workspace，大概是搜索工作区 md 文件带#的标题部分)  
+将 merge all window 设置为了 cmd option e  
+将 next window tab 设置为了 cmd 2, previous window tab cmd 1
+
+切换侧边栏，默认为 ctrl b，换为 ctrl b 加 ctrl b （add，mac 里叫主侧栏）  
+切换活动栏，默认未设置，换位 ctrl b 加 ctrl v
+
+add，关闭右侧缩略图，预览功能。设置，搜索 editor.minimap.enabled。取消勾选。

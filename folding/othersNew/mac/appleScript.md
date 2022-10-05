@@ -48,3 +48,21 @@ tell application "iTerm"
 	end tell
 end tell
 ```
+
+## 221004
+
+### 快捷键输入当前日期
+
+automator quickaction utilities run-applescript 输入以下代码，然后 cmd s 存储。
+keyboard shortcuts services 找到上面的保存名，设置快捷键即可
+目前还有问题，chrome 上可正常使用，vscode 上使用会报错
+
+```
+on run {input, parameters}
+
+	set thedate to (current date) as string
+	tell application "System Events"
+		keystroke thedate
+	end tell
+end run
+```
