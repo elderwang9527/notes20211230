@@ -27,7 +27,10 @@ crl k, 或 esc D，删除当前光标右边所有。(add,crl k 全删，esc d，
 crl w, 删除左边。
 ⌘ + ⌥ + B 按键回放。
 sft cmd m, mark  
-sft cmd j, to mark.
+sft cmd j, to mark.     
+
+ctl a 到行首        
+ctl e 到行尾
 
 ### 使用技巧
 

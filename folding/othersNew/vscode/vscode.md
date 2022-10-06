@@ -166,3 +166,19 @@ cmd option 左右切换文件 tab
 切换活动栏，默认未设置，换位 ctrl b 加 ctrl v
 
 add，关闭右侧缩略图，预览功能。设置，搜索 editor.minimap.enabled。取消勾选。
+
+## 221005
+
+## 显示/隐藏指定文件/文件夹
+
+<img src='./img/2022-10-05-10-05-51.png' height=333px></img>  
+似乎只有.git 需要指定 true 才会显示，其它无需指定都是默认显示
+
+```
+  "files.exclude": {
+    // ".ipynb_checkpoints": true,
+    // "**/.gitignore": true,
+    // "**/.vscode": true,
+    "**/.git": false
+  },
+```
