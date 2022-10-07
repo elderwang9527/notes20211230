@@ -131,3 +131,11 @@ https://www.cnblogs.com/rxysg/p/15672210.html
 首先在 github 新建一个 repo  
 git remote remove origin  
 git remote add origin git@github.com:rusty-peilin/new-repo.git
+
+### git tag
+
+<img src='./img/2022-10-06-10-53-40.png' height=333px></img>  
+https://blog.csdn.net/YOUYOU0710/article/details/108128431
+
+git tag -a tagname -m “description”  
+git push origin --tags
