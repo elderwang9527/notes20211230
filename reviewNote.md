@@ -16,4 +16,5 @@ when review
 0912 0909-0911  
 0920 0912-0919  
 1002 clear  
-1006 clear
+1006 clear  
+1009 solidity8.0
