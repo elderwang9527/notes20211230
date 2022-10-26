@@ -108,3 +108,9 @@ cmd c，cmd option v
 ### open . 打开 tab 而不是 window
 
 ![](./img/2022-10-01-11-34-13.png)
+
+### 安装一些软件可能遇到 can't be opened because apple can't check it for malicious software 报错
+
+此时打开系统偏好，安全与隐私可能就有解锁此软件的选项
+
+
