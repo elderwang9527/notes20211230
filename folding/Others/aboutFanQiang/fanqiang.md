@@ -18,6 +18,7 @@ add, curl https://twitter.com 有时候无结果，用 curl https://www.youtube.
 https://www.jianshu.com/p/0470d0dc3e64
 
 add220929
+
 https://github.com/Fndroid/clash_for_windows_pkg/releases  
 或 https://github.com/rusty-peilin/clash4window 下载
 然后  
