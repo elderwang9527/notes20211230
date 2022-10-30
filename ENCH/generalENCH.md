@@ -55,3 +55,13 @@ braces
 
 <img src='./img/2022-10-05-11-16-55.png' height=333px></img>  
 parenthesis
+
+## 221029       
+
+spot trading        
+现货交易        
+
+margin trading  
+保证金交易      
+
+
