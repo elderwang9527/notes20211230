@@ -31,3 +31,6 @@ https://portal.shadowsocks.nz/
 这样的好处是像 lets vpn 那样可选很多线路，且终端也能翻墙
 add  
 重启后 port 可能会变成其它值导致无法翻墙，手动设置为上次的 port 值即可
+
+add221031  
+这种方式 telegram 无法连接，需在 telegram，data and storage，use proxy 中把 server 设置为 127.0.0.1 port 设置为 clash for windows 中设置的 port
