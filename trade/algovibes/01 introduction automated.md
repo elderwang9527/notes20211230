@@ -19,7 +19,7 @@ pip install regex==2022.3.2
 
 add 221030  
 iloc[:,:6]大概意思是只获取所有行，前 6 列的数据  
-set_index 可以指定数据中的某一列，将其作为该数据的新索引        
+set_index 可以指定数据中的某一列，将其作为该数据的新索引
 
 ![](./img/2022-07-20-15-52-56.png)  
 Open.plot() 可以画出折线图
@@ -38,3 +38,11 @@ while true: 死循环的意思，只有遇到 break 才结束
 
 ![](./img/2022-07-20-16-26-38.png)  
 执行交易，返回结果时两个交易，第一个买，第二个卖。
+
+add221101  
+产生一个交易后，会产生一个 timeStamp，用 order['transactTime']获取，其中 transactTime 是固定值，order 是之前交易的函数名
+
+%run ./filename.ipynb 即可运行 filename 文件并使用其中的变量  
+如 filename 中有 aaa = "bbb",则在当前文件运行 aaa 输出 "bbb"
+
+
