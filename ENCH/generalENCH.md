@@ -73,3 +73,9 @@ columns
 
 syntax  
 语法，句法
+
+intersection  
+交接（点或线）
+
+lucid  
+表达清楚的；易懂的

@@ -65,6 +65,28 @@ aggregation function 举例
 新增一个叫 state 的 table
 
 <img src='./img/2022-11-03-02-01-01.png' height=333px></img>  
-为新 table 添加内容     
+为新 table 添加内容
 
+## 221103
 
+<img src='./img/2022-11-03-09-22-54.png' height=333px></img>  
+inner join  
+salesdpt.sales sales 是 salesdpt.sales as sales 的简写，下一行同理  
+最终找出两者 location_name 值相同的项并列出来，注意此时 location_name 虽然一样，但还没有合并
+
+<img src='./img/2022-11-03-09-33-40.png' height=333px></img>  
+这样写就把之前的 location_name 合并了
+
+<img src='./img/2022-11-03-09-36-57.png' height=333px></img>  
+left join，from 那一行的全部显示，而 left join 那一行的只显示与上面有相同值的行，如此图的 san clemente
+
+<img src='./img/2022-11-03-09-39-12.png' height=333px></img>  
+right join。则 right join 一行的显示全部，from 那一行的只显示和 right join 一行有相同内容的部分
+
+<img src='./img/2022-11-03-09-47-36.png' height=333px></img>  
+在给 state，添加值过后，左侧也出现了 null
+
+<img src='./img/2022-11-03-09-49-51.png' height=333px></img>  
+删掉之前的，开始新增一个 schema
+
+primary key
