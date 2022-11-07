@@ -6,7 +6,9 @@
 这两个分别是获得印度股票和道琼斯指数的 symbol
 
 <img src='./img/2022-11-02-18-42-38.png' height=333px></img>  
-获取 data，要下载较长时间
+获取 data，要下载较长时间  
+add221107  
+这里的 yf 是 import yfinance as yf
 
 <img src='./img/2022-11-02-18-48-42.png' height=333px></img>  
 --=  

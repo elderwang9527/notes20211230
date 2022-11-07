@@ -60,6 +60,7 @@ aggregation function 举例
 
 <img src='./img/2022-11-03-01-53-59.png' height=333px></img>  
 限定条件 group by
+意思应该是把同名的合并，它们的数值相加
 
 <img src='./img/2022-11-03-01-58-19.png' height=333px></img>  
 新增一个叫 state 的 table
@@ -72,7 +73,8 @@ aggregation function 举例
 <img src='./img/2022-11-03-09-22-54.png' height=333px></img>  
 inner join  
 salesdpt.sales sales 是 salesdpt.sales as sales 的简写，下一行同理  
-最终找出两者 location_name 值相同的项并列出来，注意此时 location_name 虽然一样，但还没有合并
+最终找出两者 location_name 值相同的项并列出来，注意此时 location_name 虽然一样，但还没有合并  
+select\*from 的在左，inner join 的在右
 
 <img src='./img/2022-11-03-09-33-40.png' height=333px></img>  
 这样写就把之前的 location_name 合并了
