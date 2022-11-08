@@ -91,4 +91,38 @@ right join。则 right join 一行的显示全部，from 那一行的只显示�
 <img src='./img/2022-11-03-09-49-51.png' height=333px></img>  
 删掉之前的，开始新增一个 schema
 
-primary key
+<img src='./img/2022-11-07-18-04-13.png' height=333px></img>  
+在 sm 里新增一个 sales table，此 table 包含一个 primary key，它只是一个 unique identifier。它是一个只能含有唯一值的 clm，如 1，2，3 等等。此 clm 被叫做 id。  
+1，因为是 primary key，所以不能是 null。  
+2，这样增加数据时就会自动增加 id 也就是 key。  
+3，应该是将 id 这个 clm 名设置为 pm key 的意思。  
+4，int 数据站用量小，所以用 int 表示城市名。
+
+<img src='./img/2022-11-07-18-24-04.png' height=333px></img>  
+新增数据时，不用填 id，自动就填上了
+
+<img src='./img/2022-11-07-18-27-07.png' height=333px></img>  
+用 pm key 的方式新增另一个 table，用来存储城市名。
+
+<img src='./img/2022-11-07-18-42-00.png' height=333px></img>  
+sales table 里可以输入 location id 为 3 的数据，但实际上 location-name table 里并没有对应 3 的值，这个问题可以通过 foreign key 来解决。  
+foreign key 是一个引用 inference，连接 sales table 和 location table。
+
+<img src='./img/2022-11-07-18-48-56.png' height=333px></img>  
+这里删除了之前的 sales table，重写了带 foreign key 的，引用了 locations table 里的 id。
+
+<img src='./img/2022-11-07-18-51-31.png' height=333px></img>  
+此时再输入 3 就会报错了。
+
+<img src='./img/2022-11-07-18-56-21.png' height=333px></img>  
+把两个 table 结合起来显示就能显示完整数据了。
+
+<img src='./img/2022-11-07-18-57-54.png' height=333px></img>  
+再处理下就可以将每个城市的收入汇总再显示了。
+
+<img src='./img/2022-11-07-19-00-42.png' height=333px></img>  
+1，空格代替 alias 更改 clm 名  
+2，排序  
+3，倒序
+
+
