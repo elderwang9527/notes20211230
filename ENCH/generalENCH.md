@@ -79,3 +79,8 @@ intersection
 
 lucid  
 表达清楚的；易懂的
+
+## 221108
+
+intraday  
+当天的，一天内的
