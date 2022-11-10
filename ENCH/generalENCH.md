@@ -84,3 +84,11 @@ lucid
 
 intraday  
 当天的，一天内的
+
+## 221109
+
+<img src='./img/2022-11-09-15-10-59.png' height=333px></img>  
+deviating
+
+websockets  
+大概是类似 http 那样的数据传输协议

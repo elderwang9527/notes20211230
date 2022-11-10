@@ -7,13 +7,16 @@ mysql 为本文所讲，且是开源的
 <img src='./img/2022-11-02-21-33-39.png' height=333px></img>  
  mysql 下载方式，别选页面上方的 download，会付费。选页面下方此处
 
+add221109  
+还要下载此图的 workbench，才有 ui 界面
+
 <img src='./img/2022-11-02-21-45-58.png' height=333px></img>  
 mysql workbench
 
 <img src='./img/2022-11-02-21-55-48.png' height=333px></img>  
 在 mysql 中，schema 类似 db，在里面存放 tables，所以先创建个 db 或称之为 schema。以下简称 sm  
 sql 不区分大小写，所以 CrEaTe 等同于 create  
-输入如图，点击闪电图标，出现下方绿色反馈。再在左侧刷新就能显示此 sm 了。  
+输入如图，点击闪电图标，出现下方绿色反馈。再在左侧刷新就能显示此 sm 了。 add221109，如果只执行单行命令，应该点带 I 的闪电       
 要删掉此 sm 输入 drop schema schemaname 点击闪电即可。  
 这里 schema 可以写为 database，一样的效果
 
@@ -124,5 +127,3 @@ foreign key 是一个引用 inference，连接 sales table 和 location table。
 1，空格代替 alias 更改 clm 名  
 2，排序  
 3，倒序
-
-
