@@ -35,3 +35,12 @@ c，复制。
 conda create -n test37 python=3.7  
 anconda 桌面 home install jupyter，并从桌面 launch jupyter  
 之后依赖从桌面安装，如安装不成功则从 jupyter 页面里 pip install 安装 或类似 pip install --upgrade dateparser==1.1.1 更新
+
+## How To Set Up a JupyterLab Environment on Ubuntu 22.04
+
+<img src='./img/2022-11-10-15-50-40.png' height=333px></img>
+
+https://www.vultr.com/docs/how-to-set-up-a-jupyterlab-environment-on-ubuntu-22-04/
+
+看起来很复杂，但可以省去申请域名，设置密码等步骤，所以做到步骤 5 就行了  
+但是需要创建一个非 root 等 sudo 账户，教程记在了 vps.md 中

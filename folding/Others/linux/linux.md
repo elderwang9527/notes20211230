@@ -49,3 +49,8 @@ https://blog.csdn.net/u012507643/article/details/124799156
 root@kor40:~/substrate-front-end-template# grep -r -l "127.0.0.1" ./src
 ./src/config/development.json
 查找到了./src 目录下包含 127.0.0.1 的文件为./src/config/development.json
+
+### 创建一个有 sudo 权限的新用户
+
+<img src='./img/2022-11-10-15-58-01.png' height=333px></img>  
+https://www.vultr.com/docs/how-to-use-sudo-on-a-vultr-cloud-server/
