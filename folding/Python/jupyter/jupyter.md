@@ -44,3 +44,6 @@ https://www.vultr.com/docs/how-to-set-up-a-jupyterlab-environment-on-ubuntu-22-0
 
 看起来很复杂，但可以省去申请域名，设置密码等步骤，所以做到步骤 5 就行了  
 但是需要创建一个非 root 等 sudo 账户，教程记在了 vps.md 中
+
+add221111  
+注意下次登录时可能会登陆到 root 账户。需要 cat /etc/passwd 找到 jupyter 的用户名，再用此用户名登陆才能正常使用。

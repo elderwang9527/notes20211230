@@ -92,3 +92,8 @@ deviating
 
 websockets  
 大概是类似 http 那样的数据传输协议
+
+## 221111
+
+momentum        
+动量
