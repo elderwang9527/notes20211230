@@ -34,3 +34,6 @@ add
 
 add221031  
 这种方式 telegram 无法连接，需在 telegram，data and storage，use proxy 中把 server 设置为 127.0.0.1 port 设置为 clash for windows 中设置的 port
+
+add221115  
+这种翻墙方式可能导致 jupyter 连接币安 api 出现问题，此时只能换为经典 vpn 软件。
