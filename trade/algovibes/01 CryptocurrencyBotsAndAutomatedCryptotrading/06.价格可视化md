@@ -1,0 +1,23 @@
+## 221116
+
+<img src='./img/2022-11-16-09-27-45.png' height=333px></img>  
+--=  
+<img src='./img/2022-11-16-09-28-18.png' height=333px></img>  
+--=  
+<img src='./img/2022-11-16-09-34-01.png' height=333px></img>  
+--=  
+<img src='./img/2022-11-16-09-37-33.png' height=333px></img>  
+--=  
+<img src='./img/2022-11-16-09-38-45.png' height=333px></img>  
+没仔细看，需要时再学
+
+```
+def getminutedata(symbol,interval,lookback):
+    frame = pd.DataFrame(client.get_historical_klines(symbol,interval,lookback+' 30m ago UTC'))
+    frame = frame.iloc[:,:6]
+    frame.columns = ['Time','Open','High','Low','Close','Volume']
+    frame = frame.set_index('Time')
+    frame.index = pd.to_datetime(frame.index, unit='ms')
+    frame = frame.astype(float)
+    return frame
+```
