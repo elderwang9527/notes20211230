@@ -13,7 +13,10 @@
 获取只跟 usdt 关联的 pair
 
 <img src='./img/2022-11-16-10-31-30.png' height=333px></img>  
-筛选掉有 up 和 down 的带杠杆交易对
+筛选掉有 up 和 down 的带杠杆交易对  
+add221118  
+之前还有一段未截上屏幕：  
+y = x[x.symbol.str.contains('USDT')]
 
 <img src='./img/2022-11-16-10-33-33.png' height=333px></img>  
 按价格涨幅排序
