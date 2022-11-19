@@ -34,7 +34,9 @@ y = x[x.symbol.str.contains('USDT')]
 对上面 function 传参得到数据
 
 <img src='./img/2022-11-16-10-44-12.png' height=333px></img>  
-这段代码具体啥意思没弄明白，之后删了
+这段代码具体啥意思没弄明白，之后删了  
+add221118  get_top_symbol
+这里意思是怎样用固定的钱去买，而不是买固定数量的币。如这里是用固定 200usdt 买，能买到 489 个这个币
 
 <img src='./img/2022-11-16-10-53-43.png' height=333px></img>  
 具体策略代码  
