@@ -95,5 +95,11 @@ websockets
 
 ## 221111
 
-momentum        
+momentum  
 动量
+
+## 221120
+
+<img src='./img/2022-11-20-23-33-07.png' height=333px></img>  
+cron 是计时程序的意思
+
