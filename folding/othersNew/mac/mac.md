@@ -113,4 +113,6 @@ cmd c，cmd option v
 
 此时打开系统偏好，安全与隐私可能就有解锁此软件的选项
 
+### downie 下载 YouTube 视频，取消反序
 
+<img src='./img/2022-11-23-13-26-24.png' height=333px></img>
