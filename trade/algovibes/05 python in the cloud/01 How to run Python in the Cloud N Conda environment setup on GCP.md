@@ -6,7 +6,7 @@
 
 https://www.youtube.com/watch?v=lIJlhKrP_SI&list=PL9ATnizYJ7f9ZGSx-7siizxqh4VtRZblk&index=1
 
-minicorner
+miniconda
 
 sudo apt-get install wget  
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh  

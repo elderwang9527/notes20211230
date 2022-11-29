@@ -19,3 +19,7 @@
 --=  
 <img src='./img/2022-11-26-14-28-39.png' height=333px></img>  
 结合数字货币的示例，因为数据会存入到 db，所以就没必要 output 了。
+
+## add221128
+
+如 where python 无法使用，则用 which python 找路径

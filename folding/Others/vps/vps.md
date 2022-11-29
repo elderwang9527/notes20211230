@@ -27,3 +27,18 @@ code ~/.ssh/known_hosts
 https://blog.csdn.net/aili2460/article/details/102316848
 方法一似乎要下载 python，使用方法二：
 wget -qO- bench.sh | bash
+
+### iterm 传输本地文件到 vps
+
+https://www.jianshu.com/p/c00c2bcb62e4
+
+经测试方法二 scp 最好，示例如下：
+
+本地到 vps  
+scp -r ./filename root@67.78.79.556:/root #llv
+可以这样给命令写注释的方法，以后 ctl r llv 直接找到 local 到 vps 的命令
+
+vps 到本地  
+scp -r root@67.78.79.556:/root/filename ./ #vvl
+
+-r 代表可以传输目录，但只传输文件加上-r 也没问题
