@@ -42,3 +42,5 @@ vps 到本地
 scp -r root@67.78.79.556:/root/filename ./ #vvl
 
 -r 代表可以传输目录，但只传输文件加上-r 也没问题
+
+### iterm2 连接到 vps 最好单独开一个 window，如果是 tab 的话，上下滚动屏幕会变为返回之前命令
