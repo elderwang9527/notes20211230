@@ -26,3 +26,27 @@ pd.Series(data = [1.23456789])
 pd.set_option('display.precision',4)
 pd.Series(data = [1.23456789236546])
 ```
+
+## '<' not supported between instances of 'float' and 'method' 报错
+
+<img src='./img/2022-12-03-17-28-51.png' height=333px></img>
+
+因为 diff 是个固定方法，所以报错，所以取列名时尽量别选太通用的词。
+
+## ValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+
+<img src='./img/2022-12-03-17-48-11.png' height=333px></img>  
+--=  
+<img src='./img/2022-12-03-17-47-08.png' height=333px></img>  
+and 替换为&，且每项加上括号
+
+## frame.iloc[:,0:5]
+
+```
+  frame = pd.DataFrame(client.get_historical_klines(symbol,
+                                                     '30m',
+                                                     '50 hours ago UTC'))
+    frame = frame.iloc[:,0:5]
+```
+
+[a,b]大概是显示前 a 行，前 b 列。但:代表显示所有行，0:5 代表显示第 0-4 列。

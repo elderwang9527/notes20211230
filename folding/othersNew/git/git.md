@@ -139,3 +139,5 @@ https://blog.csdn.net/YOUYOU0710/article/details/108128431
 
 git tag -a tagname -m “description”  
 git push origin --tags
+
+### git token 过期后新增 token 要选 classic 的，选 fine 的会遇到报错。

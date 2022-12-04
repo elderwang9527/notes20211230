@@ -11,9 +11,9 @@
 ### 需要以下两个前置视频
 
 https://www.youtube.com/watch?v=_IV1qfSPPwI  
-已看过
+已看过  
 https://www.youtube.com/watch?v=rYfe9Bg2GcY  
-还未看
+还未看，但未看也能看懂此视频
 
 <img src='./img/2022-12-03-10-46-02.png' height=333px></img>  
 初始代码
