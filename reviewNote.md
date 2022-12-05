@@ -42,3 +42,4 @@ when review
 1128 clear  
 1130 clear  
 1203 clear  
+1205 trade/01/02/49

@@ -19,17 +19,17 @@
 还有些解释没听懂
 
 <img src='./img/2022-11-27-13-48-56.png' height=333px></img>  
---= 1
+--= 1  
 <img src='./img/2022-11-27-13-49-29.png' height=333px></img>  
---= 2
+--= 2  
 <img src='./img/2022-11-27-13-52-07.png' height=333px></img>  
---= 3
+--= 3  
 <img src='./img/2022-11-27-13-53-16.png' height=333px></img>  
 --= 4  
 <img src='./img/2022-11-27-13-54-52.png' height=333px></img>  
---= 5
+--= 5  
 复制图一的官方代码粘贴到图二位置  
-修改代码到图三，并加上一行图四代码，得到最终图四的回测结果  
+修改代码到图三，并加上一行图四代码，得到最终图五的回测结果  
 蓝线是显示账户余额，蓝圈是显示盈利的交易，红圈是显示亏损的交易
 
 <img src='./img/2022-11-27-13-58-20.png' height=333px></img>  
@@ -65,9 +65,9 @@ notify_order 用来检查一个 order 的状态
 如果是 completed 且是 buy order，则打印出相关信息
 
 <img src='./img/2022-11-27-14-47-14.png' height=333px></img>  
-这是捕捉在哪个时间节点，此 aura？被执行  
+这是捕捉在哪个时间节点，此 order 被执行  
 因为 backtrader 以 iteration 的逻辑运行，它只抓取当前 object 的长度  
-比如此 buy order 触发了两天后，则此 object 的长度是两天？则获取到此 buy 执行在第二个 bar 或者说是 dataframe 的第二 row 行。
+例如，假设此 buy order 是在开始测试时的第二天触发，则此 object 的长度是两天。则获取到此 buy 执行在第二个 bar 或者说是 dataframe 的第二 row 行。
 
 <img src='./img/2022-11-27-14-55-45.png' height=333px></img>  
 以上一段很重要，因为卖出逻辑是要等到买入后至少 5 天或称 5bar 或称 5row 才执行。
