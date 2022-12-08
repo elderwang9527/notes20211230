@@ -7,3 +7,5 @@
 遇到报错：There was a problem resending the confirmation email
 User has disabled email notifications from Twitter and they must be enabled before they can be invited to your team.  
 即使允许 notifications，邮箱仍无法收到验证邮件。暂时放弃
+
+add 邮箱换为 gmail，申请成功
