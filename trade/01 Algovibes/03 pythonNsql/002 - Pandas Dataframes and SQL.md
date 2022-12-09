@@ -9,6 +9,9 @@
 add221108  
 如果是在 ipython 命令行或者 jupyter notebook 中要执行 pip 命令，就需要加感叹号，表示我要执行的是系统的命令，而不是 Python 语句
 
+add221208  
+这里的 employees 是 table 名，在上节创建的。
+
 <img src='./img/2022-11-02-15-12-24.png' height=333px></img>  
 --=  
 <img src='./img/2022-11-02-15-12-48.png' height=333px></img>  
