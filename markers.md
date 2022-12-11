@@ -7,6 +7,8 @@ ooov 信息太多，截图和文字不能表示所有内容，需要看视频。
 ooot 截图名称已经现实在截图中，就不再写了  
 ooon 截图内容与所做笔记无关，只是需要做笔记的时候视频刚好显示到此处
 
+aaat transition，过渡代码，帮助理解过程，但不计入最终代码
+
 mark，important，hard ，ask，undecide，need，small，far
 mmmi 重要知识  
 不再使用 mmmh 难点知识  
