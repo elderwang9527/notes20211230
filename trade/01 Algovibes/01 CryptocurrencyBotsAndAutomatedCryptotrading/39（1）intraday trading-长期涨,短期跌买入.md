@@ -16,7 +16,7 @@
 <img src='./img/2022-12-10-21-05-02.png' height=333px></img>  
 --= 策略，sl 是 stop loss 的意思
 
-<img src='./img/2022-12-10-21-06-28.png' height=333px></img>  
+<img src='./img/2022-12-11-15-45-29.png' height=333px></img>  
 buyprices，sellprices，buydates 等都可以这样查看
 
 <img src='./img/2022-12-10-21-08-36.png' height=333px></img>  
