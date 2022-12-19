@@ -45,4 +45,5 @@ when review
 1205 trade/01/02/49  
 1208 clear  
 1211 clear  
-1216 clear
+1216 clear  
+1219 clear
