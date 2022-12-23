@@ -103,3 +103,15 @@ momentum
 <img src='./img/2022-11-20-23-33-07.png' height=333px></img>  
 cron 是计时程序的意思
 
+## 221222
+
+<img src='./img/2022-12-22-20-18-43.png' height=333px></img>
+A good rule of thumb
+
+annotate  
+注释 v
+
+## 221223
+
+<img src='./img/2022-12-23-17-08-15.png' height=333px></img>  
+it's not out of the question
