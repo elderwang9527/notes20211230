@@ -115,3 +115,11 @@ annotate
 
 <img src='./img/2022-12-23-17-08-15.png' height=333px></img>  
 it's not out of the question
+
+## 221230
+
+<img src='./img/2022-12-30-09-32-21.png' height=333px></img>  
+comprehension n，理解力  
+comprehend v，理解      
+
+
