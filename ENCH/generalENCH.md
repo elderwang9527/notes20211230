@@ -118,8 +118,14 @@ it's not out of the question
 
 ## 221230
 
+## nested loop，嵌套循环
+
 <img src='./img/2022-12-30-09-32-21.png' height=333px></img>  
 comprehension n，理解力  
-comprehend v，理解      
+comprehend v，理解
 
+<img src='./img/2022-12-31-10-46-03.png' height=333px></img>  
+introductory adj. 引导的，介绍的；入门的，初步的；（新产品）试销的
 
+<img src='./img/2022-12-31-10-51-37.png' height=333px></img>  
+重复 3 次打印 0-2
