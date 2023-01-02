@@ -127,5 +127,4 @@ comprehend v，理解
 <img src='./img/2022-12-31-10-46-03.png' height=333px></img>  
 introductory adj. 引导的，介绍的；入门的，初步的；（新产品）试销的
 
-<img src='./img/2022-12-31-10-51-37.png' height=333px></img>  
-重复 3 次打印 0-2
+
