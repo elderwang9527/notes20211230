@@ -4,8 +4,8 @@
 上节课获取了 live data，这节课根据 live data 来实施策略  
 策略是买入币如果之前的一些秒钟此币价格下降了一定比例
 
-<img src='./img/2022-11-09-16-53-11.png' height=333px></img>
-卖出条件是基于 traing stop loss 机制
+<img src='./img/2022-11-09-16-53-11.png' height=333px></img>  
+卖出条件是基于 trailing stop loss 机制
 
 <img src='./img/2022-11-09-16-55-04.png' height=333px></img>  
 --=  
@@ -22,6 +22,9 @@ add221111
 add221114  
 注意此时应该是按输入命令后依次显示自此产生的每一笔交易的价格，而不是一秒钟显示一次交易价格。  
 所以像 btcusdt 这样交易很频繁的 pair 会有很多行都显示在同一秒中。
+
+add230102  
+这种形式叫做逐笔订单
 
 <img src='./img/2022-11-09-17-17-15.png' height=333px></img>  
 之前的是获取并存入 sql 的 py，这里新开一个读取 sql 数据的 py
