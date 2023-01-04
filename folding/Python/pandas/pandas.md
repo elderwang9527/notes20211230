@@ -50,3 +50,17 @@ and 替换为&，且每项加上括号
 ```
 
 [a,b]大概是显示前 a 行，前 b 列。但:代表显示所有行，0:5 代表显示第 0-4 列。
+
+## 230103
+
+## dataframe 使用 sqlalchemy 写入 sql 数据库
+
+<img src='./img/2023-01-03-17-17-16.png' height=333px></img>  
+--=  
+<img src='./img/2023-01-03-17-17-30.png' height=333px></img>
+
+https://wenku.baidu.com/view/d5698fa3bad528ea81c758f5f61fb7360b4c2b18.html  
+如是 sqlite 则省略 schema 字段
+
+<img src='./img/2023-01-03-23-46-17.png' height=333px></img>  
+上图为写入介绍，此图为自己写的写入和读取实例
