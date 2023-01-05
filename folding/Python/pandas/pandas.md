@@ -64,3 +64,28 @@ https://wenku.baidu.com/view/d5698fa3bad528ea81c758f5f61fb7360b4c2b18.html
 
 <img src='./img/2023-01-03-23-46-17.png' height=333px></img>  
 上图为写入介绍，此图为自己写的写入和读取实例
+
+## 按各种条件新增列
+
+<img src='./img/2023-01-04-10-01-02.png' height=333px></img>
+
+## 筛选出 df 中满足条件的行
+
+<img src='./img/2023-01-04-10-02-05.png' height=333px></img>
+
+## 取消科学计数法
+
+<img src='./img/2023-01-04-12-17-38.png' height=333px></img>  
+网上查到的很多方法如 np.set_printoptions(suppress=True) 等无效，用此方法转为 string 则有效  
+示例：
+
+```
+a=1
+b=10000000
+f'{a/b:.20f}'
+```
+
+```
+profits = [f'{(sell-buy)/buy:.20f}' for sell,buy in zip(sellprices, buyprices)]
+profits
+```
