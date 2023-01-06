@@ -89,3 +89,11 @@ f'{a/b:.20f}'
 profits = [f'{(sell-buy)/buy:.20f}' for sell,buy in zip(sellprices, buyprices)]
 profits
 ```
+
+## 220105
+
+## k 线单位
+
+<img src='./img/2023-01-05-23-31-59.png' height=333px></img>  
+1 分钟 k 线的一行数据是显示该行所示时间开始到下一行所示时间截止这个时间段的 k 线  
+所以 5 分单位 k 线的 第 5 分钟 的 close 应该是跟 1 分单位 k 线的第 9 分钟而不是第 6 分钟的 close 相同
