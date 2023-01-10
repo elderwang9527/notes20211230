@@ -11,6 +11,10 @@
 2，可能是在用 backtrader 时需要这个，不然可能崩溃  
 3，cerebro，name of the class handling everything for backtrader
 
+add230110  
+class, 类。  
+类是模板，而实例则是根据类创建的对象。
+
 <img src='./img/2022-11-27-13-45-28.png' height=333px></img>  
 --=  
 <img src='./img/2022-11-27-13-45-53.png' height=333px></img>  
