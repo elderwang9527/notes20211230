@@ -54,3 +54,7 @@ root@kor40:~/substrate-front-end-template# grep -r -l "127.0.0.1" ./src
 
 <img src='./img/2022-11-10-15-58-01.png' height=333px></img>  
 https://www.vultr.com/docs/how-to-use-sudo-on-a-vultr-cloud-server/
+
+### ls -lh
+
+自动调整合适的单位查看文件大小
