@@ -90,10 +90,25 @@ profits = [f'{(sell-buy)/buy:.20f}' for sell,buy in zip(sellprices, buyprices)]
 profits
 ```
 
-## 220105
+## 230105
 
-## k 线单位
+### k 线单位
 
 <img src='./img/2023-01-05-23-31-59.png' height=333px></img>  
 1 分钟 k 线的一行数据是显示该行所示时间开始到下一行所示时间截止这个时间段的 k 线  
 所以 5 分单位 k 线的 第 5 分钟 的 close 应该是跟 1 分单位 k 线的第 9 分钟而不是第 6 分钟的 close 相同
+
+## 230111
+
+### df 显示各列类型
+
+df.dtypes
+
+### df datetime 转时间戳
+
+df['Time_ms_int'] = pd.to_datetime(df['Time']).apply(lambda x : x.value)/1000000
+注：不除以任何数，类型为 int，除以任何数后类型变为 float，会以科学计数法显示。如想正常显示，则按以下方式转换回 int。
+
+### df 类型转换
+
+df['Time_ms_int']= df['Time_ms_int'].astype('int')
