@@ -127,4 +127,20 @@ comprehend v，理解
 <img src='./img/2022-12-31-10-46-03.png' height=333px></img>  
 introductory adj. 引导的，介绍的；入门的，初步的；（新产品）试销的
 
+## 230113
 
+metric  
+衡量标准
+adj. 米制的，公制的；度规的；用诗体写的，格律诗的  
+n. 诗韵；衡量标准；度规
+
+boilerplate  
+n. 样板文件；引用
+
+arbitrary  
+随机的，任意的  
+arbitrage  
+套利
+
+ndarray  
+多维数组，矩阵

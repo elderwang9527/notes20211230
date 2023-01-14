@@ -18,3 +18,8 @@ https://www.jianshu.com/p/e6850152e69a
 但也可直接 ubunt22 而不是 ubunt20，22 自带 python3 为 3.10，20 为 3.6
 
 ### list 需要深拷贝，方法：import copy，ori_num_list = copy.deepcopy(num_list)
+
+### 打印变量类型
+
+name = "lili"
+print(type(name))
