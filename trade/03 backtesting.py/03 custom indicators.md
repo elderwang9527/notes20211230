@@ -2,6 +2,10 @@
 
 ### 此节讲 custom indicator。应该是不用策略库，回测自己写的策略的意思。3 个例子，可以覆盖绝大多数你的 indicators。
 
+<img src='./img/2023-01-14-00-06-52.png' height=333px></img>  
+add230114  
+后两种用 indicator 的策略不是太懂。但根据此测试，原理应该是跟方法一一样。都是类似给原始 df 新增一列 signal，用 signal 列判断是否交易。所以如果是自己写的策略，不需要用方法三，直接用方法一可能更简单。甚至可以在方法一层面上更简化，直接引用已经创建好信号的 df。只有当需要用到策略库里的策略时，才需要用方法二的 indicator。
+
 ### 第一个是用你已经在外部 python 生成的信号，把它引入 bt。
 
 ### 第二个是用 pandas ta。
@@ -49,6 +53,3 @@ pct_change 是基础 pandas function
 更改 period，  
 最终实施策略  
 indicator(data)中的 data 永远等于 bt = Backtest(GOOG \*）中的 GOOG。此例中（或所有情况都是？）data 是 OHLCV open high low Close volume 数据
-
-<img src='./img/2023-01-14-00-06-52.png' height=333px></img>
-后两种用 indicator 的策略不是太懂。但根据此测试，原理应该是跟方法一一样。都是类似给原始 df 新增一列 signal，用 signal 列判断是否交易。所以如果是自己写的策略，不需要用方法三，直接用方法一可能更简单。甚至可以在方法一层面上更简化，直接引用已经创建好信号的 df。只有当需要用到策略库里的策略时，才需要用方法二的 indicator。

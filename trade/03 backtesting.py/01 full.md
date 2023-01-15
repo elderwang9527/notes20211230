@@ -19,7 +19,7 @@ pip3 install ta-lib，非必需，只是此节教程需要。
 5，定义策略时大多数时候都要使用的两个 function，可能少数情况只需要使用 init 一个就行。init function 是刚开始就运行一次。next function 是在每个蜡烛/k 线都运行一次。evaluate the criteria/评估标准，决定是否在下一个蜡烛买入。
 
 <img src='./img/2023-01-12-08-57-27.png' height=333px></img>  
-1，引入 talib ，没听太懂，可能是因为 bt 库本身没有策略，所以要引入 talib 库的策略。（也可以自己写策略，会在之后介绍方法）
+1，引入 talib ，没听太懂，可能是因为 bt 库本身没有策略，所以要引入 talib 库的策略。（也可以自己写策略，会在之后介绍方法）  
 2，第一个参数是策略名，第二个是获取的 data 的 close 数据，第三个是时间窗口？  
 3，引入 crossover  
 4，如果第一个参数大于第二个参数，卖出。  
