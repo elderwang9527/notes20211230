@@ -112,3 +112,43 @@ df['Time_ms_int'] = pd.to_datetime(df['Time']).apply(lambda x : x.value)/1000000
 ### df 类型转换
 
 df['Time_ms_int']= df['Time_ms_int'].astype('int')
+
+## 230118
+
+### lambda 函数或者表达式。
+
+```
+import time
+
+# 测试的Def函数
+def square1(n):
+    return n ** 2
+
+# 测试的Lambda函数
+square2 = lambda n: n ** 2
+
+print(time.time())
+
+# 使用Def函数
+i = 0
+while i < 1000000000:
+    square1(100)
+    i += 1
+
+print(time.time())
+
+# 使用lambda函数
+i = 0
+while i < 1000000000:
+    square2(100)
+    i += 1
+
+print(time.time())
+
+1413272496.27
+1413272703.05 (Def   函数:207s)
+1413272904.49 (Lambda函数:201s)
+```
+
+例子  
+大概就是其它语言匿名函数的意思
