@@ -62,7 +62,10 @@ pip3 install ta-lib，非必需，只是此节教程需要。
 <img src='./img/2023-01-12-10-51-52.png' height=333px></img>  
 --=  
 <img src='./img/2023-01-12-10-52-28.png' height=333px></img>  
-heatmap
+heatmap  
+add 230121
+注意是 return_heatmap，有下滑线。  
+range 里包含第一个数，不包含第二个数，如此例里的 upper_bound，包含 55，但不包含 85。
 
 <img src='./img/2023-01-12-10-55-24.png' height=333px></img>  
 --=  

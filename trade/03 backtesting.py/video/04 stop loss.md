@@ -7,10 +7,12 @@
 <img src='./img/2023-01-21-11-12-30.png' height=333px></img>  
 --=  
 <img src='./img/2023-01-21-11-11-49.png' height=333px></img>  
-一个简单的 stop loss 例子。可能出现图三这种奇怪情况，特别是股票这种非 7\*24 市场。  
+一个简单的 stop loss 例子。可能出现图三这种奇怪情况，特别是股票这种非 7\*24 市场。
 
-<img src='./img/2023-01-21-11-19-13.png' height=333px></img>    
+<img src='./img/2023-01-21-11-19-13.png' height=333px></img>  
 如果一个 bar 很高，可能同时触发止损和止盈。backtesting 默认选择止损
+
+create a class witch extends Strategy
 
 ## 230116
 
