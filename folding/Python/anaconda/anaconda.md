@@ -97,3 +97,15 @@ jupyter notebook --generate-config 可以得知 config 文件保存路径，修�
 c.NotebookApp.ip = 'localhost' 为 c.NotebookApp.ip = '0.0.0.0'，注意另起一行，且无缩进
 
 开启 vps 端口，具体见 vps.md。之后即可通过本地电脑访问 vpsip:port 访问 jupyter
+
+## 230123
+
+## anaconda 更新
+
+win 中需要打开 anaconda promot  
+mac 中直接在有如（base）的命令行输入：  
+conda update conda  
+conda update anaconda  
+conda update python
+
+重启 anaconda，点击确认更新
