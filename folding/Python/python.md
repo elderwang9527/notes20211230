@@ -23,3 +23,39 @@ https://www.jianshu.com/p/e6850152e69a
 
 name = "lili"
 print(type(name))
+
+## 230125
+
+### Python·@property 属性
+
+<img src='./img/2023-01-25-01-52-53.png' height=333px></img>
+
+```
+class Student(object):
+    def __init__(self, score=0):
+        self._score = score
+
+    @property
+    def score(self):
+        print("getting score")
+        return self._score
+
+    @score.setter
+    def score(self, value):
+        print("setting score")
+        if not isinstance(value, int):
+            raise ValueError("score must be an integer!")
+        if value < 0 or value > 100:
+            raise ValueError('score must between 0 ~ 100!')
+        self._score = value
+
+s = Student(60)
+s.score
+print("=====================")
+s.score = 88
+s.score
+```
+
+简单来说，加了@property 就可以用 实例.方法 来调用，而不仅仅只能用 方法()
+
+https://blog.csdn.net/qq_37865996/article/details/124205925
