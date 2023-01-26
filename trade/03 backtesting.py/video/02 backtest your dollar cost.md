@@ -19,4 +19,10 @@ https://www.cnblogs.com/freely/p/8022923.html
 <img src='./img/2023-01-18-15-53-44.png' height=333px></img>  
 当改为 self.data.Close.s.index.week.dayofweek。即可获得是星期几的数据
 
+<img src='./img/2023-01-26-00-48-34.png' height=333px></img>  
+--=  
+<img src='./img/2023-01-26-00-47-26.png' height=333px></img>
+1,如果是 0-1 之间的小数，代表可用钱数的比例，如果是整数，如 1，2，3 等，则是买那么多股。这里用此方法实现了买尽量多的整数股。  
+2，如果投资金额少，或者标的物价格低，一次一股都买不到，可以用此方法。
+
 ### 之后的内容看不太懂，需要重学第一课。
