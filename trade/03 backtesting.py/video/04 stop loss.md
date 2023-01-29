@@ -49,5 +49,5 @@ https://github.com/kernc/backtesting.py/blob/master/backtesting/lib.py
 将 bt 库里的 class \*\*\* 代码复制到自己的脚本下，再做些修改，就变为了固定数值的止损。  
 变量前加\_目的是让人知道这是个内部变量，只在函数内部使用，只是个习惯。
 
-<img src='./img/2023-01-25-02-32-21.png' height=333px></img>
+<img src='./img/2023-01-25-02-32-21.png' height=333px></img>  
 之后还有些内容，讲两种不同止损设置以及止损 bar 细节的，没听太懂。
