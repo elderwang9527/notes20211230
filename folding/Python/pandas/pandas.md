@@ -152,3 +152,23 @@ print(time.time())
 
 例子  
 大概就是其它语言匿名函数的意思
+
+## 230201
+
+### 新增星期列
+
+df['dayofweek'] = df['Date'].dt.day_name()
+
+### 查看 df 数据起止时间
+
+df['date'].max() - df['date'].min()
+
+### df 时间过滤器
+
+<img src='./img/2023-02-01-20-45-43.png' height=333px></img>  
+方法一
+
+<img src='./img/2023-02-01-20-47-13.png' height=333px></img>  
+方法一不太好，将 data 设置为 index 后即可如图更好的过滤数据
+
+

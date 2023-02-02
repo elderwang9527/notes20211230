@@ -46,3 +46,7 @@ scp -r root@67.78.79.556:/root/filename ./ #vvl
 ### iterm2 连接到 vps 最好单独开一个 window，如果是 tab 的话，上下滚动屏幕会变为返回之前命令
 
 ### 让本机输入的命令在 vps 里耶能执行，如本机命令连接上 vps 且直接到/root/trade 目录： ssh -t root@139.111.222.333 'cd /root/trade; exec bash'
+
+### ### iTerm2 ssh 免密登陆 vps。
+
+见 iTerm2.md
