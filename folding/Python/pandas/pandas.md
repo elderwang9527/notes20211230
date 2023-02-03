@@ -153,7 +153,9 @@ print(time.time())
 例子  
 大概就是其它语言匿名函数的意思
 
-## 230201
+## 230201 时间序列数据与 Tick 数据处理
+
+https://www.zhihu.com/zvideo/1567062989219540992
 
 ### 新增星期列
 
@@ -171,4 +173,19 @@ df['date'].max() - df['date'].min()
 <img src='./img/2023-02-01-20-47-13.png' height=333px></img>  
 方法一不太好，将 data 设置为 index 后即可如图更好的过滤数据
 
+## aggregate/合计 大概意思是把更短的时间周期合并成更长的周期
 
+<img src='./img/2023-02-02-09-40-43.png' height=333px></img>  
+1，分隔符是\t，大概意思是源文件是 txt，需要指定分隔符  
+2，parse date 的时候，0，1 两列作为 date，即高速程序，这两列都是时间  
+3，有中文，所以用 gbk 方式  
+4，跳过首尾行数据
+5，合并两列数据  
+6，在原始数据上修改  
+7，resample，5min 数据改为 30min
+
+<img src='./img/2023-02-02-09-50-58.png' height=333px></img>  
+获取 csv 数据做成 df
+
+<img src='./img/2023-02-02-09-53-04.png' height=333px></img>  
+resample，ohlc，agg 就能完成 tick/逐笔订单 转标准 df。（但未测试一些时间段内一笔都没有会出现什么情况）

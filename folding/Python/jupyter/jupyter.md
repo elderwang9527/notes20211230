@@ -47,3 +47,14 @@ https://www.vultr.com/docs/how-to-set-up-a-jupyterlab-environment-on-ubuntu-22-0
 
 add221111  
 注意下次登录时可能会登陆到 root 账户。需要 cat /etc/passwd 找到 jupyter 的用户名，再用此用户名登陆才能正常使用。
+
+## 关闭 jupyter warning
+
+```
+
+在 jupyter 第一个 cell 单独加入
+import warnings
+warnings.filterwarnings('ignore')
+warnings.simplefilter('ignore')
+
+```
