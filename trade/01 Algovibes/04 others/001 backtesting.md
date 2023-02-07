@@ -29,7 +29,8 @@ comission 佣金的意思
 bt.plot()画出图像
 
 <img src='./img/2022-11-14-15-31-19.png' height=333px></img>  
-optimize，应该是将 n1 n2 分别赋予 50，60，70。。。150 这样的数值，找出怎样的数值能产生最大回报
+optimize，应该是将 n1 n2 分别赋予 50，60，70。。。150 这样的数值，找出怎样的数值能产生最大回报  
+注意浮点数不能用此图的 range 方法，要改为如 benchmark_rate = np.arange(0.960, 0.981, 0.01).tolist(),这样
 
 <img src='./img/2022-11-14-15-34-05.png' height=333px></img>  
 这里修改一下，就变成胜率为最大化目标。
