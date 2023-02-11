@@ -189,3 +189,12 @@ df['date'].max() - df['date'].min()
 
 <img src='./img/2023-02-02-09-53-04.png' height=333px></img>  
 resample，ohlc，agg 就能完成 tick/逐笔订单 转标准 df。（但未测试一些时间段内一笔都没有会出现什么情况）
+
+## 筛选 loc df 中某个子时间段
+
+newdf = df.loc[ (df.index > '2021-04-01 00:00:00') & (df.index < '2021-06-01 00:00:00') ]
+
+loc 和 iloc 都是 pandas 工具中定位某一行的函数，loc 是 location 的意思，而 iloc 中的 i 指的是 Integer，二者的区别如下：
+
+loc：通过行标签名称索引行数据  
+iloc：通过行号索引行数据

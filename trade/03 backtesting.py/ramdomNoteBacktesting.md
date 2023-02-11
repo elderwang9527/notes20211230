@@ -1,0 +1,27 @@
+## 230210
+
+### RuntimeWarning: divide by zero encountered in double_scalars
+
+np.seterr(divide='ignore')
+
+https://github.com/kernc/backtesting.py/issues/584
+
+```
+I am getting the same error on v.0.3.3. You can use: np.seterr(divide='ignore')
+This won't fix the problem, but it will turn off the error warning. In addition, as I understand it, this only affects the final result of the "'Sortino Ratio" so if you dont use this indicator, then its not so critical
+```
+
+### 禁止 FutureWarning 和 UserWarning
+
+import warnings
+
+warnings.simplefilter(action='ignore', category=FutureWarning)  
+warnings.simplefilter(action='ignore', category=UserWarning)
+
+注意在当前 cell 不生效，只对以后的 cell 生效
+
+### optimize 时，有相连关系的两个变量都要写在 optimize 里。
+
+<img src='./img/2023-02-10-20-45-15.png' height=333px></img>  
+optimize 时，有相连关系的两个变量都要写在 optimize 里。还要加上 constraint 限制条件即可。  
+如此例 optimize 里没有 signal_short，就会默认为固定的-1\*0.5
