@@ -141,3 +141,9 @@ git tag -a tagname -m “description”
 git push origin --tags
 
 ### git token 过期后新增 token 要选 classic 的，选 fine 的会遇到报错。
+
+### 多 git 账号
+
+https://zhuanlan.zhihu.com/p/468501219
+
+这个教程较好，但仍遇到了 remote: Permission to XXXA/xxxx.git denied to XXXB 问题无法解决
