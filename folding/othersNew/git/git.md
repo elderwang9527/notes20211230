@@ -147,3 +147,10 @@ git push origin --tags
 https://zhuanlan.zhihu.com/p/468501219
 
 这个教程较好，但仍遇到了 remote: Permission to XXXA/xxxx.git denied to XXXB 问题无法解决
+
+原因是即使执行了  
+git config --global user.name "Your Name"  
+git config --global user.email "your-email@example.com"  
+电脑 keychain 里仍然保留的是之前账号的账号名和密码（github 是 personal access token），  
+mac 电脑搜索钥匙串访问，再搜索 git，删除 github.com 对应的钥匙串，可能删除不成功，则切换左侧登陆/本地项目选项。再自己找 github.com 项目删除（而不是搜索删除），则能删除成功  
+之后再 push，输入用户名，再输入密码即 personal access token，即可。新的账号和 pat 就存入了钥匙串。（注意 ssh key 和 pat 是两个概念，应该是两个都满足了后才能成功执行）
