@@ -15,3 +15,8 @@ add230211
 np.set_printoptions(threshold=np.inf)  
 np.set_printoptions(precision=5)  
 np.set_printoptions(suppress=True)
+
+add230213  
+加入：  
+pd.options.display.max_seq_items = None  
+就能让 pandas arrary 不输出省略号，而输出完整数据

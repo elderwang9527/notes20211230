@@ -43,6 +43,6 @@ stats.\_trades 可以得到所有交易。其它变量还可以得到很多信�
 --=  
 <img src='./img/2023-01-29-00-43-34.png' height=333px></img>  
 --=  
-<img src='./img/2023-01-29-00-34-12.png' height=333px></img>
+<img src='./img/2023-01-29-00-34-12.png' height=333px></img>  
 lookforward backtest 代码。需要再仔细学习。 2045-3600  
 这些代码其实足够了，但之后内容还会教做视觉化等操作。较难，暂时省略
