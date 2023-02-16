@@ -25,3 +25,7 @@ warnings.simplefilter(action='ignore', category=UserWarning)
 <img src='./img/2023-02-10-20-45-15.png' height=333px></img>  
 optimize 时，有相连关系的两个变量都要写在 optimize 里。还要加上 constraint 限制条件即可。  
 如此例 optimize 里没有 signal_short，就会默认为固定的-1\*0.5
+
+### 在用不是自己写的 indicator，而是引用其它如 pandas_ta 的时候，需要再一些参数前加 pd.Series 转换格式
+
+<img src='./img/2023-02-16-02-27-30.png' height=333px></img>
