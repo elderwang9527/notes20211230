@@ -19,14 +19,14 @@
 <img src='./img/2023-02-08-20-59-19.png' height=333px></img>
 
 1，binance websocket server：  
-https://github.com/binance-us/binance-us-api-docs/blob/master/web-socket-streams.md 有介绍
-2，json.dumps 将 python 字典转换为 json object。
+https://github.com/binance-us/binance-us-api-docs/blob/master/web-socket-streams.md 有介绍  
+2，json.dumps 将 python 字典转换为 json object。  
 3，whenever open a stream， sending a message to the server。  
 4，defining what is happening when receive a message from the server。  
 5，json.loads 将 json 转换为 python 字典。  
 6，websocket 的标准写法
 
-这样就持续实时从币安获得 btcusdt 的价格数据来。
+这样就持续实时从币安获得 btcusdt 的价格数据了。
 
 <img src='./img/2023-02-08-21-02-48.png' height=333px></img>  
 之前的数据这样处理下就过滤为了 df。但目前只是单行的 df，只是因为在持续打印，看起来像一个很多行的 df。
