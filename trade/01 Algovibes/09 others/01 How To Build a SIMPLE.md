@@ -26,6 +26,10 @@ https://github.com/binance-us/binance-us-api-docs/blob/master/web-socket-streams
 5，json.loads 将 json 转换为 python 字典。  
 6，websocket 的标准写法
 
+```
+ws = websocket.websocketApp(endpoint, on_message=on_message,on_open=on_open)
+```
+
 这样就持续实时从币安获得 btcusdt 的价格数据了。
 
 <img src='./img/2023-02-08-21-02-48.png' height=333px></img>  
@@ -36,6 +40,9 @@ https://github.com/binance-us/binance-us-api-docs/blob/master/web-socket-streams
 <img src='./img/2023-02-08-21-07-20.png' height=333px></img>  
 这样处理下就得到了一个持续增加行的 df 了。  
 注意 python 里函数内使用全局变量似乎要这样加个 global
+
+add230219  
+pd.concat 将 out 拼接到 df 上，axis=0，代表是把 out 拼接到 df 的下面而不是右面。
 
 <img src='./img/2023-02-08-21-25-33.png' height=333px></img>  
 --=  
