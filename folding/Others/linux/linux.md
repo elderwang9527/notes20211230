@@ -58,3 +58,7 @@ https://www.vultr.com/docs/how-to-use-sudo-on-a-vultr-cloud-server/
 ### ls -lh
 
 自动调整合适的单位查看文件大小
+
+### df -h
+
+查看剩余空间

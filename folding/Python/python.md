@@ -59,3 +59,52 @@ s.score
 简单来说，加了@property 就可以用 实例.方法 来调用，而不仅仅只能用 方法()
 
 https://blog.csdn.net/qq_37865996/article/details/124205925
+
+### pip 和 pip3 区别
+
+<img src='./img/2023-02-19-22-56-33.png' height=333px></img>
+
+### AttributeError: 'OptionEngine' object has no attribute 'execute'
+
+sqlalchemy 升级到了 2.0，用法有些改变
+
+```
+### 原code，会报错
+import numpy as np
+from sqlalchemy import create_engine
+import pandas as pd
+import pandas_ta as ta
+
+engine = create_engine('sqlite:///./binance-futures-220203-230204-1min/DOTUSDT.db')
+df = pd.read_sql('tablename',engine)
+df.Date = pd.to_datetime(df.Date, unit='ms')
+df.set_index('Date', inplace=True)
+```
+
+```
+### 方式1，注意需注释掉 df.Date = pd.to_datetime(df.Date, unit='ms')，可能因为此方法转换了Date为string
+from sqlalchemy import create_engine, text as sql_text
+import pandas as pd
+import pandas_ta as ta
+connection = create_engine('sqlite:///../binance-futures-220203-230204-1min/DOTUSDT.db')
+query = "SELECT * FROM tablename"
+df = pd.read_sql_query(con=connection.connect(),
+                            sql=sql_text(query))
+# df.Date = pd.to_datetime(df.Date, unit='ms')
+df.set_index('Date', inplace=True)
+```
+
+```
+### 方式2，注意需注释掉 df.Date = pd.to_datetime(df.Date, unit='ms')，可能因为此方法转换了Date为string
+import numpy as np
+from sqlalchemy import create_engine , text
+import pandas as pd
+import pandas_ta as ta
+engine = create_engine('sqlite:///../binance-futures-220203-230204-1min/DOTUSDT.db')
+with engine.begin() as conn:
+    query = text("""SELECT * FROM tablename""")
+    df = pd.read_sql_query(query, conn)
+# df
+# df.Date = pd.to_datetime(df.Date, unit='ms')
+df.set_index('Date', inplace=True)
+```

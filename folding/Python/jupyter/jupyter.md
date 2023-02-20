@@ -58,3 +58,19 @@ warnings.filterwarnings('ignore')
 warnings.simplefilter('ignore')
 
 ```
+
+## vscode 自动格式化 jupyter-notebook ipynb 文件
+
+```
+As Kyle Carow stated in their answer to Ian Huff: Formatting of notebooks is available by now.
+
+MacOS: Option+Shift+F
+Windows: Alt+Shift+F
+Pressing these keys will either trigger a formatting of the active cell or the notebook as a whole if no cell is active.
+```
+
+但似乎只能解决空行过多的简单问题，缩进错误等问题无法解决
+
+## vscode 中选择 jupyter notebook 内核
+
+打开一个 ipynb 文件，右上角笔记本形状图表选择
