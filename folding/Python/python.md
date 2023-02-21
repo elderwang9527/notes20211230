@@ -82,7 +82,7 @@ df.set_index('Date', inplace=True)
 ```
 
 ```
-### 方式1，注意需注释掉 df.Date = pd.to_datetime(df.Date, unit='ms')，可能因为此方法转换了Date为string
+### 方式1，注意 df.Date = pd.to_datetime(df.Date, unit='ms')，中的ms需改为ns
 from sqlalchemy import create_engine, text as sql_text
 import pandas as pd
 import pandas_ta as ta
@@ -95,7 +95,7 @@ df.set_index('Date', inplace=True)
 ```
 
 ```
-### 方式2，注意需注释掉 df.Date = pd.to_datetime(df.Date, unit='ms')，可能因为此方法转换了Date为string
+### 方式2，注意 df.Date = pd.to_datetime(df.Date, unit='ms')，中的ms需改为ns
 import numpy as np
 from sqlalchemy import create_engine , text
 import pandas as pd
