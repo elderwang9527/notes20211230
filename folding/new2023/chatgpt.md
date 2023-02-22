@@ -93,3 +93,28 @@ defaults 是 Anaconda 官方频道，它包含了许多预安装的软件包，�
 conda-forge 则是由社区维护的频道，它包含了大量常见的 Python 软件包和工具，以及其他语言的软件包。与 defaults 不同，conda-forge 中的软件包更新频率相对较快，因为它是由社区维护的。这意味着，conda-forge 频道中的软件包版本往往是最新的。
 
 另外，由于 conda-forge 是由社区维护的，所以可能存在一些质量不佳的软件包，因此使用 conda-forge 时需要谨慎选择软件包，并检查其稳定性和安全性。
+
+### pd.read_excel 怎么一次读取一个文件夹内的所有 xls 文件？
+
+```
+import os
+import pandas as pd
+
+# 指定包含要合并的XLS文件的文件夹路径
+folder_path = './folder_name/'
+
+# 获取文件夹中所有的XLS文件名
+xls_files = [f for f in os.listdir(folder_path) if f.endswith('.xls')]
+
+# 使用列表推导式来读取所有XLS文件并存储在一个DataFrame列表中
+df_list = [pd.read_excel(os.path.join(folder_path, f)) for f in xls_files]
+
+# 使用concat函数将所有DataFrame合并为一个
+merged_df = pd.concat(df_list, ignore_index=True)
+
+# 输出合并后的DataFrame
+print(merged_df)
+
+```
+
+注意可能遇到 Excel file format cannot be determined, you must specify an engine manually 报错，因为文件夹有隐藏文件，ls -a 再删除即可
