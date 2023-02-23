@@ -29,3 +29,8 @@ optimize 时，有相连关系的两个变量都要写在 optimize 里。还要�
 ### 在用不是自己写的 indicator，而是引用其它如 pandas_ta 的时候，需要再一些参数前加 pd.Series 转换格式
 
 <img src='./img/2023-02-16-02-27-30.png' height=333px></img>
+
+### bt.plot()无效，看不到图像
+
+pip uninstall -y bokeh && pip install bokeh==2.4.3  
+重启 notebook
