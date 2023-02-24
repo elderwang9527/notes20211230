@@ -198,3 +198,15 @@ loc 和 iloc 都是 pandas 工具中定位某一行的函数，loc 是 location 
 
 loc：通过行标签名称索引行数据  
 iloc：通过行号索引行数据
+
+### pandas dataframe 只显示指定列
+
+```
+# 创建示例数据帧
+df = pd.DataFrame({'Name': ['Alice', 'Bob', 'Charlie'],
+                   'Age': [25, 30, 35],
+                   'Gender': ['Female', 'Male', 'Male']})
+
+# 只显示 Name 和 Gender 列
+df[['Name', 'Gender']]
+```
