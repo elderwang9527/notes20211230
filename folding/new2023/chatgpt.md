@@ -118,3 +118,21 @@ print(merged_df)
 ```
 
 注意可能遇到 Excel file format cannot be determined, you must specify an engine manually 报错，因为文件夹有隐藏文件，ls -a 再删除即可
+
+### 获得本机公网 ip
+
+curl http://ipinfo.io/ip
+
+```
+http://ipinfo.io/ip
+http://ipecho.net/plain
+http://ifconfig.me/ip
+```
+
+### pandas 中 shape 是什么意思
+
+print(df.shape)
+
+这将打印出一个元组，例如 (100, 5)，表示数据框中有 100 行和 5 列。同样，如果你有一个 Pandas 序列（Series），你也可以使用相同的方式获取它的形状。
+
+### apt 和 apt-get 区别

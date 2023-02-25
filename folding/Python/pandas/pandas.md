@@ -210,3 +210,13 @@ df = pd.DataFrame({'Name': ['Alice', 'Bob', 'Charlie'],
 # 只显示 Name 和 Gender 列
 df[['Name', 'Gender']]
 ```
+
+### 自动定义多个列名
+
+```
+t_delay = [1, 3, 5, 7, 9, 12]
+for t in t_delay: # 分别获得未来1,3,5,7,9,12个周期的收益率，并将其shift，作为target
+    data_15mins['y_{}'.format(t)] = data_15mins['close'].shift(-t) / data_15mins['close'] - 1
+# 注意：需要理解format的用法，注意shift的用法，需要注意数据中出现的nan，inf，-inf等怎么处理？
+print(data_15mins)
+```

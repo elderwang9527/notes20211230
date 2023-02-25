@@ -74,3 +74,5 @@ Pressing these keys will either trigger a formatting of the active cell or the n
 ## vscode 中选择 jupyter notebook 内核
 
 打开一个 ipynb 文件，右上角笔记本形状图表选择
+
+ssh -i "/Users/accountname/Desktop/01workspace/keys/aws-mumbai-keypair.pem" ubuntu@ec2-13-233-124-187.ap-south-1.compute.amazonaws.com

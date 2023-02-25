@@ -11,6 +11,9 @@ https://zhuanlan.zhihu.com/p/384827869
 ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.56.200
 需要先用 ssh -p 22 root@192.168.56.200登陆后的 vps 才能使用别名登陆
 
+add  
+aws 登陆方法不一样，见 aws.md
+
 ### iTerm2 设置主题(add，理解错误，此为设置颜色组。设置主题在～/.zshrc 里设置 ZSH_THEME="...")
 
 https://iterm2colorschemes.com/ 选择主题，点击主题名获得新页面，将新页面所有内容保存着 aaa.itermcolors 文件里。进入 iterm，cmd i，colors，color presets，import。选择 aaa 文件。之后 aaa 文件会出现在 color presets 里，勾选即可。
@@ -27,9 +30,9 @@ crl k, 或 esc D，删除当前光标右边所有。(add,crl k 全删，esc d，
 crl w, 删除左边。
 ⌘ + ⌥ + B 按键回放。
 sft cmd m, mark  
-sft cmd j, to mark.     
+sft cmd j, to mark.
 
-ctl a 到行首        
+ctl a 到行首  
 ctl e 到行尾
 
 ### 使用技巧
