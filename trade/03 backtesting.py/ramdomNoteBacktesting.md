@@ -34,3 +34,17 @@ optimize 时，有相连关系的两个变量都要写在 optimize 里。还要�
 
 pip uninstall -y bokeh && pip install bokeh==2.4.3  
 重启 notebook
+
+### 杠杆交易，如 50 倍杠杆设置 margin 为 0.02
+
+```
+class Backtest
+(
+data, strategy, cash=10000, commission=0.0, margin=0.02, trade_on_close=False, hedging=False, exclusive_orders=False)
+
+```
+
+margin is the required margin (ratio) of a leveraged account. No difference is made between initial and maintenance margins. To run the backtest using e.g. 50:1 leverge that your broker allows, set margin to 0.02 (1 / leverage).
+
+<img src='./img/2023-02-26-11-46-45.png' height=333px></img>  
+设置每笔交易固定金额，而不是每笔 all in。
