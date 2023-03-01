@@ -120,3 +120,45 @@ df.set_index('Date', inplace=True)
 这段 Python 代码的作用是创建一个字符串变量 existing_excel_file，其中包含一个文件的完整路径，这个文件名是 '510050_d.xlsx'，并且这个文件应该位于当前工作目录下的 'lession_1_data' 子目录中。
 
 具体而言，os.getcwd() 函数返回当前 Python 解释器的工作目录，也就是当前正在运行的脚本所在的目录。然后，os.path.join() 函数将当前工作目录与子目录 'lession_1_data' 和文件名 '510050_d.xlsx' 连接起来，形成了一个完整的文件路径。最终，这个完整的文件路径被赋值给变量 existing_excel_file。
+
+## 230228
+
+### python 中：price=("%.1f" % float(float(mark_price)-0.3))是什么意思
+
+```
+这行代码是将一个字符串类型的变量mark_price转换成浮点型，然后从中减去0.3，最后将结果保留1位小数，并将结果赋值给变量price。
+
+具体来说，这行代码中的float(mark_price)将字符串mark_price转换为浮点型，然后float(mark_price)-0.3从浮点型的mark_price中减去0.3得到一个新的浮点型数值。接着，"%.1f" %这一语法将这个浮点型数值格式化为保留1位小数的字符串。最后，price=将这个字符串赋值给变量price。
+```
+
+### python 中，判断某元素是否在某列表中
+
+要判断一个元素是否在一个列表中，可以使用 Python 内置的 in 运算符。这个运算符返回一个布尔值，如果元素在列表中则为 True，否则为 False。
+
+以下是一个简单的示例代码：
+
+```
+my_list = [1, 2, 3, 4, 5]
+
+if 3 in my_list:
+    print("3 is in the list")
+else:
+    print("3 is not in the list")
+
+```
+
+如果您想要检查多个元素是否在一个列表中，可以使用多个 in 运算符，或者将元素放入另一个列表中，然后使用 all()函数来检查它们是否全部在原始列表中。以下是一个使用 all()函数的示例：
+
+```
+my_list = [1, 2, 3, 4, 5]
+
+check_list = [3, 4, 5]
+
+if all(elem in my_list for elem in check_list):
+    print("All elements are in the list")
+else:
+    print("At least one element is not in the list")
+
+```
+
+在此示例中，我们定义一个名为 check_list 的列表，其中包含 3、4 和 5。我们使用一个列表推导式和 all()函数来检查 check_list 中的所有元素是否都在 my_list 中。由于所有元素都在 my_list 中，因此代码将打印“All elements are in the list”。
