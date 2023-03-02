@@ -162,3 +162,42 @@ else:
 ```
 
 在此示例中，我们定义一个名为 check_list 的列表，其中包含 3、4 和 5。我们使用一个列表推导式和 all()函数来检查 check_list 中的所有元素是否都在 my_list 中。由于所有元素都在 my_list 中，因此代码将打印“All elements are in the list”。
+
+### python 怎么在满足一定条件后终止程序并报错，不执行之后的代码
+
+```
+if some_condition:
+    raise Exception("这里发生了一个错误，程序将终止执行。")
+
+# 如果上面的条件不满足，则会执行以下代码。
+print("这里是程序正常执行的代码。")
+
+```
+
+### python 中，怎么将一个脚本所有的 print 信息保存到一个单独的文件
+
+```
+import sys
+
+sys.stdout = open('output.txt', 'w')
+
+# 打印一些信息
+print('Hello World')
+print('This is a test')
+
+sys.stdout.close()
+
+```
+
+```
+"w"是Python内置的文件打开模式（file mode），它表示以写入模式（write mode）打开文件。如果文件不存在，则创建该文件。如果文件已存在，则覆盖原有内容。
+
+除了"w"之外，还有其他文件打开模式可供选择，包括：
+
+"r": 以只读模式（read mode）打开文件（默认模式）
+"a": 以追加模式（append mode）打开文件，如果文件不存在，则创建该文件
+"x": 以独占模式（exclusive creation mode）创建文件，如果文件已存在，则抛出FileExistsError异常
+"b": 以二进制模式（binary mode）打开文件
+"t": 以文本模式（text mode）打开文件（默认模式）
+您可以根据需要选择适当的文件打开模式来打开文件。例如，如果您希望以追加模式打开文件，则可以将"w"替换为"a"，如下所示：
+```
