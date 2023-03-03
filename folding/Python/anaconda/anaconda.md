@@ -98,9 +98,9 @@ c.NotebookApp.ip = 'localhost' 为 c.NotebookApp.ip = '0.0.0.0'，注意另起�
 
 开启 vps 端口，具体见 vps.md。之后即可通过本地电脑访问 vpsip:port 访问 jupyter
 
-## 230123
+## 2301
 
-## anaconda 更新
+### anaconda 更新
 
 win 中需要打开 anaconda promot  
 mac 中直接在有如（base）的命令行输入：  
@@ -109,3 +109,47 @@ conda update anaconda
 conda update python
 
 重启 anaconda，点击确认更新
+
+### anaconda 怎么卸载虚拟环境
+
+```
+conda env remove --name envname
+```
+
+### conda install 和 pip install 区别
+
+```
+conda install xxx：这种方式安装的库都会放在anaconda3/pkgs目录下，这样的好处就是，当在某个环境下已经下载好了某个库，再在另一个环境中还需要这个库时，就可以直接从pkgs目录下将该库复制至新环境而不用重复下载。
+pip install xxx：分两种情况，一种情况就是当前conda环境的python是conda安装的，和系统的不一样，那么xxx会被安装到anaconda3/envs/current_env/lib/python3.x/site-packages文件夹中，如果当前conda环境用的是系统的python，那么xxx会通常会被安装到~/.local/lib/python3.x/site-packages文件夹中
+
+import xxx时，先找的是anaconda3/pkgs目录，所以conda安装的包会被import进来
+```
+
+所以为了避免干扰，用 pip install 而不用 conda install  
+此外 conda uninstall 和 pip uninstall 一样。要清空这个 pkgs 下的已下载库，可以通过命令 conda clean -h （conda clean -a）进行实现。
+
+### 设置 conda-forge 为优先级
+
+https://zhuanlan.zhihu.com/p/508506160
+
+1.3 conda-forge
+默认的 conda channel 是 defaults，但这个 channel 的 package 不全，这时候可以选择使用 conda-forge，先看一下官网对它的介绍（https://conda-forge.org/docs/user/introduction.html ）：
+
+Conda-forge is a community effort that provides conda packages for a wide range of software.
+可见 conda-forge 是一个 community，它所提供的 package 都放在同名的 conda-forge 这个 channel 里，建议使用这个 channel，并设置严格优先使用 conda-forge，因为不同 channel 的 package 不一定完全兼容，下面是配置方法：
+
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+如果在用户根目录没有.condarc 这个文件，上面命令会创建这个文件，设置完之后可以通过下面命令查看 channel 状态和优先级：
+
+conda config --get channels
+这条命令可能会得到类似如下的显示：
+
+--add channels 'defaults' # lowest priority
+--add channels 'conda-forge' # highest priority
+这时~/.condarc 的内容如下：
+
+channels:
+
+- conda-forge
+- defaults

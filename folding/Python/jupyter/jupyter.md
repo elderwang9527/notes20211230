@@ -76,3 +76,18 @@ Pressing these keys will either trigger a formatting of the active cell or the n
 打开一个 ipynb 文件，右上角笔记本形状图表选择
 
 ssh -i "/Users/accountname/Desktop/01workspace/keys/aws-mumbai-keypair.pem" ubuntu@ec2-13-233-124-187.ap-south-1.compute.amazonaws.com
+
+## 2303
+
+### jupyter 指定 conda 虚拟环境，以及其它相应设置
+
+<img src='./img/2023-03-02-23-14-43.png' height=333px></img>
+
+```
+conda install ipykernel
+
+python -m ipykernel install --user --name envName --display-name "jupyter-envNAme"
+
+```
+
+然后网页里还需要手动选择下。
