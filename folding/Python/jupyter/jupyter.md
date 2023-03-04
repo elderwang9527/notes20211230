@@ -91,3 +91,90 @@ python -m ipykernel install --user --name envName --display-name "jupyter-envNAm
 ```
 
 然后网页里还需要手动选择下。
+
+### ipynb 引入 ipynb
+
+<img src='./img/2023-03-03-17-17-54.png' height=333px></img>
+
+被引入的其实不用加 import import_ipynb  
+如报错，则试试重启
+
+### 我用本地电脑连接到了 vps 中的 Jupyter notebook，并运行了其中一个 ipynb 程序，这个程序需要运行很长时间，我中途必须得关掉连接此程序的网页，请问有什么办法让我关闭网页后仍然让程序继续运行？
+
+add:  
+1，需要先进入拥有此 jupyter notebook 的 conda 虚拟环境  
+2，如是连接 vps 上的 jupyter notebook，则需加入除 jupyter notebook 额外的命令。跟正常情况 vps 开启 jupyter notebook 的命令一样
+
+```
+
+可以使用 nohup 命令在后台运行 Jupyter Notebook 以保持程序在远程服务器上运行，即使你关闭了终端窗口或者网络连接断开。具体步骤如下：
+
+在服务器上打开终端并启动 Jupyter Notebook：
+
+ruby
+Copy code
+$ jupyter notebook
+使用 nohup 命令在后台运行 Jupyter Notebook：
+
+shell
+Copy code
+$ nohup jupyter notebook &
+nohup 命令用于运行一个命令，并忽略所有的挂起信号，即使你关闭了终端窗口或网络连接断开，程序也可以在后台持续运行。
+
+记录 Jupyter Notebook 进程的进程号：
+
+ruby
+Copy code
+$ echo $!
+echo $! 命令用于输出上一个在后台运行的进程的进程号，这个进程号可以用于后续的操作，例如杀死进程。
+
+退出服务器终端，关闭连接。
+
+现在你可以关闭远程服务器连接，程序仍将在后台运行。若需要再次连接远程服务器并恢复 Jupyter Notebook，可以通过以下命令重新启动：
+
+css
+Copy code
+$ jupyter notebook --no-browser --port=<port-number>
+其中 <port-number> 是你在运行 Jupyter Notebook 时指定的端口号，默认为 8888。如果想在本地浏览器中打开 Jupyter Notebook，可以使用 SSH 隧道或者浏览器插件，将远程服务器端口转发到本地。
+
+```
+
+### nohup jupyter notebook & 中 &起到的是什么作用
+
+```
+在Linux系统中，& 符号是用于将一个命令放入后台运行的符号，它会让命令在后台运行而不阻塞当前终端的输入输出，这个命令将会立即返回一个提示符，你可以继续输入其他命令。
+
+当你在服务器上运行 jupyter notebook 命令时，通常情况下该命令会将一个Web服务器启动在终端的前台运行，直到你关闭终端或者退出登录，这样会导致Jupyter Notebook服务随之停止。而使用 & 符号可以让 jupyter notebook 命令在后台持续运行，即使你关闭了终端或者退出了登录，该命令也会一直运行下去。
+
+当你在运行 nohup jupyter notebook & 命令时，nohup 命令用于让 jupyter notebook 命令忽略挂起信号，这样即使你关闭了终端或者退出了登录，该命令也会在后台持续运行。而 & 符号则将 nohup jupyter notebook 命令放入后台运行，同时返回一个提示符，让你可以继续输入其他命令。
+```
+
+### jupyter notebook 中怎么使用%%capture
+
+add:  
+1，似乎必须写在最上排  
+2，关闭网页可能会显示 keyboard interrupt。直接断网而不关网页有效  
+3，此方法只能获得正常输出，无法获得报错内容
+
+```
+在Jupyter Notebook中，%%capture是一个魔术命令，用于捕获输出并将其存储在一个变量中，而不是将其直接打印到屏幕上。
+
+以下是一个示例，演示如何在Jupyter Notebook中使用%%capture：
+
+python
+Copy code
+%%capture captured_output
+
+# 这里是一些代码，产生一些输出
+print('Hello, World!')
+x = 2 + 2
+print(x)
+
+# 在这之后，所有的输出将会被捕获并保存在变量captured_output中
+在这个示例中，captured_output将会包含print语句产生的输出以及计算结果。在执行完这个代码块后，如果我们想要查看这些输出，可以使用captured_output.show()方法：
+
+scss
+Copy code
+captured_output.show()
+这将会打印出print语句产生的输出以及计算结果。
+```
