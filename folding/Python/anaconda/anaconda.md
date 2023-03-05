@@ -87,7 +87,7 @@ bash Anaconda3-2022.05-Linux-x86_64.sh
 
 q，退出许可证，yes，yes。
 
-source ~/.bashrc，之后如果 conda command not found。则在~/.bashrc 里添加 export PATH=$PATH:/root/anaconda3/bin 再~/.bashrc，再 source activate 激活 base 环境
+source ~/.bashrc，之后如果 conda command not found。则在~/.bashrc 里添加 export PATH=$PATH:/root/anaconda3/bin 或 export PATH=$PATH:/home/ubuntu/anaconda3/bin 再 source ~/.bashrc，再 source activate 激活 base 环境
 
 conda update -n base -c defaults conda
 可通过此命令升级到最新版

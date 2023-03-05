@@ -35,6 +35,10 @@ optimize 时，有相连关系的两个变量都要写在 optimize 里。还要�
 pip uninstall -y bokeh && pip install bokeh==2.4.3  
 重启 notebook
 
+add:  
+以上方法仍可能无效，用以下方法：  
+bt.plot(filename='./plot_results/ramdomname.html')
+
 ### 杠杆交易，如 50 倍杠杆设置 margin 为 0.02
 
 ```
