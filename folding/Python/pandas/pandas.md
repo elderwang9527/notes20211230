@@ -220,3 +220,25 @@ for t in t_delay: # 分别获得未来1,3,5,7,9,12个周期的收益率，并将
 # 注意：需要理解format的用法，注意shift的用法，需要注意数据中出现的nan，inf，-inf等怎么处理？
 print(data_15mins)
 ```
+
+## 2303
+
+### df 删除第一行数据
+
+```
+可以使用Pandas库中的drop()函数来删除DataFrame（df）中的第一行数据。具体操作如下：
+
+假设DataFrame为df，要删除第一行数据，可以使用以下代码：
+
+bash
+Copy code
+df = df.drop(df.index[0])
+这里的df.index[0]表示第一行数据的索引，通过drop()函数删除这个索引所对应的行数据。
+
+另外，也可以使用以下代码来删除第一行数据：
+
+bash
+Copy code
+df = df.iloc[1:]
+这里的iloc[1:]表示对DataFrame进行切片，从第1行开始（第一行的索引为0），一直切到最后一行，即只保留第2行以后的所有行数据。
+```
