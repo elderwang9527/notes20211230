@@ -201,3 +201,29 @@ sys.stdout.close()
 "t": 以文本模式（text mode）打开文件（默认模式）
 您可以根据需要选择适当的文件打开模式来打开文件。例如，如果您希望以追加模式打开文件，则可以将"w"替换为"a"，如下所示：
 ```
+
+### 怎么改变下面的代码，能让 multiprocessing 加速这段代码：
+
+add：
+注意使用此方法请求网上数据时可能造成访问过频而被拒绝
+
+for i in range(10000):
+print(i\*2)
+
+```
+可以使用multiprocessing模块中的Pool类来加速这段代码。下面是一个使用Pool的示例：
+
+python
+Copy code
+import multiprocessing
+
+def print_double(i):
+    print(i*2)
+
+if __name__ == '__main__':
+    with multiprocessing.Pool() as pool:
+        pool.map(print_double, range(10000))
+这个示例中，我们定义了一个名为print_double的函数，它接收一个参数i，并输出i*2的结果。然后，我们使用multiprocessing.Pool()来创建一个进程池，然后使用pool.map()方法将这个函数映射到一个包含10000个整数的列表上。这样，print_double函数将并行执行10000次，每次输出一个数字的2倍。由于这个操作被分配给多个进程执行，因此整个过程可以更快地完成。
+
+需要注意的是，在使用multiprocessing时，必须在if __name__ == '__main__':语句中调用代码，以确保在主进程中运行。
+```
