@@ -227,3 +227,26 @@ if __name__ == '__main__':
 
 需要注意的是，在使用multiprocessing时，必须在if __name__ == '__main__':语句中调用代码，以确保在主进程中运行。
 ```
+
+### 怎么查看 python 的 sys 模块有哪些可执行函数
+
+```
+要查看 Python 的 sys 模块中的可执行函数，可以使用 Python 的内置函数 dir()。
+
+dir() 可以列出指定模块中的所有属性和方法，包括变量、函数、类等等。例如，在 Python 中，要查看 sys 模块中的所有可执行函数，可以执行以下命令：
+
+python
+Copy code
+import sys
+print(dir(sys))
+执行这段代码后，你将会看到所有 sys 模块中的可执行函数列表。
+
+如果你只想查看 sys 模块中的函数，可以结合使用 callable() 函数来过滤掉非函数类型的属性和方法：
+
+python
+Copy code
+import sys
+functions = [attr for attr in dir(sys) if callable(getattr(sys, attr))]
+print(functions)
+这个代码将会输出 sys 模块中的所有可执行函数的名称列表。
+```

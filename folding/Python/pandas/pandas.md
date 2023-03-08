@@ -242,3 +242,19 @@ Copy code
 df = df.iloc[1:]
 这里的iloc[1:]表示对DataFrame进行切片，从第1行开始（第一行的索引为0），一直切到最后一行，即只保留第2行以后的所有行数据。
 ```
+
+## 230307
+
+### df 格式化模版
+
+```
+            # 以下列名为原df列名。获得原df指定列
+            df = df[['Date', 'Open', 'High', 'Low', 'Close', 'Volume']]
+            # 重命名为以下新列名
+            df.columns = ['timestamp', 'open', 'high', 'low', 'close', 'volume']
+            # to_datetime，格式化timestamp，会自动省略时分秒等信息，可能根据情况需要设置再后面加，unit='ns' 或 unit='ns'
+            df['timestamp'] = pd.to_datetime(df['timestamp'])
+            # 将 timestamp 列设为index
+            df.set_index('timestamp', inplace=True)
+            print(df)
+```
