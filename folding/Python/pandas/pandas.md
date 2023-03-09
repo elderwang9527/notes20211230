@@ -258,3 +258,9 @@ df = df.iloc[1:]
             df.set_index('timestamp', inplace=True)
             print(df)
 ```
+
+## 230309
+
+### 逐次连乘逐行收益率与用 出价/入价 - 1 计算收益率，按直觉得到的结果应该一样，但却不一样
+
+to be done
