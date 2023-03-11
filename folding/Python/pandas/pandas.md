@@ -281,3 +281,23 @@ na1 != na2
 
 在做多时没有问题，nav = nav\*(1+ret)，但做空时如果按 nav = nav\*(1-ret)就错了  
 但具体做空时怎么写还不知道。
+
+## 230311
+
+### 同时 plot 多个列，且指定其中一列的颜色，粗细
+
+```
+from sklearn.preprocessing import MinMaxScaler
+
+result_df = result_df[['aaa', 'bbb', 'ccc']   ]
+
+# 将数据归一化到0-1的范围内
+scaler = MinMaxScaler()
+scaled_result_df = pd.DataFrame(scaler.fit_transform(result_df), columns=result_df.columns, index=result_df.index)
+
+
+# 绘制折线图
+# scaled_result_df.plot()
+ax = scaled_result_df.plot(y='aaa', color='black', linewidth=5.5, figsize=(10, 6))
+scaled_result_df.plot(ax=ax)
+```
