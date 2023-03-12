@@ -250,3 +250,20 @@ functions = [attr for attr in dir(sys) if callable(getattr(sys, attr))]
 print(functions)
 这个代码将会输出 sys 模块中的所有可执行函数的名称列表。
 ```
+
+## 230312
+
+### python 文件怎么读取自身的文件名
+
+```
+要读取Python文件的文件名，您可以使用__file__变量。这个变量是一个字符串，包含当前模块的文件路径。您可以使用以下代码行访问它：
+
+python
+Copy code
+import os
+filename = os.path.basename(__file__)
+print(filename)
+这将打印出当前模块的文件名（包括扩展名）。os.path.basename()函数返回__file__变量的最后一个组成部分，即文件名部分。
+
+请注意，当您在交互式解释器中使用时，__file__变量将不可用，因为交互式解释器没有与之关联的文件。
+```

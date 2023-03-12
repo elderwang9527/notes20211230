@@ -301,3 +301,39 @@ scaled_result_df = pd.DataFrame(scaler.fit_transform(result_df), columns=result_
 ax = scaled_result_df.plot(y='aaa', color='black', linewidth=5.5, figsize=(10, 6))
 scaled_result_df.plot(ax=ax)
 ```
+
+### 如图
+
+<img src='./img/2023-03-11-22-37-32.png' height=333px></img>
+
+要这样写因为  
+如注释掉 1 则 AttributeError: Can only use .dt accessor with datetimelike values  
+如注释掉 2 则无法删除原数据中时分秒数据  
+如注释掉 3 则会因为 4 而报错 AttributeError: 'Index' object has no attribute 'year'
+
+```
+df_price['timestamp'] = pd.to_datetime(df_price['timestamp'])和
+df_price['timestamp'] = df_price['timestamp'].dt.date 的区别
+
+df_price['timestamp'] = pd.to_datetime(df_price['timestamp'])将df_price中的timestamp列转换为Pandas中的日期时间类型，使得我们可以使用各种日期时间相关的方法和函数。如果timestamp列中的值不是日期时间类型，那么pd.to_datetime()方法将会把这些值转换为日期时间类型。这对于对时间序列进行分析和可视化非常有用。
+
+df_price['timestamp'] = df_price['timestamp'].dt.date将df_price中的timestamp列转换为日期类型（而不是日期时间类型）。这将会将时间戳中的时间部分去除，只保留日期部分。这在某些情况下可能会很有用，例如当您只需要考虑日期，而不需要考虑具体时间时。
+
+总之，这两个操作的主要区别是转换后的数据类型不同：一个是日期时间类型，另一个是日期类型。这两个类型各自有其适用的场景和用途，您需要根据具体情况选择使用哪个。
+```
+
+### 检查文件夹是否存在，如不存在，则创建它
+
+```
+import os
+
+def render():
+    # 检查文件夹是否存在，如果不存在，则创建文件夹
+    folder_path = '/path/to/folder'
+    if not os.path.exists(folder_path):
+        os.mkdir(folder_path)
+
+    # 继续执行函数的其他部分
+    ...
+
+```
