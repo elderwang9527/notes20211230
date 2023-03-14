@@ -337,3 +337,29 @@ def render():
     ...
 
 ```
+
+### 假设一个 df 的某列为，[0,0,1,0,0,0,-1,0,0]怎么将其快速变为[0,0,1,1,1,1,-1,-1,-1]
+
+使用前向填充和后向填充方法填充 nan 值，以将每个 nan 值替换为最近的非 nan 值。
+
+```
+import numpy as np
+import pandas as pd
+
+# 创建示例数据框
+df = pd.DataFrame({'col': [0, 0, 1, 0, 0, 0, -1, 0, 0]})
+
+# 将值为0的元素替换为nan
+df['col'].replace(0, np.nan, inplace=True)
+
+# 使用前向和后向填充方法填充nan值
+df['col'].fillna(method='ffill', inplace=True)
+df['col'].fillna(method='bfill', inplace=True)
+
+# 将-1替换为0
+df['col'].replace(-1, 0, inplace=True)
+
+# 转换为列表
+result = df['col'].tolist()
+
+```
