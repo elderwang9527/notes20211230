@@ -363,3 +363,43 @@ df['col'].replace(-1, 0, inplace=True)
 result = df['col'].tolist()
 
 ```
+
+### 怎么从 df 的所有列中，选出结尾是\_aaa 的列？
+
+```
+# 创建一个包含示例列的 DataFrame
+import pandas as pd
+
+data = {'col1_aaa': [1, 2, 3],
+        'col2_bbb': [4, 5, 6],
+        'col3_aaa': [7, 8, 9]}
+
+df = pd.DataFrame(data)
+
+# 使用 filter() 方法选出结尾是 '_aaa' 的列
+filtered_cols = df.filter(regex='_aaa$')
+
+print(filtered_cols)
+
+```
+
+在上面的代码中，filter() 方法的参数是一个正则表达式，用于匹配列名。在这个例子中，正则表达式是 \_aaa$，表示匹配以 \_aaa 结尾的列名。因此，filtered_cols 变量将是一个包含结尾为 \_aaa 的列的 DataFrame。
+
+### 在 df 中，怎么新增一列，使得该列每行的值为其它列所有该行值之和
+
+```
+# 创建一个包含示例数据的 DataFrame
+import pandas as pd
+
+data = {'col1': [1, 2, 3],
+        'col2': [4, 5, 6],
+        'col3': [7, 8, 9]}
+
+df = pd.DataFrame(data)
+
+# 新增一列，该列为其它列所有该行值之和
+df['sum'] = df.sum(axis=1)
+
+print(df)
+
+```
