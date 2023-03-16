@@ -178,3 +178,7 @@ Copy code
 captured_output.show()
 这将会打印出print语句产生的输出以及计算结果。
 ```
+
+### 撤销误删操作，history 命令
+
+jn 撤销操作不太好，但可以用 history 命令找到最近执行了的代码，从而找回误删掉的代码
