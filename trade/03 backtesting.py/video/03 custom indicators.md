@@ -1,5 +1,9 @@
 ## 230113
 
+<img src='./img/2023-03-17-00-39-55.png' height=333px></img>  
+此视频讲得不好，不用看以下笔记，看此图就行了  
+1 没截图进来，就是 bt = Backtest(df \*)中的 df，传到 2，作为 indicator 的参数 3，4。并返回最终值 5（大多数情况就是一个 npnarry，这里故意用了个特例，是多个 npnarry）最后在 6 中被调用。
+
 ### 此节讲 custom indicator。应该是不用策略库，回测自己写的策略的意思。3 个例子，可以覆盖绝大多数你的 indicators。
 
 <img src='./img/2023-01-14-00-06-52.png' height=333px></img>  
