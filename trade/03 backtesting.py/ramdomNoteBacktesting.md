@@ -60,3 +60,7 @@ margin is the required margin (ratio) of a leveraged account. No difference is m
 <img src='./img/2023-03-10-10-33-51.png' height=333px></img>
 
 有时会发生这种回测数据对不上的问题，是因为数据截止时，有交易还在进行中，上方的数据只显示完整按策略执行的策略，下方的 equity fianl 会自动在最后一个 bar close，计算出 fianl。而且 peak 也不是按所有 close 中的最高值来算，而是在开单过程中产生的最高值来算。
+
+### bt.plot(smooth_equity = True) 效果
+
+<img src='./img/2023-03-17-09-53-32.png' height=333px></img>

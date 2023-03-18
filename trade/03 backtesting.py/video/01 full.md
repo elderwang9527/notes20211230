@@ -84,3 +84,4 @@ matrix 显示 heatmap
 之前的是两个参数的，这里掩饰的是三个参数时。但觉得意义不大，需要时再视频看具体操作方法
 
 ## 以上讲解了所有 bt 库的东西？以下讲解更多策略，如 multi-time frame 策略。如 weekly 用 rsi，hourly 用 sma。感觉较难，需要时再学。
+

@@ -116,3 +116,5 @@ cmd c，cmd option v
 ### downie 下载 YouTube 视频，取消反序
 
 <img src='./img/2022-11-23-13-26-24.png' height=333px></img>
+
+### cmd shift \ 显示所有访达标签页
