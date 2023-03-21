@@ -182,3 +182,33 @@ captured_output.show()
 ### 撤销误删操作，history 命令
 
 jn 撤销操作不太好，但可以用 history 命令找到最近执行了的代码，从而找回误删掉的代码
+
+### 让一个 cell 做 for 循环，但其循环的内容是另一个 cell (未验证)
+
+```
+你可以使用Jupyter Notebook的魔术命令%%writefile将第二个cell中的代码写入到一个Python脚本文件中，然后在第一个cell中导入该脚本文件，并将其中的代码作为循环体。
+
+具体步骤如下：
+
+在第二个cell中编写要循环的代码，并使用%%writefile魔术命令将其写入到一个Python脚本文件中，例如：
+python
+Copy code
+%%writefile mycode.py
+
+for i in range(5):
+    print(i)
+此时，你会发现当前目录下多了一个名为mycode.py的文件，其中包含了第二个cell中的代码。
+
+在第一个cell中导入mycode.py文件，并将其中的代码作为循环体，例如：
+python
+Copy code
+from mycode import *
+
+for i in range(5):
+    mycode(i)
+在此示例中，我们使用from mycode import *语句导入了mycode.py文件中的所有函数和变量，然后在for循环中调用mycode()函数，并将循环变量i作为参数传递给它。
+
+这样，第一个cell中的for循环就可以使用第二个cell中的代码作为循环体了。
+
+请注意，当你运行第一个cell时，Python会重新加载mycode.py文件中的代码，并执行for循环。因此，在第二个cell中修改代码后，你需要重新运行第二个cell才能使修改生效。
+```
