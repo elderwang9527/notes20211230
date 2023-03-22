@@ -271,3 +271,23 @@ print(filename)
 ### 列表中每个元素乘以 100
 
 arr = [i * 100 for i in arr]
+
+### 打印一个 list 的前两个元素
+
+```
+my_list = [1, 2, 3, 4, 5]
+print(my_list[:2])
+
+# 语法是list[start:end]，其中start表示开始索引，end表示结束索引，但不包括end所在的元素。如果start不指定，默认为0，如果end不指定，默认为列表的长度。
+```
+
+### drop_duplicates 方法可能会遇到些问题，如 drop 掉非 NaN 值的行，此时可使用 groupby
+
+df = df.groupby('date', as_index=False).max()
+df = df.groupby('date', as_index=False).first()
+
+first 为首个非 NaN 值
+
+### 将一个 df 中所有 NaN 值换为 False
+
+df.fillna(value=False, inplace=True)

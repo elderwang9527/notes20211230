@@ -403,3 +403,20 @@ df['sum'] = df.sum(axis=1)
 print(df)
 
 ```
+
+### 过滤一个 df，使得它只保留 aaa 列中行内内容为 bbb 的行。
+
+```
+# 使用布尔索引过滤DataFrame
+df = df[df['aaa'] == 'bbb']
+```
+
+### df.set_index('timestamp', inplace=True)中 inplace=True 是什么作用
+
+```
+inplace=True 是一个参数，用于指定是否在原数据上进行操作，而不是创建一个新的副本并在副本上进行操作。
+
+在 df.set_index('timestamp', inplace=True) 中，inplace=True 意味着在原始数据帧 df 上设置索引，而不是创建一个新的数据帧并将其返回。因此，如果将此参数设置为 True，则不需要将新的数据帧分配给一个新的变量，而是直接在原始数据帧上进行更改。
+
+如果将 inplace=False 或不指定 inplace 参数，则 set_index 函数将返回一个新的数据帧，而原始数据帧将保持不变。
+```
