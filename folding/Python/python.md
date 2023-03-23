@@ -291,3 +291,20 @@ first 为首个非 NaN 值
 ### 将一个 df 中所有 NaN 值换为 False
 
 df.fillna(value=False, inplace=True)
+
+### 在一个 list 的最前面添加一个元素
+
+my_list.insert(0, new_item)
+
+### 在一个 numpy.ndarray 的最前面添加一个元素
+
+my_array = np.insert(my_array, 0, new_item)
+
+### 删除掉 numpy.ndarray 的第一个元素
+
+my_array = my_array[1:]
+my_array = np.delete(my_array, 0)
+
+### python 中， 怎么让 a 等于 b，c 中的最大值
+
+a = max(b, c)

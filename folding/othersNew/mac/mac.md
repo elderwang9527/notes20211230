@@ -118,3 +118,9 @@ cmd c，cmd option v
 <img src='./img/2022-11-23-13-26-24.png' height=333px></img>
 
 ### cmd shift \ 显示所有访达标签页
+
+### 找到并关闭某个进程，特别是用 nohup 执行的隐藏进程
+
+ps -ef | grep \*
+
+kill -9 pid (上面指令的结果中的第二列数字)

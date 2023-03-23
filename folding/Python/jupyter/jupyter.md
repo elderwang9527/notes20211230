@@ -212,3 +212,7 @@ for i in range(5):
 
 请注意，当你运行第一个cell时，Python会重新加载mycode.py文件中的代码，并执行for循环。因此，在第二个cell中修改代码后，你需要重新运行第二个cell才能使修改生效。
 ```
+
+### vps 中的 jupyter 让本地可连接
+
+nohup jupyter notebook --ip 0.0.0.0 --no-browser --allow-root &

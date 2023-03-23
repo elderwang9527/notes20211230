@@ -62,3 +62,9 @@ https://www.vultr.com/docs/how-to-use-sudo-on-a-vultr-cloud-server/
 ### df -h
 
 查看剩余空间
+
+### 找到并关闭某个进程，特别是用 nohup 执行的隐藏进程
+
+ps -aux|grep \*
+
+kill -9 pid (上面指令的结果中的第二列数字)
