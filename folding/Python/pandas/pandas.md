@@ -17,7 +17,8 @@ import pandas as pd
 #显示1000列
 pd.set_option('display.max_columns', 1000)
  #显示1000行
-pd.set_option('display.max_rows', 1000)
+<!-- pd.set_option('display.max_rows', 1000) -->
+pd.set_option('display.min_rows', 1000)
 #设置每一列中值的最大显示宽度
 pd.set_option('display.max_colwidth',1000)
 #设置浮点数的最多显示精度
