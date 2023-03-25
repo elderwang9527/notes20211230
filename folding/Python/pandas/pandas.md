@@ -252,11 +252,11 @@ df = df.iloc[1:]
             # 以下列名为原df列名。获得原df指定列
             df = df[['Date', 'Open', 'High', 'Low', 'Close', 'Volume']]
             # 重命名为以下新列名
-            df.columns = ['ts', 'open', 'high', 'low', 'close', 'vol']
-            # to_datetime，格式化ts，可能根据情况需要设置再后面加，unit='ns' 或 unit='ns'
-            df['ts'] = pd.to_datetime(df['ts'])
-            # 将 ts 列设为index
-            df.set_index('ts', inplace=True)
+            df.columns = ['date', 'open', 'high', 'low', 'close', 'vol']
+            # to_datetime，格式化date，可能根据情况需要设置再后面加，unit='ns' 或 unit='ns'
+            df['date'] = pd.to_datetime(df['date'])
+            # 将 date 列设为index
+            df.set_index('date', inplace=True)
             print(df)
 ```
 

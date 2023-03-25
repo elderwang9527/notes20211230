@@ -308,3 +308,15 @@ my_array = np.delete(my_array, 0)
 ### python 中， 怎么让 a 等于 b，c 中的最大值
 
 a = max(b, c)
+
+### 显示依赖 module 版本
+
+```
+print(*.__version__)
+```
+
+### 升级依赖 module 版本
+
+```
+pip install --upgrade *
+```
