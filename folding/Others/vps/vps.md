@@ -50,3 +50,17 @@ scp -r root@67.78.79.556:/root/filename ./ #vvl
 ### ### iTerm2 ssh 免密登陆 vps。
 
 见 iTerm2.md
+
+### 连上 vps 后不自动断线
+
+https://www.it603.com/js/123.html
+
+/etc/ssh/ssh_config 最后加上
+
+```
+Host *	#表示需要启用该规则的服务端（域名或ip）
+ServerAliveInterval 60	#表示没60秒去给服务端发起一次请求消息（这个设置好就行了）
+ServerAliveCountMax 3	#表示最大连续尝试连接次数（这个基本不用设置）
+```
+
+注意先用 sudo su 进入 sudo 模式，再添加

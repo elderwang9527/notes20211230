@@ -216,3 +216,32 @@ for i in range(5):
 ### vps 中的 jupyter 让本地可连接
 
 nohup jupyter notebook --ip 0.0.0.0 --no-browser --allow-root &
+
+### 本地登陆 vps 中的 jupyter，输入密码出现 Invalid credentials 报错
+
+原因是新版 JN 默认使用 argon2 为密码编码，但可能出问题了无法解码。则输入密码显示错误，需要自己用 sha1 编码。
+
+```
+#
+pip install notebook[password] （可能不需要这步，之后有问题再执行这步。）
+
+# 生成sha1密码
+python -c "from notebook.auth import passwd; print(passwd('密码 password', algorithm='sha1'))"
+
+# 生成jupyter_notebook_config.py
+jupyter notebook --generate-config
+
+# 定位到jupyter_notebook_config.py，找到以下代码，解开注释，并将生成的sha1密码粘贴到此处
+c.NotebookApp.password = ''
+
+# 重启输入密码即可，注意登陆页面输入密码为编码前密码。编码后的密码是保存在文件中
+```
+
+注意登陆页面输入密码为编码前密码，编码后的密码是保存在文件中
+
+注意在~/.jupyter 目录可能同时有 jupyter_notebook_config.py jupyter_notebook_config.json jupyter_server_config.json  
+最好将 jupyter_notebook_config.json jupyter_server_config.json 删掉，只保留 jupyter_notebook_config.py  
+因为 jupyter_notebook_config.py 优先级最低。  
+且不要用 jupyter notebook password 或 jupyter server password 再生成密码，因为它们会默认用 argon2 生成密码且生成新的 jupyter_notebook_config.json jupyter_server_config.json 文件。覆盖掉 jupyter_notebook_config.py 的效果。
+
+jupyter notebook password 或 jupyter server password 差不多。但使用 jupyter server password 后会发生一些迁移，启动 notebook 时会提示发生了迁移。似乎只能从 notebook 迁移到 server，而无法迁移回来。
