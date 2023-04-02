@@ -124,3 +124,5 @@ cmd c，cmd option v
 ps -ef | grep \*
 
 kill -9 pid (上面指令的结果中的第二列数字)
+
+### karabiner，键位映射
