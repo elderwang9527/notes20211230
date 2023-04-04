@@ -1,5 +1,7 @@
 ## 230318
 
+### review230404，很多地方看不懂，在后面的具体列子中再学习。
+
 ## Fundamentals
 
 <img src='./img/2023-03-18-23-16-28.png' height=333px></img>
