@@ -6,7 +6,7 @@
 
 ### single backtest
 
-<img src='./img/2023-03-19-09-52-15.png' height=333px></img>
+<img src='./img/2023-03-19-09-52-15.png' height=333px></img>  
 --=  
 <img src='./img/2023-03-19-09-54-06.png' height=333px></img>  
 --=  
@@ -43,8 +43,13 @@
 --=  
 <img src='./img/2023-03-19-11-00-36.png' height=333px></img>  
 --=  
-<img src='./img/2023-03-19-11-02-06.png' height=333px></img>  
---=  
+<img src='./img/2023-03-19-11-02-06.png' height=333px></img>
+
+<img src='./img/2023-04-06-10-32-43.png' height=333px></img>  
+add 230406  
+lower_ths_prod, upper_ths_prod = zip(\*product(lower_ths, upper_ths)) 的意思如图。大概就是分别生成两个数组，让它们的长度一样，使得它们按顺序结合可以遍历完所有的乘积对。  
+注意规律，前一个数组和后一个数组的不同，语言很难说清，但看图就能明白。
+
 <img src='./img/2023-03-19-11-04-58.png' height=333px></img>  
 --=  
 <img src='./img/2023-03-19-11-05-31.png' height=333px></img>  
