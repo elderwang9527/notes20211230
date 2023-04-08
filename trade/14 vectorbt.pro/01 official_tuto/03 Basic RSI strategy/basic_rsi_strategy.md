@@ -50,7 +50,11 @@ add 230406
 lower_ths_prod, upper_ths_prod = zip(\*product(lower_ths, upper_ths)) 的意思如图。大概就是分别生成两个数组，让它们的长度一样，使得它们按顺序结合可以遍历完所有的乘积对。  
 注意规律，前一个数组和后一个数组的不同，语言很难说清，但看图就能明白。
 
+<img src='./img/2023-04-07-15-58-08.png' height=333px></img>
+
 add 230407  
+vbt.Param 大概就是让 lower_ths_prod 这个 list 变为 lower_th_index 这样一个可被 vbt 使用的参数。  
+以下为 ai 解答  
 vbt.Param 是一个用于创建参数网格的类。在这个特定的代码块中，lower_ths_prod 和 upper_ths_prod 是两个列表，它们包含了我们想要测试的所有下限和上限的组合。我们使用 vbt.Param 将这些组合转换为一个参数网格，以便我们可以将它们传递给 rsi.rsi_crossed_below 和 rsi.rsi_crossed_above 函数，以便在所有组合上运行这些函数。这样，我们可以轻松地测试不同的参数组合，以找到最佳的交易策略。
 
 <img src='./img/2023-03-19-11-04-58.png' height=333px></img>  
