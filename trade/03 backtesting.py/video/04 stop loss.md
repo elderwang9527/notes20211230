@@ -1,5 +1,12 @@
 ## 230121
 
+<img src='./img/2023-04-11-16-46-00.png' height=333px></img>  
+--=  
+<img src='./img/2023-04-11-16-46-45.png' height=333px></img>
+
+add230411 此节教程不太好，把简单的问题复杂化了。不用看以下的笔记，看此代码就行，实现了标准的 trailing stop loss  
+但注意如图 2，此方式的触发平仓是以 high 或 low 而不是 close 来的。
+
 ### 此节学习 stop loss，使用渐增难度的三个例子。理解后就能所有 bt 的 sl 相关了。最先例子是使用一个 buy function。之后会 extending strategy class。
 
 <img src='./img/2023-01-21-11-13-08.png' height=333px></img>  
