@@ -182,3 +182,13 @@ add，关闭右侧缩略图，预览功能。设置，搜索 editor.minimap.enab
     "**/.git": false
   },
 ```
+
+## mac vscode 中，有没有办法能快速注释当前行以下所有行的代码
+
+To comment out all lines below the current line in VSCode on a Mac, you can follow these steps:
+
+1. Place your cursor on the line you want to start commenting out from.
+2. Hold down the Shift key and click on the last line you want to comment out. This will select all the lines in between.
+3. Use the Shift + Option + A shortcut to comment out the selected lines.
+
+Shift + Option + A 是 上三个引号加下三个引号注释，也可以用 cmd / ，是每行前都加#注释
