@@ -445,3 +445,37 @@ df = pd.DataFrame({'col_name': [1, 2, 3]})
 value = df.at[0, 'col_name']
 print(value) # Output: 1
 ```
+
+### df.corr()是什么意思，请举例说明
+
+df.corr()是 pandas 中的一个方法，用于计算 DataFrame 中列之间的成对相关性。它返回一个新的 DataFrame，其中包含所有列对之间的相关系数。
+
+以下是如何使用 df.corr()的示例：
+
+```
+import pandas as pd
+
+# 创建一个示例DataFrame
+data = {'A': [1, 2, 3], 'B': [4, 5, 6], 'C': [7, 8, 9]}
+df = pd.DataFrame(data)
+
+# 计算列之间的成对相关性
+corr_matrix = df.corr()
+
+# 打印相关矩阵
+print(corr_matrix)
+```
+
+这将输出：
+
+```
+     A    B    C
+A  1.0  1.0  1.0
+B  1.0  1.0  1.0
+C  1.0  1.0  1.0
+```
+
+在这个例子中，我们创建了一个包含三列 A、B 和 C 的 DataFrame。然后，我们调用 df.corr()来计算这些列之间的成对相关性，这将导致一个新的 DataFramecorr_matrix。最后，我们使用 print(corr_matrix)打印相关矩阵。
+
+<img src='./img/2023-04-21-10-28-55.png' height=333px></img>  
+另一个例子，注意是横纵坐标两两对比来显示相关性，如二排二列代表 a 和 b 相关性为 1，二排三列代表 a 和 c 相关性为 0.866025
