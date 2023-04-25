@@ -113,6 +113,10 @@ df.set_index('Date', inplace=True)
 
 ### if **name** == '**main**':
 
+当Python文件被执行时，解释器会将特殊变量__name__设置为字符串'__main__'。这意味着如果脚本作为主程序运行，条件__name__ == '__main__'将评估为True。
+
+另一方面，如果脚本作为模块导入到其他程序中，__name__的值将被设置为模块的名称，条件将评估为False。
+
 简单来说，该语句用来当文件当作脚本运行时候，就执行代码；但是当文件被当做 Module 被 import 的时候，就不执行相关代码。
 
 ### python 里的代码 existing_excel_file = os.path.join(os.getcwd(), 'lession_1_data', '510050_d.xlsx') 是什么意思
