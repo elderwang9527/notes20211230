@@ -153,3 +153,14 @@ channels:
 
 - conda-forge
 - defaults
+
+### 解决 Mac 系统 VSCode 终端无法启动 Conda 环境
+
+<img src='./img/2023-04-26-15-13-37.png' height=333px></img>
+
+https://betheme.net/yidongkaifa/101669.html
+
+解决方法
+打开“设置”，位于 Code -> 首选项 -> 设置，搜索"terminal.integrated.inheritEnv"选项，配置修改为 false
+
+"terminal.integrated.inheritEnv": false
