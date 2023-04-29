@@ -31,3 +31,4 @@ Pearson 相关系数和 Spearman 相关系数的区别在于，Pearson 相关系
 
 https://zhuanlan.zhihu.com/p/72513104
 
+### ∑ sigma 

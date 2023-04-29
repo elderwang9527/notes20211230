@@ -126,3 +126,7 @@ ps -ef | grep \*
 kill -9 pid (上面指令的结果中的第二列数字)
 
 ### karabiner，键位映射
+
+### 输入希腊字母		
+
+<img src='./img/2023-04-28-10-05-21.png' height=333px></img>  
