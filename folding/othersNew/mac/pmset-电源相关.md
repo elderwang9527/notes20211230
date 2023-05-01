@@ -4,6 +4,8 @@
 
 #### 让盒盖后仍能正常运行程序（还未测试）
 
+##### add230430 不用看以下信息，apple store 下载 Amphetamine 即可
+
 sudo pmset -a autopoweroff 0 && sudo pmset -a hibernatemode 0 && sudo pmset -a standby 0 && sudo rm /var/vm/sleepimage  
 （想恢复到正常时，sudo pmset restoredefaults，恢复到默认）
 
