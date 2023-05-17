@@ -245,3 +245,55 @@ c.NotebookApp.password = ''
 且不要用 jupyter notebook password 或 jupyter server password 再生成密码，因为它们会默认用 argon2 生成密码且生成新的 jupyter_notebook_config.json jupyter_server_config.json 文件。覆盖掉 jupyter_notebook_config.py 的效果。
 
 jupyter notebook password 或 jupyter server password 差不多。但使用 jupyter server password 后会发生一些迁移，启动 notebook 时会提示发生了迁移。似乎只能从 notebook 迁移到 server，而无法迁移回来。
+
+## vps 装 jupyter 一条龙 ，适用于除 aws 外大多数 vps
+
+连接进 vps，此时需要输入密码  
+ssh -p 22 root@192.168.56.200
+
+生成本地机密码对，已经生成过就不用再生成了。
+ssh-keygen
+
+拷贝公钥到 vps
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.56.200
+
+下载 anaconda 并安装，再启动 jupyter
+
+```
+wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
+https://repo.anaconda.com/archive 可在这里找具体版本，arch 命令找当前 vps 架构如 x86_64 等。
+
+bash Anaconda3-2022.05-Linux-x86_64.sh
+
+q，退出许可证，yes，yes。
+
+source ~/.bashrc，之后如果 conda command not found。则在~/.bashrc 里添加 export PATH=$PATH:/root/anaconda3/bin 或 export PATH=$PATH:/home/ubuntu/anaconda3/bin 再 source ~/.bashrc，再 source activate 激活 base 环境
+
+conda update -n base -c defaults conda
+可通过此命令升级到最新版
+
+jupyter notebook --generate-config 可以得知 config 文件保存路径，修改此文件
+
+c.NotebookApp.ip = 'localhost' 为 c.NotebookApp.ip = '0.0.0.0'，注意另起一行，且无缩进
+
+开启 vps 端口，具体见 vps.md。之后即可通过本地电脑访问 vpsip:port 访问 jupyter
+```
+
+可能需要复制 jupyter_notebook_config.py 并重命名为 jupyter_server_config.py。
+
+可能需要 vps 官网页面开启指定的端口
+
+重点，sudo ufw status 显示可使用的端口，发现并没有上方 vps 官网已经开启了的端口。sudo ufw allow 8888，开启指定端口
+
+jupyter notebook --ip 0.0.0.0 --no-browser --allow-root，之后则可在本地访问 vps 的 jupyter
+
+nohup jupyter notebook --ip 0.0.0.0 --no-browser --allow-root & 可在后台启动 jupyter，这样关掉 vps 也能继续访问。
+
+此时 python --version 为 Python 3.9.12，注意安装 binance 依赖为 pip install python-binance
+
+
+
+
+
+
+

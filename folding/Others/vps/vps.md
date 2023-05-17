@@ -64,3 +64,5 @@ ServerAliveCountMax 3	#表示最大连续尝试连接次数（这个基本不用
 ```
 
 注意先用 sudo su 进入 sudo 模式，再添加
+
+### 怎么查看 vultr vps 的某个端口是否被 防火墙 firewall 屏蔽了
