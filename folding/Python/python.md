@@ -456,3 +456,7 @@ docs.pythontab.com
 docs.pythontab.com
 使用了global关键字后， 变量被重新赋值
 ```
+
+### 230517 为什么我用 python main.py > log1，log1 文件生成的打印出来的东西会有延迟
+
+<img src='./img/2023-05-17-17-53-27.png' height=333px></img>
