@@ -460,3 +460,20 @@ docs.pythontab.com
 ### 230517 为什么我用 python main.py > log1，log1 文件生成的打印出来的东西会有延迟
 
 <img src='./img/2023-05-17-17-53-27.png' height=333px></img>
+
+### 230518 打印当前年月日时分秒以及毫秒
+
+```
+from datetime import datetime
+
+print(datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f"))
+```
+
+包括毫秒
+
+```
+import time
+print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+```
+
+不包括毫秒

@@ -291,9 +291,6 @@ nohup jupyter notebook --ip 0.0.0.0 --no-browser --allow-root & 可在后台启�
 
 此时 python --version 为 Python 3.9.12，注意安装 binance 依赖为 pip install python-binance
 
-
-
-
-
-
-
+<img src='./img/2023-05-18-10-49-52.png' height=333px></img>  
+add230518  
+vscode 下载 ssh remote 插件，再如图在 config 文件里写入此 vps 配置，重启 vscode，则能在 vscode 左侧工具栏里找到此 vps，点击进入就可用 vscode 控制 vps 了。但此时 vps 会覆盖 vscode 之前打开的本地目录，此时在 mac 下方工具栏右键 vscode，再点击之间的本地目录。这 vps 目录和本地目录就能在同一个窗口不同 tab 的形式共存了(或者选择文件夹形状的 connect in new window 也是同样效果)
