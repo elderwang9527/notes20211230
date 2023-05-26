@@ -98,9 +98,7 @@ c.NotebookApp.ip = 'localhost' 为 c.NotebookApp.ip = '0.0.0.0'，注意另起�
 
 开启 vps 端口，具体见 vps.md。之后即可通过本地电脑访问 vpsip:port 访问 jupyter
 
-## 2301
-
-### anaconda 更新
+## 2301 anaconda 更新
 
 win 中需要打开 anaconda promot  
 mac 中直接在有如（base）的命令行输入：  
@@ -110,13 +108,13 @@ conda update python
 
 重启 anaconda，点击确认更新
 
-### anaconda 怎么卸载虚拟环境
+## anaconda 怎么卸载虚拟环境
 
 ```
 conda env remove --name envname
 ```
 
-### conda install 和 pip install 区别
+## conda install 和 pip install 区别
 
 ```
 conda install xxx：这种方式安装的库都会放在anaconda3/pkgs目录下，这样的好处就是，当在某个环境下已经下载好了某个库，再在另一个环境中还需要这个库时，就可以直接从pkgs目录下将该库复制至新环境而不用重复下载。
@@ -128,7 +126,7 @@ import xxx时，先找的是anaconda3/pkgs目录，所以conda安装的包会被
 所以为了避免干扰，用 pip install 而不用 conda install  
 此外 conda uninstall 和 pip uninstall 一样。要清空这个 pkgs 下的已下载库，可以通过命令 conda clean -h （conda clean -a）进行实现。
 
-### 设置 conda-forge 为优先级
+## 设置 conda-forge 为优先级
 
 https://zhuanlan.zhihu.com/p/508506160
 
@@ -154,7 +152,7 @@ channels:
 - conda-forge
 - defaults
 
-### 解决 Mac 系统 VSCode 终端无法启动 Conda 环境
+## 解决 Mac 系统 VSCode 终端无法启动 Conda 环境
 
 <img src='./img/2023-04-26-15-13-37.png' height=333px></img>
 
@@ -164,3 +162,21 @@ https://betheme.net/yidongkaifa/101669.html
 打开“设置”，位于 Code -> 首选项 -> 设置，搜索"terminal.integrated.inheritEnv"选项，配置修改为 false
 
 "terminal.integrated.inheritEnv": false
+
+## 230525 我在本地 mac 电脑上有个 anaconda 环境 a，请问有没有什么方法把这个环境 a 移植到 vps ubuntu 系统的 anaconda 中去？
+
+总结，有方法移植环境，但是最好同系统移植
+
+```
+可以通过以下步骤将你的本地Mac上的Anaconda环境迁移到Ubuntu VPS中：
+
+在你的Mac上，使用conda env export > environment.yml命令导出你的环境。这将创建一个名为environment.yml的文件，其中包含了环境的详细信息，包括所有的库和版本信息。
+
+将environment.yml文件传输到你的Ubuntu VPS。你可以使用scp或者其他文件传输工具来完成这一步。
+
+在你的Ubuntu VPS上，确保已经安装了Anaconda。
+
+使用conda env create -f environment.yml命令在Ubuntu VPS上创建新环境。这将使用你之前导出的environment.yml文件来创建一个完全一样的环境。
+
+以上步骤应该能够帮助你迁移你的Anaconda环境。然而，这种方法可能会因为两个操作系统之间的差异而遇到一些问题。例如，某些Python库可能在Mac和Ubuntu上有不同的依赖项。如果遇到这种情况，你可能需要手动解决这些问题。
+```
