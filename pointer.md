@@ -34,4 +34,5 @@ day:otherFolder
 0425 offline  
 0429 offline  
 0521 offline/05  
-0527 offline/06
+0527 offline/06  
+0602 07/01
