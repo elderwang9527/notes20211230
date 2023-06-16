@@ -1,5 +1,9 @@
 ## 230602 提取字幕
 
+add  
+youtube 类似，只不过第 7 步文件开头为 timedtext  
+但 youtube 可以用https://savesubs.com/ 下载，更方便
+
 https://www.bilibili.com/video/BV1Yv4y117u2
 
 准备工作：电脑浏览器（以 Microsoft Edge 浏览器举例，英文版开发人员工具同理）
