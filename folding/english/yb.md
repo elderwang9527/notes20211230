@@ -8,6 +8,9 @@ https://baijiahao.baidu.com/s?id=1747439324819545438&wfr=spider&for=pc
 
 https://www.bilibili.com/video/BV1hC4y1H7pU
 
+具体读法讲解：
+https://www.zhihu.com/question/284586977/answer/438905545
+
 ## 英语国际音标表（48 个）
 
 ### 元音（20 个）
@@ -33,6 +36,9 @@ https://www.bilibili.com/video/BV1hC4y1H7pU
 半元音 / j/ / w/
 
 边音 / ǀ/
+
+<img src='./img/2023-08-24-10-09-55.png' height=333px></img>  
+/ ǀ/单独读音和字头读音都类似拼音 l，但字尾读类似欧的声音，应该就是英文字母 L 的后半截声音。相对于字头读音口型区别是舌根要向上。
 
 ## 元音，辅音是什么意思
 
@@ -64,6 +70,13 @@ https://www.bilibili.com/video/BV1hC4y1H7pU
 浊辅音 是口腔中有阻塞且声带振动的音。
 这些不同的音素类型在不同的语言中可能会有变化，但这些基本概念适用于大多数语言的发音特点。
 ```
+
+## 音标标准
+
+<img src='./img/2023-08-24-11-22-56.png' height=333px></img>
+
+分为新版国际音标 ipa88，旧版国际音标 ipa63，美版音标 kk，国际音标又称为英式音标  
+有道词典用的 ipa88
 
 ## 一些例子
 
