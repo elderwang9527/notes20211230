@@ -144,3 +144,31 @@ FAT32（单个文件不可超过 4GB），exFAT（部分安卓手机不支持）
 ## 怎么整齐排列 mac 的文件夹
 
 快捷键 control+command+1 自动排列，control+command+2 按照种类自动排列，mac 下的文件夹设置一次，以后所有的文件都按照最后一次设定来执行
+
+## 批量重命名：在 mac 中，怎么用 python 的方法批量删除一个文件夹内所有文件的文件名的前 2 个字符
+
+```
+import os
+
+# 设置要操作的文件夹路径
+folder_path = "/path/to/your/folder"
+
+# 获取文件夹中的所有文件和子文件夹
+items = os.listdir(folder_path)
+
+# 遍历文件夹中的每个项目
+for item in items:
+    item_path = os.path.join(folder_path, item)
+
+    # 检查项目是否为文件而不是子文件夹
+    if os.path.isfile(item_path):
+        # 提取文件名的前2个字符以后的部分
+        new_name = item[2:]
+
+        # 构建新的文件名的完整路径
+        new_path = os.path.join(folder_path, new_name)
+
+        # 使用os.rename()来重命名文件
+        os.rename(item_path, new_path)
+
+```

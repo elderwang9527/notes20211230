@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvgfpqp11r3o8"]
+
+[ext_resource type="Script" path="res://积分场景/Label.gd" id="1_jpxo6"]
+[ext_resource type="Script" path="res://积分场景/Label2.gd" id="2_mqxpm"]
+
+[node name="Node" type="Node"]
+metadata/_edit_horizontal_guides_ = [71.0]
+metadata/_edit_vertical_guides_ = [167.0]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 169.0
+offset_top = 73.0
+offset_right = 209.0
+offset_bottom = 96.0
+script = ExtResource("1_jpxo6")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 892.0
+offset_top = 74.0
+offset_right = 932.0
+offset_bottom = 97.0
+script = ExtResource("2_mqxpm")
