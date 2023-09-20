@@ -172,3 +172,25 @@ for item in items:
         os.rename(item_path, new_path)
 
 ```
+
+## 写一个在 mac 系统中删除当前文件夹下所有后缀名为.srt 的文件都 python 脚本
+
+```
+import os
+
+# 获取当前工作目录
+current_directory = os.getcwd()
+
+# 遍历当前文件夹下的所有文件
+for filename in os.listdir(current_directory):
+    if filename.endswith('.srt'):
+        file_path = os.path.join(current_directory, filename)
+        try:
+            # 删除文件
+            os.remove(file_path)
+            print(f"已删除文件: {file_path}")
+        except Exception as e:
+            print(f"删除文件时出错: {file_path}")
+            print(f"错误信息: {str(e)}")
+
+```
