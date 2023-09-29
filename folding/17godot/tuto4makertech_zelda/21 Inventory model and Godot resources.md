@@ -16,4 +16,16 @@
 
 ### 0600 将 inv 中的物品在 inv gui 中展示。但这里先加一些 chest things 到 playerinventory（只是将 0430 里添加的东西多添加点）。
 
- 
+### 0640 inventory-gui.gd 中增加@onready var inventory: Inventory = preload("res://inventory/playerInventory.tres")
+
+### 0802 slot 节点目前只有一个背景 area2d，给它增加一个 area2d 来用于显示物品。并再给它添加一个如图脚本。
+
+<img src='./img/2023-09-28-15-50-20.png' height=333px></img>
+
+### 0917 如图在 inventory-gui-gd 中更新所有 slots，得到如图效果。虽然有了 items，但不在正确位置
+
+<img src='./img/2023-09-28-15-56-50.png' height=333px></img>  
+--=
+<img src='./img/2023-09-28-15-57-52.png' height=333px></img>
+
+### 1022 做些修改，物品位置就显示正确了
