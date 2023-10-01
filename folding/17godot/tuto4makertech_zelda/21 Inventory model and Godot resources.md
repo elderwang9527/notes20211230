@@ -4,7 +4,9 @@
 
 <img src='./img/2023-09-27-22-45-19.png' height=333px></img>
 
-## 0212 为了创建一个新类型的 resource，创建如图的脚本，继承自 Resource。
+## 重难点
+
+### 0212 为了创建一个新类型的 resource，创建如图的脚本，继承自 Resource。
 
 <img src='./img/2023-09-29-23-44-00.png' height=333px></img>
 
@@ -22,32 +24,50 @@
 --=  
 <img src='./img/2023-09-29-23-54-46.png' height=333px></img>
 
-### 
+### 0342 回到 inventory.gd，让其 items array 包含的类型为 InventoryItem。
 
-# 分割
+<img src='./img/2023-09-30-09-20-53.png' height=333px></img>
 
-## 0156 创建 inv model，创建它不需要创建新场景，因为 inv model 不是一个节点而是一个 resource（视频提供了 link to godot resource）。
+### 0424 创造第一个 inventoryItem lifepot，之后还创造了一个 sword，未截图。(注意视频此时虽然是在 inventoryItem.gd 的脚本下创建，但在其它脚本下也能创建，所以创造 resource 可能跟所在脚本无关，只要在 inspector 里点加号再选择 inventoryItem 就能创造类型为 inventoryItem 的 resource)
 
-## 以下内容没看太懂
+<img src='./img/2023-09-30-09-22-56.png' height=333px></img>  
+--=  
+<img src='./img/2023-09-30-09-23-35.png' height=333px></img>
+--=  
+<img src='./img/2023-09-30-09-24-39.png' height=333px></img>
 
-### 0430 新建 inventory 和 inveteoryItem 两个脚本，它们都继承自 Resource 而不是 Node。并在 inveteoryItem 里添加 inveteoryItem resource 的 lifepot 和 sword。
+### 0457 创造一个 inventory 类型的 resource，叫做 playerInventory，作为玩家的库存。playerInventory 的类型为 tres，而它包含的 items 也是 tres，所以这里其实有了一个嵌套，即 资源/resource/tres 里面包含的数组的每个元素也是 资源/resource/tres。
 
-### 0500 在 inveteoryItem 里添加 inventory resource 的项目，并保存为 playerInventory.tres
+<img src='./img/2023-09-30-09-41-26.png' height=333px></img>
 
-### 0522 add the new inventory to the player
+### 0521 通过代码给 player 增加个 inventory 类型的变量，再通过拖拽把 playerInventory 设置为这个新增的变量，player 就最终拥有了这个 playerInventory 资源。
 
-### 0600 将 inv 中的物品在 inv gui 中展示。但这里先加一些 chest things 到 playerinventory（只是将 0430 里添加的东西多添加点）。
+<img src='./img/2023-09-30-09-45-51.png' height=333px></img>
+--=  
+<img src='./img/2023-09-30-09-48-22.png' height=333px></img>
 
-### 0640 inventory-gui.gd 中增加@onready var inventory: Inventory = preload("res://inventory/playerInventory.tres")
+### 0531 让刚刚给玩家添加的 playerInventory 资源在以前创建的 inventory gui 中显示出来。
 
-### 0802 slot 节点目前只有一个背景 area2d，给它增加一个 area2d 来用于显示物品。并再给它添加一个如图脚本。
+#### 添加 playerInventory 的 items 到 10 个
 
-<img src='./img/2023-09-28-15-50-20.png' height=333px></img>
+<img src='./img/2023-09-30-09-53-39.png' height=333px></img>
 
-### 0917 如图在 inventory-gui-gd 中更新所有 slots，得到如图效果。虽然有了 items，但不在正确位置
+#### 0636 在 inventorygui 中 preload playerInventory-tres。注意这里用了 preload，而 0521 步则没有，可能是只需要在一个地方 preload，其它地方就能直接引用。
 
-<img src='./img/2023-09-28-15-56-50.png' height=333px></img>  
---=
-<img src='./img/2023-09-28-15-57-52.png' height=333px></img>
+<img src='./img/2023-09-30-09-58-58.png' height=333px></img>
 
-### 1022 做些修改，物品位置就显示正确了
+#### 0800 给 slot 增加一个 sp2d 名为 item，用于之后显示物品图片。并给 slot 绑定脚本。给它分配一个背景图和一个物品图。并设置一个 update 函数，当没有 item 时，背景图的 frame 设置为 0，不设物品图。当有 item 时，背景图的 frame 设置为 1，显示背景图。
+
+<img src='./img/2023-09-30-10-03-05.png' height=333px></img>
+--=  
+<img src='./img/2023-09-30-10-04-49.png' height=333px></img>
+
+#### 0858 在 inventory-gui 脚本中，引入 slots，并也创建一个 update 函数，通过循环来调用所有 slot 的函数。
+
+<img src='./img/2023-09-30-10-09-20.png' height=333px></img>
+
+#### 0913 新建 ready 函数，用于调用 update 函数。
+
+<img src='./img/2023-09-30-10-12-10.png' height=333px></img>
+
+## 1022 做些修改，物品位置就显示正确了
