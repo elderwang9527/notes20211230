@@ -2,7 +2,7 @@
 
 ## 0030 intro，注意此时已经清空了上节课最后加的 items
 
-## 0118 the first thing we need is a place to store how many of each item is in the player's inventory。所以这里创建一个 new resource（其实是脚本，只是继承自 resource 而不是 node，但视频叫它 resource 也没错，广义的 resource 也包括脚本：https://docs.godotengine.org/en/stable/tutorials/scripting/resources.html。而狭义的resource可能就只指tres文件）
+## 0118 the first thing we need is a place to store how many of each item is in the player's inventory。所以这里创建一个 new resource（其实是脚本，只是继承自 resource 而不是 node，但视频叫它 resource 也没错，广义的 resource 也包括脚本：https://docs.godotengine.org/en/stable/tutorials/scripting/resources.html 而狭义的 resource 可能就只指 tres 文件）
 
 <img src='./img/2023-09-30-18-41-23.png' height=333px></img>
 
@@ -30,7 +30,7 @@
 
 <img src='./img/2023-10-01-10-11-21.png' height=333px></img>
 
-## 0725 现在开始更新 gui。给 panel 增加 label，然后进行各种调整，看视频，最终达到图 2 效果。(此处自己跟做有 bug，暂时没解决)
+## 0725 现在开始更新 gui。给 panel 增加 label，然后进行各种调整，看视频，最终达到图 2 效果。(此处自己跟做有 bug，已解决 bug，updated.emit()多了一个缩进)
 
 <img src='./img/2023-10-01-17-07-37.png' height=333px></img>  
 --=  
