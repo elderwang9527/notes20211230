@@ -48,13 +48,15 @@
 
 ### 0843 但有个 bug 是即使没有攻击，slime 碰到玩家可能也会消失，因为虽然让玩家身上的剑不可见了，但它实际上还在，能碰撞到 slime
 
-### 0916 给 sword 创建如图脚本。 1019 给 player/weapon 添加一个脚本。1035 修改 player 脚本。解决了上述问题。
+### 0916 给 sword 创建如图脚本。 1019 给 player/weapon 添加一个脚本。1035 修改 player 脚本。最后还要加上图 4 视频未加的代码才能真正解决上述 bug。
 
 <img src='./img/2023-10-06-16-12-47.png' height=333px></img>  
 --=  
 <img src='./img/2023-10-06-16-26-36.png' height=333px></img>  
 --=  
-<img src='./img/2023-10-06-16-29-13.png' height=333px></img>
+<img src='./img/2023-10-06-16-29-13.png' height=333px></img>  
+--=  
+<img src='./img/2023-10-07-10-53-52.png' height=333px></img>
 
 ### 1200 即使砍掉了 slime，如果靠近生成的 smoke 太近，玩家仍然掉血。如图处理后，解决问题。（中间有错误步骤，暂不了解）
 
