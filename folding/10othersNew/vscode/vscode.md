@@ -193,7 +193,6 @@ To comment out all lines below the current line in VSCode on a Mac, you can foll
 
 Shift + Option + A 是 上三个引号加下三个引号注释，也可以用 cmd / ，是每行前都加#注释
 
-## 设置某格式下不使用prettier作为格式化插件
+## 设置某格式下不使用 prettier 作为格式化插件
 
-<img src='./img/2023-04-24-20-12-20.png' height=333px></img>  
-
+<img src='./img/2023-04-24-20-12-20.png' height=333px></img>
