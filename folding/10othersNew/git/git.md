@@ -49,7 +49,7 @@ git checkout head . 修改被还原
 git clean -nfd 查看即将被删除的文件  
 git clean -fd 增加的文件被删除
 
-### 为一台电脑配置多个 GitHub 账号
+### 先参考 231013 ，不能解决再看这条。为一台电脑配置多个 GitHub 账号
 
 ![](./img/2022-02-27-14-10-26.png)
 
@@ -142,7 +142,7 @@ git push origin --tags
 
 ### git token 过期后新增 token 要选 classic 的，选 fine 的会遇到报错。
 
-### 多 git 账号
+### 先参考 231013 ，不能解决再看这条。多 git 账号
 
 https://zhuanlan.zhihu.com/p/468501219
 
@@ -154,3 +154,13 @@ git config --global user.email "your-email@example.com"
 电脑 keychain 里仍然保留的是之前账号的账号名和密码（github 是 personal access token），  
 mac 电脑搜索钥匙串访问，再搜索 git，删除 github.com 对应的钥匙串，可能删除不成功，则切换左侧登陆/本地项目选项。再自己找 github.com 项目删除（而不是搜索删除），则能删除成功  
 之后再 push，输入用户名，再输入密码即 personal access token，即可。新的账号和 pat 就存入了钥匙串。（注意 ssh key 和 pat 是两个概念，应该是两个都满足了后才能成功执行）
+
+## 231013 多 git 账号
+
+参考此教程：https://www.haccks.com/posts/github-multi-ssh-key/
+
+<img src='./img/2023-10-13-11-31-06.png' height=333px></img>
+
+自己实践没有问题，只是有些步骤是之前已经做过的，如使用的是 rsa 而不是 ed25519 加密。  
+<img src='./img/2023-10-13-11-35-37.png' height=333px></img>  
+注意最后 git push 项目时，要选 ssh 而不是 https，且要修改 github.com 为第二个账号的 host（保存在～/.ssh/config 中）
