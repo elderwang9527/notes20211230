@@ -19,3 +19,9 @@ RigidBody2D 是 2D 物理引擎的一部分，用于模拟 2D 物体的物理行
 使用 RigidBody2D 时，角色的移动通常受到物理引擎的模拟，因此需要在物理世界中受到力的作用。
 RigidBody2D 通常用于需要角色与其他物体进行真实物理交互的情况，如物理谜题游戏或模拟游戏。
 总的来说，如果您需要精确控制和便捷的角色控制，可以选择使用 Character2D。如果您需要更真实的物理模拟和与其他物体的物理交互，可以选择使用 RigidBody2D。选择哪种节点取决于您的游戏需求和设计目标。
+
+## ogg 音乐点选不了 loop 循环
+
+<img src='./img/2023-10-13-22-33-55.png' height=333px></img>
+
+https://ask.godotengine.org/152149/i-cant-enable-loop-using-audiostreamplayer2d

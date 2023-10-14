@@ -159,8 +159,8 @@ mac 电脑搜索钥匙串访问，再搜索 git，删除 github.com 对应的钥
 
 参考此教程：https://www.haccks.com/posts/github-multi-ssh-key/
 
-<img src='./img/2023-10-13-11-31-06.png' height=333px></img>
+<img src='./img/2023-10-13-11-31-06.png' height=333px></img>  
+自己实践没有问题，只是有些步骤是之前已经做过的，如使用的是 rsa 而不是 ed25519 加密。
 
-自己实践没有问题，只是有些步骤是之前已经做过的，如使用的是 rsa 而不是 ed25519 加密。  
 <img src='./img/2023-10-13-11-35-37.png' height=333px></img>  
 注意最后 git push 项目时，要选 ssh 而不是 https，且要修改 github.com 为第二个账号的 host（保存在～/.ssh/config 中）
