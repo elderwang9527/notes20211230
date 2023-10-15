@@ -25,3 +25,7 @@ RigidBody2D 通常用于需要角色与其他物体进行真实物理交互的�
 <img src='./img/2023-10-13-22-33-55.png' height=333px></img>
 
 https://ask.godotengine.org/152149/i-cant-enable-loop-using-audiostreamplayer2d
+
+## AnimatedSprite2D 和 AnimationPlayer 的区别
+
+AnimatedSprite2D 更简单，但可处理细节更少。AnimationPlayer 相反
