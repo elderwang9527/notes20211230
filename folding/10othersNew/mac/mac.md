@@ -198,3 +198,7 @@ for filename in os.listdir(current_directory):
 ## 231003 修改程序图标
 
 gpt 说的修改 icns 文件的方法无效，用以下方法有效：cmd c 想使用的图标，选择程序显示简介，点击左上角图标处 cmd v。则图标立即改变，cmd tab 时显示的图标可能要延迟一段时间或者退出重启后再改变。
+
+## 231015 mac 自带录屏方法
+
+shift cmd 5，注意录屏结束后文件默认保存在桌面
