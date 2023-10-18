@@ -16,7 +16,7 @@ RigidBody2D is more for a platformer (gravity is automatically applied)
 
 ## AnimationPlayer 添加帧造成意外影响
 
-### 回答似乎没理解问题，但有其它作用
+### 回答似乎没理解问题，但有其它作用。add，另有回答说是要设置 RESET 动画中的 rotation 为 0，暂未测试
 
 wen：  
 Can I know why after adding a track with a 90-degree rotation to the root node's Node2D in the AnimationPlayer and then resetting the rotation to 0, but the root node's Node2D rotation return to 90 degrees after playing the animation?
@@ -24,3 +24,5 @@ Can I know why after adding a track with a 90-degree rotation to the root node's
 da：
 You need to add another key frame with 0 degree rotation to the start. Using only one key frame creates a constant rather than a gradual change.  
 你需要在开头添加另一个 0 度旋转的关键帧。只使用一个关键帧会导致恒定的变化，而不是渐变的变化。
+
+## length()可求速度绝对值
