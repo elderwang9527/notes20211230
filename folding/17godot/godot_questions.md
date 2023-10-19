@@ -26,3 +26,27 @@ You need to add another key frame with 0 degree rotation to the start. Using onl
 你需要在开头添加另一个 0 度旋转的关键帧。只使用一个关键帧会导致恒定的变化，而不是渐变的变化。
 
 ## length()可求速度绝对值
+
+## 镜面反弹方法
+
+```
+func _physics_process(delta):
+	var prev_velocity = velocity
+	updateAnimation()
+
+	var collided = move_and_slide()
+	if collided:
+		handle_collision(prev_velocity)
+	else:
+		pass
+```
+
+```
+func handle_collision(prev_velocity: Vector2):
+#	var col = get_last_slide_collision()
+#	var collider = col.get_collider()
+#	velocity = -1*prev_velocity
+#   get_last_slide_collision().get_normal()得到法线/normal-line，orthogonal方法从法线变为镜面线
+	var mirror_line = get_last_slide_collision().get_normal().orthogonal()
+	velocity = prev_velocity.reflect(mirror_line)
+```
