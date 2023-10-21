@@ -50,3 +50,13 @@ func handle_collision(prev_velocity: Vector2):
 	var mirror_line = get_last_slide_collision().get_normal().orthogonal()
 	velocity = prev_velocity.reflect(mirror_line)
 ```
+
+## 为什么有时 CollisionShape2D 外面要套一层 area2d
+
+### 大概 area2d 的作用是监控碰撞模型的进出。而光是 collision 模型的话则只处理碰撞。所以要监控进出就要在 collision 模型外套一层 area2d
+
+A region of 2D space that detects other CollisionObject2Ds entering or exiting it.
+
+Area2D is a region of 2D space defined by one or multiple CollisionShape2D or CollisionPolygon2D child nodes. It detects when other CollisionObject2Ds enter or exit it, and it also keeps track of which collision objects haven't exited it yet (i.e. which one are overlapping it).
+
+This node can also locally alter or override physics parameters (gravity, damping) and route audio to custom audio buses.

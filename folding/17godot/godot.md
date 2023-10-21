@@ -33,3 +33,4 @@ AnimatedSprite2D 更简单，但可处理细节更少。AnimationPlayer 相反
 ## 似乎根节点下的所有子节点的脚本的-ready -physics 等函数都会在程序运行时自动运行。但如 player 下被隐藏的子节点的函数则不会自动运行。应该是因为这些子节点都已经是 player 的一部分。而如图的 follow can 则是后续添加进的。
 
 <img src='./img/2023-10-19-17-59-50.png' height=333px></img>
+
