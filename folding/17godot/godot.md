@@ -34,3 +34,9 @@ AnimatedSprite2D 更简单，但可处理细节更少。AnimationPlayer 相反
 
 <img src='./img/2023-10-19-17-59-50.png' height=333px></img>
 
+## area2d 层设置，目前自己的规则
+
+<img src='./img/2023-10-22-10-41-21.png' height=333px></img>
+
+注意 layer3，layer4 设置为被 hurt 的一方为 mask 层。虽然反直觉，但因为教程是这样，就先按这样来。暂未测试相反是否会出问题。
+
