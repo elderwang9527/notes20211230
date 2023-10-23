@@ -36,7 +36,33 @@ AnimatedSprite2D 更简单，但可处理细节更少。AnimationPlayer 相反
 
 ## area2d 层设置，目前自己的规则
 
-<img src='./img/2023-10-22-10-41-21.png' height=333px></img>
+<img src='./img/2023-10-22-22-55-52.png' height=333px></img>
 
-注意 layer3，layer4 设置为被 hurt 的一方为 mask 层。虽然反直觉，但因为教程是这样，就先按这样来。暂未测试相反是否会出问题。
+## 自定义带参数信号的写法
 
+```
+extends Button
+
+signal custom_signal(val)
+
+var value = "aaa"
+
+func _ready():
+    # 1，注意反直觉的是test_function这里不写参数，因为下方custom_signal.emit(value)时已经写好了参数
+	$".".custom_signal.connect(test_function)
+
+func _on_pressed():
+	print('pressed')
+	custom_signal.emit(value)
+
+func test_function(info):
+	print('test_function')
+	print(info)
+
+```
+
+```
+pressed
+test_function
+aaa
+```
