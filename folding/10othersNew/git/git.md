@@ -164,3 +164,6 @@ mac 电脑搜索钥匙串访问，再搜索 git，删除 github.com 对应的钥
 
 <img src='./img/2023-10-13-11-35-37.png' height=333px></img>  
 注意最后 git push 项目时，要选 ssh 而不是 https，且要修改 github.com 为第二个账号的 host（保存在～/.ssh/config 中）
+
+add, push 前还要加上这个  
+git config --local user.email "ANOTHER.github.com" && git config --local user.name "ANOTHER"

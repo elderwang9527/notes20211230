@@ -66,3 +66,7 @@ pressed
 test_function
 aaa
 ```
+
+## 连接 PackedScene 信号的方法，不能像图一那样正常 scene 那样写，而是图二那样在实例化后才连接。
+
+<img src='./img/2023-10-23-15-07-12.png' height=333px></img>
