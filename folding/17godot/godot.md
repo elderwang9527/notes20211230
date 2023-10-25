@@ -70,3 +70,13 @@ aaa
 ## 连接 PackedScene 信号的方法，不能像图一那样正常 scene 那样写，而是图二那样在实例化后才连接。
 
 <img src='./img/2023-10-23-15-07-12.png' height=333px></img>
+
+## 存储数据方法
+
+https://kidscancode.org/godot_recipes/4.x/basics/file_io/index.html
+
+<img src='./img/2023-10-24-15-07-06.png' height=333px></img>  
+Storing data，简单情况，测试如图
+
+<img src='./img/2023-10-24-15-12-26.png' height=333px></img>  
+Saving Resources，较复杂的情况，未测试

@@ -60,3 +60,22 @@ A region of 2D space that detects other CollisionObject2Ds entering or exiting i
 Area2D is a region of 2D space defined by one or multiple CollisionShape2D or CollisionPolygon2D child nodes. It detects when other CollisionObject2Ds enter or exit it, and it also keeps track of which collision objects haven't exited it yet (i.e. which one are overlapping it).
 
 This node can also locally alter or override physics parameters (gravity, damping) and route audio to custom audio buses.
+
+## godot 中的 user:// 目录实际上是在哪里？
+
+```
+在 Godot 游戏引擎中，user:// 目录实际上是指向用户特定数据的一个虚拟路径。这个目录位于用户的主目录下，具体位置取决于操作系统。下面是不同操作系统上 user:// 目录的实际位置：
+
+Windows:
+user:// 目录通常位于用户的文档目录下的 "Godot" 子目录中。例如：C:\Users\<YourUsername>\Documents\Godot\
+
+macOS:
+在 macOS 上，user:// 目录通常位于用户的 ~（主目录）下的 "Library/Application Support/Godot/" 目录中。例如：/Users/<YourUsername>/Library/Application Support/Godot/
+add，finder好像不能找到，在终端：cd /Users/accountName/Library/Application Support/Godot/app_userdata 中找到，也有看不到存储文件的情况，但实际使用没问题的情况
+
+Linux:
+在 Linux 系统上，user:// 目录通常位于用户的主目录下的 .godot 子目录中。例如：/home/<YourUsername>/.godot/
+
+在这个目录中，你可以保存和读取用户特定的游戏数据，例如配置文件、存档、日志等。user:// 是一个方便的方式，它允许你跨不同操作系统访问用户数据，而不必担心确切的文件路径。通过使用 user://，你可以确保你的游戏在不同平台上都能够找到用户数据。
+
+```
