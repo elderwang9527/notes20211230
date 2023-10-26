@@ -80,3 +80,7 @@ Storing data，简单情况，测试如图
 
 <img src='./img/2023-10-24-15-12-26.png' height=333px></img>  
 Saving Resources，较复杂的情况，未测试
+
+## 不同系统 user 路径
+
+<img src='./img/2023-10-25-11-07-59.png' height=333px></img>
