@@ -106,3 +106,7 @@ myArray.push_back(4)
 ## stringName
 
 <img src='./img/2023-10-27-10-58-42.png' height=333px></img>
+
+## 如果在主脚本中先读一个子脚本的值，再 add_child 的话，则不能获得子脚本中\_ready 做的修改(大概是没有 add_child 创建节点，\_ready 也就没有执行)。所以最好应该先读值，再 add_child。
+
+<img src='./img/2023-10-29-23-11-48.png' height=333px></img>

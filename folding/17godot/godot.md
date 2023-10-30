@@ -84,3 +84,14 @@ Saving Resources，较复杂的情况，未测试
 ## 不同系统 user 路径
 
 <img src='./img/2023-10-25-11-07-59.png' height=333px></img>
+
+## PackedScene 实例化并部署在 tilemap 指定位置的代码
+
+```
+func _on_start_timer_timeout():
+	$MobTimer.start()
+	var lifepot = lifepot_scene.instantiate()
+	tilemap.add_child(lifepot)
+	var lifepot_position = Vector2(20, 20)
+	lifepot.global_position = lifepot_position
+```
