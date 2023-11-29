@@ -167,3 +167,40 @@ mac 电脑搜索钥匙串访问，再搜索 git，删除 github.com 对应的钥
 
 add, push 前还要加上这个  
 git config --local user.email "ANOTHER.github.com" && git config --local user.name "ANOTHER"
+
+## 231128 git 使用 git reset --hard HEAD 后，仍然跟上一次提交有区别，该怎么恢复到跟上一次提交完全一样
+
+### 总结：多加一个 git clean -fd
+
+```
+执行 git reset --hard HEAD 的目的是将当前工作目录和索引（即暂存区）重置为最后一次提交的状态。如果您发现在执行这个命令之后仍然与上一次提交有区别，可能是由以下几个原因造成的：
+
+未跟踪的文件：git reset --hard 不会影响未跟踪的文件（即那些未被 Git 管理的文件）。如果您的目录中有未跟踪的文件，它们在重置后仍会存在。
+
+忽略文件：如果有 .gitignore 文件指定忽略某些文件，即使它们在提交中有变化，git reset --hard 也不会删除或恢复这些文件。
+
+子模块：如果您的仓库中包含 Git 子模块，git reset --hard 不会自动更新这些子模块。您需要单独更新子模块。
+
+文件系统大小写不敏感：在某些文件系统（如 Windows 或 macOS 的默认设置）中，文件名大小写不敏感。这可能会导致看似相同的文件名在 Git 中被视为不同的文件。
+
+为了恢复到与上一次提交完全一样的状态，您可以尝试以下步骤：
+
+清理未跟踪的文件：
+
+bash
+Copy code
+git clean -fd
+这个命令会删除所有未跟踪的文件和目录。
+
+检查 .gitignore 文件：确保没有需要的文件被错误地忽略。
+
+更新子模块（如果有）：
+
+bash
+Copy code
+git submodule update --init --recursive
+检查文件名大小写问题：在大小写敏感的文件系统中确保所有文件名的大小写正确。
+
+完成这些步骤后，您的工作目录应该与上一次提交的状态一致。如果仍有问题，请检查是否有其他特殊情况或配置影响了 Git 的行为。
+
+```
