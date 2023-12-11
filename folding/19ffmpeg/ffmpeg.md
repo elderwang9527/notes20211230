@@ -1,6 +1,8 @@
 ## Mac 电脑上安装 FFmpeg 的指南
 
-## 231210
+### 231210
+
+### 注意 ffmpeg -version 后可能遇到：zsh: command not found: ffmpeg 报错，此时 brew info ffmpeg 可能会看到很多依赖项为 x，即未安装依赖。则重新 brew install ffmpeg 等待安装完成就可能解决问题。
 
 https://www.python100.com/html/93874.html
 
@@ -70,4 +72,11 @@ ffmpeg -i input.mp4 -vf "transpose=1" output.mp4
 ffmpeg -i input.mp4 -vf "select=eq(pict_type\,I)" -vsync vfr output.mp4
 四、总结
 在Mac电脑上安装FFmpeg并不复杂，只需要安装Homebrew并运行一些命令即可。FFmpeg提供了许多强大的功能，包括视频转码、剪辑、处理等，可以让您更轻松地处理和修改视频。希望这份指南能够帮助您更好地了解如何在Mac电脑上安装和使用FFmpeg。
+```
+
+## 按时间把一个视频分割为多个并批量导出
+
+```
+ffmpeg -i 02demo.mkv -ss 00:00 -to 03:33 -c copy output_clip_1.mp4
+ffmpeg -i 02demo.mkv -ss 03:34 -to 05:00 -c copy output_clip_2.mp4
 ```
