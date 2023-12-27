@@ -77,6 +77,15 @@ ffmpeg -i input.mp4 -vf "select=eq(pict_type\,I)" -vsync vfr output.mp4
 ## 按时间把一个视频分割为多个并批量导出
 
 ```
+## 作废
 ffmpeg -i 02demo.mkv -ss 00:00 -to 03:33 -c copy output_clip_1.mp4
 ffmpeg -i 02demo.mkv -ss 03:34 -to 05:00 -c copy output_clip_2.mp4
 ```
+
+改为如下，原因如截图
+
+```
+ffmpeg -ss 00:00:00 -i quanji.mp4 -to 00:40 -c copy 0000.mp4
+```
+
+<img src='./img/2023-12-26-14-50-15.png' height=333px></img>
