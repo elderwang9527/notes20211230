@@ -82,10 +82,19 @@ ffmpeg -i 02demo.mkv -ss 00:00 -to 03:33 -c copy output_clip_1.mp4
 ffmpeg -i 02demo.mkv -ss 03:34 -to 05:00 -c copy output_clip_2.mp4
 ```
 
-改为如下，原因如截图
+改为如下，原因如截图（还是有问题）
 
 ```
 ffmpeg -ss 00:00:00 -i quanji.mp4 -to 00:40 -c copy 0000.mp4
 ```
 
 <img src='./img/2023-12-26-14-50-15.png' height=333px></img>
+
+### 还是有问题，改为如下命令
+
+```
+# 有 -c copy，速度更快，但可能有前5秒被跳过的bug，以及之前提到的bug。
+ffmpeg -i quanji.mp4 -ss 1:05:15 -to 1:11:36 -c copy 990517迎击拳.mp4
+# 无 -c copy，速度更慢，但没有前5秒被跳过的bug
+ffmpeg -i quanji.mp4 -ss 1:05:15 -to 1:11:36 990517迎击拳.mp4
+```
