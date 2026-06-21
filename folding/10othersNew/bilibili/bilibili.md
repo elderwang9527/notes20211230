@@ -24,4 +24,3 @@ https://www.bilibili.com/video/BV1Yv4y117u2
 ## 231116 上传分 p 视频，需要下载软件，mac 不行，只能 win。
 
 https://zhuanlan.zhihu.com/p/567615709
-
